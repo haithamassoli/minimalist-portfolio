@@ -1,0 +1,37 @@
+---
+import { faqs, site } from '../../data';
+import SectionHeading from '../ui/SectionHeading.astro';
+import AssetImage from '../ui/AssetImage.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+---
+<section class="section faq-section section--bordered" id="faq" aria-labelledby="faq-heading">
+  <div class="container faq-grid">
+    <div class="faq-content">
+      <SectionHeading id="faq-heading" muted="أسئلتك،" title="جاوبنا عليها." />
+      <div class="faq-list">
+        {faqs.map((faq, index) => <details class="faq-item" name="portfolio-faq" open={index === 0}>
+        <summary>
+          <span class="faq-item__number" dir="ltr">{faq.id}</span>
+          <span>{faq.question}</span>
+          <span class="faq-item__toggle">
+            <Icon name="plus" size={18} />
+          </span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>{faq.answer}</p>
+        </div>
+      </details>)}
+    </div>
+  </div>
+  <aside class="consultation-card" data-reveal>
+    <AssetImage image={site.avatar} sizes="64px" decorative />
+    <h3>لسى محتار؟<br />احجز استشارتك</h3>
+    <p>مكالمة قصيرة نفهم فيها احتياجك ونحدد الخطوة المناسبة لمشروعك.</p>
+    <div>
+      <Button href={site.bookingUrl} label="احجز استشارة" external icon="arrow-up-left" />
+      <span class="cal-wordmark" dir="ltr">Cal.com</span>
+    </div>
+  </aside>
+</div>
+</section>

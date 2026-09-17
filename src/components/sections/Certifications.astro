@@ -1,0 +1,11 @@
+---
+import { certificates } from '../../data';
+import SectionHeading from '../ui/SectionHeading.astro';
+import CertificateCard from '../cards/CertificateCard.astro';
+---
+<section class="section certificates-section section--bordered" id="certifications" aria-labelledby="certifications-heading">
+  <div class="container section-stack">
+    <SectionHeading id="certifications-heading" title="معتمد فيمـا أحـــــب" centered />
+    <div class="certificates-grid">{certificates.map((certificate, index) => <CertificateCard certificate={certificate} index={index} />)}</div>
+  </div>
+</section>

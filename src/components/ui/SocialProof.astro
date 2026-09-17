@@ -1,0 +1,13 @@
+---
+import { site, testimonials } from '../../data';
+import AssetImage from './AssetImage.astro';
+---
+<a class="social-proof" href="/#testimonials" aria-label="اقرأ آراء العملاء">
+  <div class="social-proof__avatars" aria-hidden="true">
+    {testimonials.slice(1).map(person => <AssetImage image={person.avatar} sizes="38px" decorative />)}
+  </div>
+  <div class="social-proof__text">
+    <span class="social-proof__stars" aria-label="تقييم خمس نجوم">★★★★★</span>
+    <span>{site.happyClients}</span>
+  </div>
+</a>

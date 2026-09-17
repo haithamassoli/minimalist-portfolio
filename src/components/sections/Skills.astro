@@ -1,0 +1,17 @@
+---
+import { skills } from '../../data';
+import SectionHeading from '../ui/SectionHeading.astro';
+import CallToAction from '../ui/CallToAction.astro';
+---
+<section class="section skills-section section--bordered" id="skills" aria-labelledby="skills-heading">
+  <div class="container section-stack">
+    <SectionHeading id="skills-heading" title="خدمات تدفع نموك" centered />
+    <div class="skills-deck">
+      {skills.map((group, index) => <article class={`skill-card skill-card--${index + 1}`} data-reveal>
+      <h3>{group.title}</h3>
+      <ul dir={group.direction === 'ltr' ? 'ltr' : 'rtl'}>{group.items.map(item => <li>{item}</li>)}</ul>
+    </article>)}
+  </div>
+  <CallToAction />
+</div>
+</section>

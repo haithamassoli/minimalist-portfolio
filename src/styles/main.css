@@ -1,0 +1,31 @@
+@import './fonts.css';
+
+@import './tokens.css';
+
+@import './global.css';
+
+@import './ui.css';
+
+@import './header.css';
+
+@import './sections/hero.css';
+
+@import './sections/projects.css';
+
+@import './sections/about.css';
+
+@import './sections/skills.css';
+
+@import './sections/services.css';
+
+@import './sections/testimonials.css';
+
+@import './sections/certifications.css';
+
+@import './sections/faq.css';
+
+@import './sections/articles.css';
+
+@import './footer.css';
+
+@import './motion.css';

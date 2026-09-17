@@ -1,0 +1,16 @@
+name: Validate
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # No lockfile is fabricated. After your first npm install, commit package-lock.json
+      # and replace npm install with npm ci for fully reproducible dependency resolution.
+      - run: npm install
+      - run: npm run validate
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e

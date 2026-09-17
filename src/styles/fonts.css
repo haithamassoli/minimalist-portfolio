@@ -1,0 +1,26 @@
+/* Original font references, not bundled font binaries. Replace with licensed
+   self-hosted URLs for production, or switch --font-body in tokens.css. */
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/zvtIX3lfoEatRXmuaEhn4EhOESo.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/WrV7fIGa1u2iMigz3mcvfnsyM.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/0SzM07uZ5RKGQlPCh6YyxMpGsaM.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}

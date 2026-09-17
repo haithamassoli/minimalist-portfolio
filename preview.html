@@ -1,0 +1,2417 @@
+<!-- Standalone convenience preview. Native Astro source is in src/. Requires internet for remote images/fonts. -->
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f7"><title>Home | الرئيسية</title><meta name="description" content="معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك."><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="https://example.com/"><link rel="icon" href="https://framerusercontent.com/images/k0cCifxqNYOPVH771zx1Tc0o.png" media="(prefers-color-scheme: light)"><link rel="icon" href="https://framerusercontent.com/images/VKtY3zUE6vgynd8drPYsZJOblgc.png" media="(prefers-color-scheme: dark)"><link rel="preconnect" href="https://framerusercontent.com" crossorigin="anonymous"><meta property="og:type" content="website"><meta property="og:locale" content="ar_SA"><meta property="og:title" content="Home | الرئيسية"><meta property="og:description" content="معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك."><meta property="og:url" content="https://example.com/"><meta property="og:image" content="https://framerusercontent.com/assets/NeyGbZ0qWoRptvkeBeaNYDDcW4.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Home | الرئيسية"><meta name="twitter:description" content="معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك."><meta name="twitter:image" content="https://framerusercontent.com/assets/NeyGbZ0qWoRptvkeBeaNYDDcW4.jpg"><style>/* Original font references, not bundled font binaries. Replace with licensed
+   self-hosted URLs for production, or switch --font-body in tokens.css. */
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/zvtIX3lfoEatRXmuaEhn4EhOESo.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/WrV7fIGa1u2iMigz3mcvfnsyM.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://framerusercontent.com/assets/0SzM07uZ5RKGQlPCh6YyxMpGsaM.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+:root {
+  color-scheme: light;
+  --font-body: 'Thmanyah', 'Tahoma', 'Arial', sans-serif;
+  --color-page: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-body: #545454;
+  --color-muted: #737373;
+  --color-border: #dedede;
+  --color-blue: #1b5fff;
+  --color-green: #11b77a;
+  --color-orange: #fe7617;
+  --content-width: 1080px;
+  --gutter: 44px;
+  --section-space: 128px;
+  --section-gap: 64px;
+  --radius-card: 20px;
+  --shadow-card: 0 1px 1px #0000000d, 0 5px 12px -6px #00000012, 0 16px 24px -20px #00000024;
+  --shadow-button: 0 6px 12px #1a1a1a14, inset 0 4px 6px #ffffff59;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+}
+
+@media (max-width: 809px) {
+  :root {
+    --gutter: 22px;
+    --section-space: 48px;
+    --section-gap: 48px;
+  }
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, p, figure, blockquote {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  font-feature-settings: 'ss01' 1;
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button, a, input, textarea, summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: progress;
+  opacity: .65;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img, svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 5px;
+}
+
+::selection {
+  background: #1b5fff25;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+  scroll-margin-top: 24px;
+}
+
+.section--bordered {
+  border-top: 1px solid var(--color-border);
+}
+
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+.page-rails {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 50%;
+  transform: translateX(50%);
+  width: min(75%, var(--content-width));
+  border-inline: 1px solid var(--color-border);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* The body must contain the full-height decorative rail, not only the viewport. */
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-body);
+  transition: color .2s;
+}
+
+.text-link:hover {
+  color: var(--color-blue);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--color-ink);
+  color: white;
+  z-index: 100;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.scroll-fade {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(transparent, #f7f7f794);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.listing-page {
+  padding-top: 160px;
+  min-height: 65vh;
+}
+
+.listing-heading {
+  display: grid;
+  gap: 24px;
+  text-align: center;
+  justify-items: center;
+}
+
+.listing-heading h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.4;
+}
+
+.not-found {
+  min-height: 75vh;
+  padding-top: 180px;
+  display: grid;
+  gap: 32px;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.not-found > p {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .page-rails {
+    width: min(100%, var(--content-width));
+  }
+}
+
+@media (max-width: 1199px) {
+  .page-rails {
+    width: 95%;
+  }
+}
+
+@media (max-width: 809px) {
+  .listing-page {
+    padding-top: 128px;
+  }
+  .scroll-fade {
+    height: 30px;
+  }
+}
+
+
+.icon {
+  flex-shrink: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 68px;
+  padding: 22px 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  box-shadow: var(--shadow-button);
+  transition: transform .3s var(--ease-out), box-shadow .3s, background .3s;
+}
+
+.button--primary {
+  background: var(--color-ink);
+  color: #fff;
+  border-color: #828282;
+  box-shadow: 0 12px 12px #1a1a1a26, inset 0 4px 6px #ffffff59;
+}
+
+.button--secondary {
+  background: linear-gradient(#fff, #f4f4f4);
+  color: var(--color-ink);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px #1a1a1a20, inset 0 3px 5px #ffffff40;
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button .icon {
+  transition: transform .3s var(--ease-out);
+}
+
+.button:hover .icon {
+  transform: translate(-2px, -2px);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  width: 100%;
+}
+
+.section-heading--centered {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 56px;
+  line-height: 1.5;
+}
+
+.section-action {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  border-radius: 32px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 16px 20px #1a1a1a0d;
+}
+
+.cta-panel h3 {
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.social-proof {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.social-proof__avatars {
+  display: flex;
+  direction: rtl;
+  padding-inline-end: 10px;
+}
+
+.social-proof__avatars img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  outline: 2px solid var(--color-page);
+  margin-inline-end: -10px;
+  background: #e9e9e9;
+}
+
+.social-proof__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.social-proof__stars {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .section-title {
+    font-size: 52px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .section-title {
+    font-size: 44px;
+  }
+  .cta-panel h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 809px) {
+  .section-title {
+    font-size: 36px;
+  }
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .section-heading--centered {
+    align-items: center;
+  }
+  .cta-panel {
+    flex-direction: column;
+    padding: 28px 22px;
+    text-align: center;
+    gap: 28px;
+  }
+  .cta-panel h3 {
+    font-size: 28px;
+  }
+  .cta-panel .button-row, .cta-panel .button {
+    width: 100%;
+  }
+  .cta-panel .button-row {
+    flex-direction: column;
+  }
+  .button {
+    min-height: 60px;
+    padding-block: 18px;
+  }
+}
+
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 88px), 994px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: ltr;
+  pointer-events: none;
+}
+
+.site-header > * {
+  pointer-events: auto;
+}
+
+.menu-toggle, .menu-close {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--color-border);
+  background: #ffffffdc;
+  backdrop-filter: blur(16px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: var(--shadow-card);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--color-ink);
+  transition: width .2s;
+}
+
+.menu-toggle:hover span:nth-child(2) {
+  width: 10px;
+}
+
+.identity-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: #ffffffeb;
+  backdrop-filter: blur(16px);
+  padding: 5px 7px 5px 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.identity-pill__mail {
+  padding: 10px;
+}
+
+.identity-pill__profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.identity-pill__profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e5e5e5;
+}
+
+.identity-pill__copy {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.identity-pill__copy strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.identity-pill__copy > span {
+  color: var(--color-muted);
+}
+
+.site-menu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding: 104px 32px 64px;
+  background: var(--color-page);
+  color: var(--color-ink);
+  overscroll-behavior: contain;
+}
+
+.site-menu[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  animation: menu-enter .3s var(--ease-out);
+}
+
+.site-menu::backdrop {
+  background: var(--color-page);
+}
+
+.site-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.site-menu nav a {
+  font-size: clamp(30px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.45;
+  transition: color .2s, transform .2s;
+}
+
+.site-menu nav a:hover {
+  color: var(--color-muted);
+  transform: translateX(-5px);
+}
+
+.site-menu__email {
+  color: var(--color-muted);
+  direction: ltr;
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  left: max(22px, calc((100vw - 994px) / 2));
+}
+
+html.menu-is-open {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+.no-js-nav {
+  position: relative;
+  padding: 100px 22px 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+@keyframes menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1199px) {
+  .site-header {
+    width: 89%;
+  }
+}
+
+@media (max-width: 480px) {
+  .identity-pill {
+    gap: 2px;
+    padding-inline-start: 5px;
+  }
+}
+
+@media (max-height: 620px) {
+  .site-menu[open] {
+    justify-content: flex-start;
+  }
+  .site-menu nav {
+    gap: 4px;
+  }
+  .site-menu nav a {
+    font-size: 30px;
+  }
+}
+
+
+.hero {
+  position: relative;
+  padding-top: 144px;
+  isolation: isolate;
+}
+
+.hero__dots {
+  position: absolute;
+  inset: 0 0 125px;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle, #a4a4a448 1.35px, transparent 1.8px) center top / 28px 28px;
+  mask-image: radial-gradient(ellipse 72% 82% at 50% 25%, #000 15%, transparent 88%);
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.hero__title {
+  font-size: 128px;
+  line-height: 1.4;
+  margin: 0 0 40px;
+}
+
+.hero__description {
+  max-width: 800px;
+  font-size: 22px;
+  line-height: 1.7;
+  color: var(--color-muted);
+  text-wrap: balance;
+}
+
+.hero__actions {
+  margin-top: 60px;
+}
+
+.client-strip {
+  border-block: 1px solid var(--color-border);
+  padding-block: 32px;
+  background: var(--color-page);
+}
+
+.client-strip__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.client-strip__label {
+  flex: none;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.client-strip__window {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  direction: ltr;
+}
+
+.client-strip__track {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 26s linear infinite;
+}
+
+.client-strip__logos {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-inline-end: 48px;
+}
+
+.client-strip__logos li {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.client-strip__logos img {
+  width: 100%;
+  height: 44px;
+  object-fit: contain;
+}
+
+.client-strip__window:hover .client-strip__track, .client-strip__window:focus-within .client-strip__track {
+  animation-play-state: paused;
+}
+
+@keyframes logo-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .hero__title {
+    font-size: 112px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .hero__title {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+  .hero__description {
+    font-size: 18px;
+  }
+  .hero__actions {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 809px) {
+  .hero {
+    padding-top: 128px;
+  }
+  .hero__inner {
+    padding-bottom: 64px;
+    max-width: 440px;
+  }
+  .hero__title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+  .hero__description {
+    font-size: 16px;
+  }
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 48px;
+    padding-inline: 12px;
+  }
+  .hero__actions .button {
+    width: 100%;
+  }
+  .client-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+  .client-strip__window {
+    width: 100%;
+    flex: none;
+  }
+  .client-strip__label {
+    font-size: 20px;
+  }
+  .client-strip__logos {
+    gap: 32px;
+    padding-inline-end: 32px;
+  }
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  direction: ltr;
+}
+
+.project-card {
+  min-width: 0;
+  direction: rtl;
+  border-radius: var(--radius-card);
+}
+
+.project-card > a {
+  position: relative;
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #d2d1cf;
+  isolation: isolate;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s var(--ease-out);
+}
+
+.project-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, #000c);
+  pointer-events: none;
+}
+
+.project-card__caption {
+  position: absolute;
+  bottom: 20px;
+  inset-inline: 20px;
+  color: #fff;
+}
+
+.project-card__caption h3 {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.project-card__caption p {
+  color: #f1f1f1;
+  font-size: 16px;
+}
+
+.project-card__open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ffffff60;
+  background: #1a1a1a55;
+  backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 14px 18px;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .3s, transform .3s var(--ease-out);
+}
+
+.project-card > a:hover .project-card__image, .project-card > a:focus-visible .project-card__image {
+  transform: scale(1.045);
+}
+
+.project-card > a:hover .project-card__open, .project-card > a:focus-visible .project-card__open {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .project-card > a {
+    height: 350px;
+  }
+  .projects-grid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 809px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .project-card > a {
+    height: auto;
+    aspect-ratio: 1.12;
+  }
+  .project-card__caption h3 {
+    font-size: 23px;
+  }
+  .project-card__caption p {
+    font-size: 14px;
+  }
+  .project-card__open {
+    top: 18px;
+    left: 18px;
+    transform: none;
+    opacity: 1;
+    padding: 10px;
+  }
+  .project-card__open span {
+    display: none;
+  }
+  .project-card > a:hover .project-card__open, .project-card > a:focus-visible .project-card__open {
+    transform: none;
+  }
+}
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 64px;
+  direction: ltr;
+}
+
+.about-copy, .about-sidebar {
+  direction: rtl;
+  min-width: 0;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.about-copy > p {
+  font-size: 22px;
+  line-height: 1.85;
+  color: var(--color-body);
+}
+
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.profile-card {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-card__image {
+  position: relative;
+  aspect-ratio: .824445;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e6e4e0;
+}
+
+.profile-card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__follow {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #ffffffea;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  font-size: 14px;
+}
+
+.profile-card h3 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.profile-card figcaption p {
+  font-size: 18px;
+  color: var(--color-muted);
+}
+
+.experience {
+  display: grid;
+  gap: 16px;
+}
+
+.experience > h3 {
+  font-size: 26px;
+}
+
+.experience ol {
+  display: grid;
+  gap: 12px;
+}
+
+.experience-card {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 22px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.experience-card > span {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.experience-card > h4 {
+  font-size: 18px;
+  margin-block: 10px 3px;
+}
+
+.experience-card > p {
+  font-size: 14px;
+  color: var(--color-body);
+}
+
+.experience > .text-link {
+  justify-self: center;
+  font-size: 14px;
+}
+
+.tool-orbit {
+  width: 100%;
+  aspect-ratio: 1.1;
+  position: relative;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.tool-orbit__ring {
+  position: absolute;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tool-orbit__ring--outer {
+  width: 87%;
+  aspect-ratio: 1;
+  border-style: dashed;
+}
+
+.tool-orbit__ring--inner {
+  width: 54%;
+  aspect-ratio: 1;
+}
+
+.tool-orbit__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: #fff;
+  font-size: 31px;
+  font-weight: 700;
+  box-shadow: var(--shadow-card);
+}
+
+.tool-orbit__app {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #fff;
+  border: 1px solid #dedede;
+  box-shadow: 0 8px 16px #00000009;
+  animation: tool-float 5s ease-in-out infinite alternate;
+}
+
+.tool-orbit__app img {
+  object-fit: contain;
+}
+
+.tool-orbit__app--1 {
+  top: 12%;
+  left: 45%;
+  background: #1a1a1a;
+}
+
+.tool-orbit__app--2 {
+  top: 28%;
+  right: 5%;
+  animation-delay: -2s;
+}
+
+.tool-orbit__app--3 {
+  bottom: 17%;
+  right: 14%;
+  animation-delay: -3s;
+}
+
+.tool-orbit__app--4 {
+  top: 26%;
+  left: 7%;
+  animation-delay: -1s;
+}
+
+.tool-orbit__app--5 {
+  bottom: 12%;
+  left: 30%;
+  animation-delay: -4s;
+}
+
+.tool-orbit__app--6 {
+  bottom: 31%;
+  left: 6%;
+  animation-delay: -2s;
+}
+
+.tool-orbit__app--7 {
+  top: 34%;
+  left: 34%;
+  width: 49px;
+  height: 49px;
+  animation-delay: -3s;
+}
+
+.tool-orbit__app--8 {
+  top: 56%;
+  left: 60%;
+  width: 49px;
+  height: 49px;
+  animation-delay: -1s;
+}
+
+@keyframes tool-float {
+  to {
+    transform: translateY(-9px) rotate(4deg);
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+  }
+  .about-copy > p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 809px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .about-copy {
+    gap: 28px;
+  }
+  .about-copy > p {
+    font-size: 18px;
+  }
+  .about-sidebar {
+    gap: 32px;
+  }
+  .profile-card__image {
+    aspect-ratio: .905759;
+  }
+  .tool-orbit {
+    max-width: 470px;
+    align-self: center;
+  }
+}
+
+
+.skills-section {
+  padding-block: 90px;
+}
+
+.skills-deck {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  direction: ltr;
+  padding-block: 20px;
+}
+
+.skill-card {
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 16px 20px #1a1a1a0d;
+  overflow: hidden;
+  background: #fff;
+  direction: rtl;
+  position: relative;
+  transition: translate .3s var(--ease-out);
+}
+
+.skill-card:hover {
+  translate: 0 -8px;
+  z-index: 4;
+}
+
+.skill-card--1 {
+  rotate: -4deg;
+  z-index: 3;
+}
+
+.skill-card--2 {
+  rotate: 3deg;
+  z-index: 2;
+}
+
+.skill-card--3 {
+  rotate: -4deg;
+  z-index: 1;
+}
+
+.skill-card h3 {
+  padding: 18px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  box-shadow: inset 0 4px 6px #ffffff59;
+}
+
+.skill-card--1 h3 {
+  background: var(--color-green);
+}
+
+.skill-card--2 h3 {
+  background: var(--color-blue);
+  color: #fff;
+}
+
+.skill-card--3 h3 {
+  background: var(--color-orange);
+}
+
+.skill-card li {
+  padding: 17px 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 18px;
+  color: var(--color-body);
+}
+
+@media (max-width: 1199px) {
+  .skill-card li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 809px) {
+  .skills-section {
+    padding-block: 48px;
+  }
+  .skills-deck {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 10px 8px;
+  }
+  .skill-card--1 {
+    order: 2;
+    rotate: -2deg;
+  }
+  .skill-card--2 {
+    order: 1;
+    rotate: 2deg;
+  }
+  .skill-card--3 {
+    order: 0;
+    rotate: -2deg;
+  }
+  .skill-card li {
+    padding-block: 14px;
+  }
+}
+
+
+.services-list {
+  display: grid;
+  gap: 64px;
+}
+
+.service-group {
+  display: grid;
+  gap: 32px;
+}
+
+.service-group h3 {
+  font-size: 26px;
+  padding-inline: 16px;
+}
+
+.service-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.service-group li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 22px 28px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 10px 12px #1a1a1a0d;
+  transition: transform .25s var(--ease-out), border-color .25s;
+}
+
+.service-group li:hover {
+  transform: translateY(-4px) rotate(-1deg);
+  border-color: #aaa;
+}
+
+.service-group .icon {
+  color: var(--color-muted);
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .service-group li {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 809px) {
+  .services-list {
+    gap: 40px;
+  }
+  .service-group {
+    gap: 24px;
+  }
+  .service-group h3 {
+    font-size: 20px;
+    padding: 0;
+  }
+  .service-group ul {
+    gap: 10px;
+  }
+  .service-group li {
+    font-size: 17px;
+    padding: 15px 18px;
+    gap: 9px;
+  }
+  .service-group .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+
+.testimonials-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  direction: ltr;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  direction: rtl;
+}
+
+.testimonial-card blockquote {
+  color: var(--color-body);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.testimonial-card figcaption {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.testimonial-card figcaption img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+  flex-shrink: 0;
+}
+
+.testimonial-card figcaption div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.testimonial-card figcaption strong {
+  font-size: 14px;
+}
+
+.testimonial-card figcaption span {
+  font-size: 12px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 809px) {
+  .testimonials-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .testimonials-grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 6px 4px 22px;
+    direction: rtl;
+    scrollbar-width: thin;
+  }
+  .testimonial-card {
+    width: min(95%, 315px);
+    flex: none;
+    scroll-snap-align: start;
+  }
+}
+
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  direction: ltr;
+}
+
+.certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+  padding: 32px 24px;
+  border: 1px solid var(--color-border);
+  border-top: 6px solid #184768;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  direction: rtl;
+  transition: transform .3s var(--ease-out);
+}
+
+.certificate-card--2 {
+  border-top-color: #ea4638;
+}
+
+.certificate-card--3 {
+  border-top-color: #1e78b8;
+}
+
+.certificate-card--4 {
+  border-top-color: #fda356;
+}
+
+.certificate-card--5 {
+  border-top-color: #3929a8;
+}
+
+.certificate-card--6 {
+  border-top-color: #204156;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+}
+
+.certificate-card__date {
+  font-size: 14px;
+  color: var(--color-body);
+}
+
+.certificate-card img {
+  width: auto;
+  max-width: 100%;
+  height: 40px;
+  object-fit: contain;
+}
+
+.certificate-card h3 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 809px) {
+  .certificates-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .certificate-card {
+    gap: 42px;
+  }
+}
+
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.faq-content {
+  display: grid;
+  gap: 64px;
+  min-width: 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  content: '';
+}
+
+.faq-item__number {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.faq-item__toggle {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  margin-inline-start: auto;
+}
+
+.faq-item__toggle svg {
+  transition: rotate .25s var(--ease-out);
+}
+
+.faq-item[open] .faq-item__toggle svg {
+  rotate: 45deg;
+}
+
+.faq-item__answer {
+  padding: 0 24px 24px;
+  color: var(--color-body);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.consultation-card {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.consultation-card > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+
+.consultation-card h3 {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.consultation-card > p {
+  color: var(--color-body);
+}
+
+.consultation-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.consultation-card .button {
+  padding: 18px 24px;
+  min-height: 56px;
+}
+
+.cal-wordmark {
+  font: 700 17px Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 1199px) {
+  .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consultation-card {
+    position: static;
+    justify-items: center;
+    text-align: center;
+  }
+  .consultation-card > p {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 809px) {
+  .faq-content {
+    gap: 48px;
+  }
+  .faq-item summary {
+    padding: 20px 16px;
+    gap: 9px;
+    font-size: 16px;
+  }
+  .faq-item__answer {
+    padding: 0 16px 22px;
+    font-size: 15px;
+  }
+  .consultation-card {
+    padding: 28px 20px;
+  }
+  .consultation-card h3 {
+    font-size: 28px;
+  }
+}
+
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.article-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  min-width: 0;
+}
+
+.article-card > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article-card__image {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: #e7e4df;
+}
+
+.article-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease-out);
+}
+
+.article-card a:hover img {
+  transform: scale(1.04);
+}
+
+.article-card__content {
+  display: grid;
+  gap: 18px;
+  padding: 32px;
+}
+
+.article-card h3 {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.article-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  font-size: 13px;
+  color: var(--color-body);
+}
+
+.article-card__meta time {
+  color: var(--color-muted);
+}
+
+.article-card__content > p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-body);
+}
+
+.article-card--featured {
+  grid-column: 1/-1;
+}
+
+.article-card--featured > a {
+  flex-direction: row;
+  min-height: 450px;
+}
+
+.article-card--featured .article-card__image {
+  width: 50%;
+  flex: none;
+  aspect-ratio: auto;
+}
+
+.article-card--featured .article-card__content {
+  flex: 1;
+  min-width: 0;
+  align-content: center;
+  gap: 24px;
+}
+
+.article-card--featured h3 {
+  font-size: 30px;
+}
+
+@media (max-width: 809px) {
+  .articles-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .article-card--featured > a {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .article-card--featured .article-card__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .article-card__content, .article-card--featured .article-card__content {
+    padding: 24px;
+    gap: 16px;
+  }
+  .article-card h3, .article-card--featured h3 {
+    font-size: 23px;
+  }
+  .article-card__content > p {
+    font-size: 16px;
+  }
+}
+
+
+.site-footer {
+  position: relative;
+  z-index: 2;
+  padding-block: 64px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.footer-info, .contact-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px 28px;
+  min-height: 540px;
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  background: var(--color-ink);
+  color: #fff;
+  box-shadow: 0 16px 20px #1a1a1a26, inset 0 4px 6px #ffffff59;
+}
+
+.footer-info {
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.footer-info nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-info nav a {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color .2s;
+}
+
+.footer-info nav a:hover {
+  color: #b8b8b8;
+}
+
+.footer-info__contact {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+
+.email-pill {
+  border: 1px solid var(--color-border);
+  background: linear-gradient(#fff, #f4f4f4);
+  color: var(--color-ink);
+  padding: 21px 27px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-button);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+.copy-email {
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #b8b8b8;
+  padding: 0;
+  font-size: 12px;
+}
+
+.copy-email:hover {
+  color: #fff;
+}
+
+.contact-panel {
+  gap: 28px;
+}
+
+.contact-panel h3 {
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input, .contact-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #ebebeb33;
+  border-radius: 20px;
+  background: #bbbbbb26;
+  padding: 23px 26px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  text-align: right;
+  transition: border-color .2s;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #b8b8b8;
+  opacity: 1;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form__trap {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.contact-form__submit {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.contact-form__note {
+  font-size: 11px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+
+.contact-form__status:empty {
+  display: none;
+}
+
+.contact-form__status {
+  font-size: 13px;
+  color: #fff;
+  padding: 10px 12px;
+  border: 1px solid #ffffff40;
+  border-radius: 12px;
+  background: #ffffff0d;
+}
+
+.contact-form__status[data-state='error'] {
+  border-color: #ffa590;
+  color: #ffd4c8;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  box-shadow: inset 0 4px 6px #ffffff59;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+
+.footer-bottom p a {
+  color: #fff;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .footer-info {
+    min-height: auto;
+    gap: 60px;
+  }
+  .footer-info__contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 809px) {
+  .site-footer {
+    padding-block: 44px;
+  }
+  .footer-info, .contact-panel {
+    padding: 32px 22px;
+    min-height: auto;
+  }
+  .contact-panel h3 {
+    font-size: 30px;
+  }
+  .footer-info nav a {
+    font-size: 28px;
+  }
+  .footer-info__contact {
+    display: grid;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 21px 20px;
+    font-size: 16px;
+  }
+  .footer-bottom {
+    padding: 24px 22px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+
+/* Content is visible by default. JS only animates elements on entry, so a
+   blocked or failed script can never leave the page permanently invisible. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__title {
+    animation: hero-arrive .8s var(--ease-out) both;
+  }
+  .hero__description {
+    animation: hero-arrive .8s .1s var(--ease-out) both;
+  }
+  .hero__actions {
+    animation: hero-arrive .8s .2s var(--ease-out) both;
+  }
+  [data-reveal].is-entering {
+    animation: section-arrive .65s var(--ease-out);
+  }
+}
+
+@keyframes hero-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes section-arrive {
+  from {
+    opacity: .25;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .site-header, .site-menu, .scroll-fade, .page-rails, .skip-link {
+    display: none !important;
+  }
+  .hero {
+    padding-top: 20px;
+  }
+  .section {
+    padding-block: 32px;
+  }
+  .client-strip__track {
+    animation: none;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+  }
+  .testimonial-card, .certificate-card, .project-card {
+    break-inside: avoid;
+  }
+}
+
+</style></head><body id="top"><a href="#main-content" class="skip-link">انتقل إلى المحتوى</a><div class="page-rails" aria-hidden="true"></div><header class="site-header"><button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="site-menu" aria-expanded="false" data-menu-open="true"><span></span><span></span><span></span></button><div class="identity-pill"><a class="identity-pill__mail" href="#contact-form" aria-label="تواصل معي"><svg class="icon " width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4zM4 6l8 7 8-7"></path></svg></a><a class="identity-pill__profile" href="#top" aria-label="رِزق — الصفحة الرئيسية"><span class="identity-pill__copy"><strong>رِزق</strong><span>مصمم منتجات</span></span><img class="" src="https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg" width="500" height="500" alt="" loading="eager" decoding="async"></a></div></header><dialog id="site-menu" class="site-menu" aria-labelledby="menu-heading"><button class="menu-close" type="button" aria-label="إغلاق القائمة" data-menu-close="true"><svg class="icon " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"></path></svg></button><h2 id="menu-heading" class="sr-only">القائمة الرئيسية</h2><nav aria-label="القائمة الرئيسية"><a href="#about">عني</a><a href="#projects">المشاريع</a><a href="#services">الخدمات</a><a href="#blog">المدونة</a><a href="#faq">الأسئلة الشائعة</a></nav><a class="site-menu__email" href="mailto:info@abdulrzaq.com">info@abdulrzaq.com</a></dialog><noscript><nav class="no-js-nav" aria-label="روابط الموقع"><a href="#about">عني</a><a href="#projects">المشاريع</a><a href="#services">الخدمات</a><a href="#blog">المدونة</a><a href="#faq">الأسئلة الشائعة</a></nav></noscript><main id="main-content" tabindex="-1"><section class="hero" id="hero" aria-labelledby="hero-title"><div class="hero__dots" aria-hidden="true"></div><div class="container hero__inner"><h1 id="hero-title" class="hero__title">رِزق</h1><p class="hero__description">مصمم واجهات وتجربة مستخدم، أساعد الشركات والمنتجات الناشئة على تحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام.</p><div class="button-row hero__actions"><a class="button button--primary " href="#contact-form"><span>ابدأ مشروعك</span></a><a class="button button--secondary " href="#projects"><span>شاهد أعمالي</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg></a></div></div><div class="client-strip" aria-label="العملاء"><div class="container client-strip__inner"><a class="social-proof" href="#testimonials" aria-label="اقرأ آراء العملاء"><div class="social-proof__avatars" aria-hidden="true"><img class="" src="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"></div><div class="social-proof__text"><span class="social-proof__stars" aria-label="تقييم خمس نجوم">★★★★★</span><span>+99 عميل سعيد</span></div></a><div class="client-strip__window"><div class="client-strip__track"><ul class="client-strip__logos"><li><img class="" src="https://framerusercontent.com/images/FbBTDr8JqdTFgkyCUR4rbkhw9k.png" width="400" height="108" alt="شعار عميل 1" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/5GEw6piP2ffZdrKkBHPSWHfZHg.png" width="232" height="124" alt="شعار عميل 2" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/rPDQuslVxzEdY3kXo3k1iL8AlI.png" width="360" height="144" alt="شعار عميل 3" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/cPgZ7tvNf4dBXrK1WhaFohfB2RQ.png" width="360" height="116" alt="شعار عميل 4" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/3hgavCV25l0ZiAWsQIOE0wExolc.png" width="328" height="120" alt="شعار عميل 5" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/OBGSM5CGpScJmZUM0ZA8zhjucpM.png" width="356" height="136" alt="شعار عميل 6" loading="lazy" decoding="async"></li></ul><ul class="client-strip__logos" aria-hidden="true"><li><img class="" src="https://framerusercontent.com/images/FbBTDr8JqdTFgkyCUR4rbkhw9k.png" width="400" height="108" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/5GEw6piP2ffZdrKkBHPSWHfZHg.png" width="232" height="124" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/rPDQuslVxzEdY3kXo3k1iL8AlI.png" width="360" height="144" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/cPgZ7tvNf4dBXrK1WhaFohfB2RQ.png" width="360" height="116" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/3hgavCV25l0ZiAWsQIOE0wExolc.png" width="328" height="120" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/OBGSM5CGpScJmZUM0ZA8zhjucpM.png" width="356" height="136" alt="" loading="lazy" decoding="async"></li></ul></div></div></div></div></section><section class="section projects-section" id="projects" aria-labelledby="projects-heading"><div class="container section-stack"><div class="section-heading section-heading--centered" data-reveal="true"><h2 id="projects-heading" class="section-title"><span class="text-muted">ألقِ نظرة<br></span>على أعمالي</h2></div><div class="projects-grid"><article class="project-card" data-reveal="true"><a href="https://rzgfolio.framer.ai/projects/mihad-mobility" target="_blank" rel="noopener noreferrer" aria-label="مِهاد — استعرض المشروع (نافذة جديدة)"><img class="project-card__image" src="https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png?width=902&amp;height=1200" srcset="https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png?width=902&amp;height=1200&amp;scale-down-to=512 385w, https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png?width=902&amp;height=1200&amp;scale-down-to=1024 770w, https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png?width=902&amp;height=1200 902w" sizes="(max-width: 809px) calc(100vw - 44px), (max-width: 1080px) calc((100vw - 106px) / 2), 487px" width="902" height="1200" alt="مِهاد — استراتيجية علامة وتجربة رقمية" loading="lazy" decoding="async"><div class="project-card__shade"></div><div class="project-card__caption"><h3>مِهاد</h3><p>استراتيجية علامة وتجربة رقمية</p></div><span class="project-card__open"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span>استعرض الموقع</span></span></a></article><article class="project-card" data-reveal="true"><a href="https://rzgfolio.framer.ai/projects/nabd-digital-health" target="_blank" rel="noopener noreferrer" aria-label="نبض — استعرض المشروع (نافذة جديدة)"><img class="project-card__image" src="https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png?width=904&amp;height=1200" srcset="https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png?width=904&amp;height=1200&amp;scale-down-to=512 386w, https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png?width=904&amp;height=1200&amp;scale-down-to=1024 771w, https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png?width=904&amp;height=1200 904w" sizes="(max-width: 809px) calc(100vw - 44px), (max-width: 1080px) calc((100vw - 106px) / 2), 487px" width="904" height="1200" alt="نبض — تصميم منتج وتجربة مستخدم" loading="lazy" decoding="async"><div class="project-card__shade"></div><div class="project-card__caption"><h3>نبض</h3><p>تصميم منتج وتجربة مستخدم</p></div><span class="project-card__open"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span>استعرض الموقع</span></span></a></article><article class="project-card" data-reveal="true"><a href="https://rzgfolio.framer.ai/projects/zin-wearable" target="_blank" rel="noopener noreferrer" aria-label="زِن — استعرض المشروع (نافذة جديدة)"><img class="project-card__image" src="https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png?width=992&amp;height=1200" srcset="https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png?width=992&amp;height=1200&amp;scale-down-to=512 423w, https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png?width=992&amp;height=1200&amp;scale-down-to=1024 847w, https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png?width=992&amp;height=1200 992w" sizes="(max-width: 809px) calc(100vw - 44px), (max-width: 1080px) calc((100vw - 106px) / 2), 487px" width="992" height="1200" alt="زِن — تجربة لياقة وأجهزة ذكية" loading="lazy" decoding="async"><div class="project-card__shade"></div><div class="project-card__caption"><h3>زِن</h3><p>تجربة لياقة وأجهزة ذكية</p></div><span class="project-card__open"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span>استعرض الموقع</span></span></a></article><article class="project-card" data-reveal="true"><a href="https://rzgfolio.framer.ai/projects/volt-product-launch" target="_blank" rel="noopener noreferrer" aria-label="فولت — استعرض المشروع (نافذة جديدة)"><img class="project-card__image" src="https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png?width=1200&amp;height=1200" srcset="https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png?width=1200&amp;height=1200&amp;scale-down-to=512 512w, https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png?width=1200&amp;height=1200&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png?width=1200&amp;height=1200 1200w" sizes="(max-width: 809px) calc(100vw - 44px), (max-width: 1080px) calc((100vw - 106px) / 2), 487px" width="1200" height="1200" alt="فولت — تصميم ويب وتوجيه إبداعي" loading="lazy" decoding="async"><div class="project-card__shade"></div><div class="project-card__caption"><h3>فولت</h3><p>تصميم ويب وتوجيه إبداعي</p></div><span class="project-card__open"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span>استعرض الموقع</span></span></a></article></div><div class="section-action"><a class="button button--secondary " href="#projects"><span>رؤية جميع المشاريع</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg></a></div></div></section><section class="section about-section section--bordered" id="about" aria-labelledby="about-heading"><div class="container section-stack"><div class="section-heading section-heading--centered" data-reveal="true"><h2 id="about-heading" class="section-title"><span class="text-muted">أصمّم تجارب<br></span>تحل مشكلات حقيقية.</h2></div><div class="about-grid"><div class="about-copy"><p data-reveal="true">أحب أحوّل الأفكار إلى تجارب حقيقية من خلال التصميم. بدأت رحلتي من فضول بسيط تجاه طريقة عمل المنتجات الرقمية، وتحول هذا الفضول مع الوقت إلى مسار مهني أصمّم فيه حلولًا تجمع بين الجمال، الوضوح، وسهولة الاستخدام.</p><p data-reveal="true">أركّز على تصميم واجهات تخدم هدفًا حقيقيًا، مو مجرد شاشات جميلة. سواء كنت أعمل على تطبيق أو موقع إلكتروني، هدفي دائمًا أن تكون التجربة طبيعية، واضحة، وتساعد المستخدم يوصل للي يحتاجه بأقل مجهود ممكن.</p><p data-reveal="true">أهتم بالتفاصيل الصغيرة لأنها تصنع الفرق الكبير. وهذا الاهتمام يساعدني على تقديم عمل متقن، وفهم احتياجات كل مشروع، وبناء علاقة قوية مع العملاء قائمة على الثقة والحرص على نجاح المنتج.</p><div class="tool-orbit" aria-hidden="true"><div class="tool-orbit__ring tool-orbit__ring--outer"></div><div class="tool-orbit__ring tool-orbit__ring--inner"></div><span class="tool-orbit__center">رِزق</span><span class="tool-orbit__app tool-orbit__app--1"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjMzNzI0Mjc3MDkiIHJvbGU9InByZXNlbnRhdGlvbiIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMTUuMzQyIDE0LjQzIEwgMTUuMzQyIDEwLjY2NCBDIDE1LjM0MiAxMC4zNDcgMTUuNDYxIDEwLjEwOSAxNS43MzggOS45NSBMIDIzLjMxIDUuNTkgQyAyNC4zNDEgNC45OTUgMjUuNTcgNC43MTggMjYuODM4IDQuNzE4IEMgMzEuNTk1IDQuNzE4IDM0LjYwOSA4LjQwNSAzNC42MDkgMTIuMzI5IEMgMzQuNjA5IDEyLjYwNiAzNC42MDkgMTIuOTI0IDM0LjU2OSAxMy4yNDEgTCAyNi43MTkgOC42NDIgQyAyNi4yNDQgOC4zNjUgMjUuNzY4IDguMzY1IDI1LjI5MiA4LjY0MiBaIE0gMzMuMDIzIDI5LjA5OCBMIDMzLjAyMyAyMC4wOTkgQyAzMy4wMjMgMTkuNTQ0IDMyLjc4NSAxOS4xNDcgMzIuMzA5IDE4Ljg3IEwgMjIuMzU5IDEzLjA4MiBMIDI1LjYwOSAxMS4yMTkgQyAyNS44ODcgMTEuMDYgMjYuMTI1IDExLjA2IDI2LjQwMiAxMS4yMTkgTCAzMy45NzQgMTUuNTc5IEMgMzYuMTU1IDE2Ljg0OCAzNy42MjEgMTkuNTQ0IDM3LjYyMSAyMi4xNiBDIDM3LjYyMSAyNS4xNzMgMzUuODM4IDI3Ljk0OCAzMy4wMjMgMjkuMDk4IFogTSAxMy4wMDMgMjEuMTcgTCA5Ljc1MiAxOS4yNjcgQyA5LjQ3NSAxOS4xMDggOS4zNTYgMTguODcgOS4zNTYgMTguNTUzIEwgOS4zNTYgOS44MzIgQyA5LjM1NiA1LjU5IDEyLjYwNiAyLjM3OSAxNy4wMDcgMi4zNzkgQyAxOC42NzIgMi4zNzkgMjAuMjE4IDIuOTM0IDIxLjUyNyAzLjkyNSBMIDEzLjcxNyA4LjQ0NCBDIDEzLjI0MSA4LjcyMiAxMy4wMDMgOS4xMTggMTMuMDAzIDkuNjczIEwgMTMuMDAzIDIxLjE3IFogTSAyMCAyNS4yMTMgTCAxNS4zNDIgMjIuNTk3IEwgMTUuMzQyIDE3LjA0NyBMIDIwIDE0LjQzIEwgMjQuNjU4IDE3LjA0NyBMIDI0LjY1OCAyMi41OTcgWiBNIDIyLjk5MyAzNy4yNjUgQyAyMS4zMjggMzcuMjY1IDE5Ljc4MiAzNi43MSAxOC40NzMgMzUuNzE5IEwgMjYuMjgzIDMxLjE5OSBDIDI2Ljc1OSAzMC45MjIgMjYuOTk3IDMwLjUyNSAyNi45OTcgMjkuOTcgTCAyNi45OTcgMTguNDc0IEwgMzAuMjg3IDIwLjM3NiBDIDMwLjU2NSAyMC41MzUgMzAuNjg0IDIwLjc3MyAzMC42ODQgMjEuMDkgTCAzMC42ODQgMjkuODExIEMgMzAuNjg0IDM0LjA1MyAyNy4zOTMgMzcuMjY0IDIyLjk5MyAzNy4yNjQgWiBNIDEzLjU5NyAyOC40MjQgTCA2LjAyNSAyNC4wNjQgQyAzLjg0NSAyMi43OTUgMi4zNzggMjAuMDk5IDIuMzc4IDE3LjQ4MyBDIDIuMzc4IDE0LjQzIDQuMjAyIDExLjY5NSA3LjAxNiAxMC41NDUgTCA3LjAxNiAxOS41ODQgQyA3LjAxNiAyMC4xMzkgNy4yNTQgMjAuNTM2IDcuNzMgMjAuODEzIEwgMTcuNjQxIDI2LjU2MSBMIDE0LjM5IDI4LjQyNCBDIDE0LjExMyAyOC41ODMgMTMuODc1IDI4LjU4MyAxMy41OTcgMjguNDI0IFogTSAxMy4xNjIgMzQuOTI2IEMgOC42ODIgMzQuOTI2IDUuMzkyIDMxLjU1NiA1LjM5MiAyNy4zOTQgQyA1LjM5MiAyNy4wNzYgNS40MzEgMjYuNzU5IDUuNDcxIDI2LjQ0MiBMIDEzLjI4IDMwLjk2MSBDIDEzLjc1NiAzMS4yMzkgMTQuMjMyIDMxLjIzOSAxNC43MDcgMzAuOTYxIEwgMjQuNjU4IDI1LjIxMyBMIDI0LjY1OCAyOC45OCBDIDI0LjY1OCAyOS4yOTcgMjQuNTM5IDI5LjUzNSAyNC4yNjEgMjkuNjkzIEwgMTYuNjkgMzQuMDU0IEMgMTUuNjU5IDM0LjY0OCAxNC40MyAzNC45MjYgMTMuMTYxIDM0LjkyNiBaIE0gMjIuOTkzIDM5LjY0MyBDIDI3Ljc5IDM5LjY0MyAzMS43OTQgMzYuMjM0IDMyLjcwNiAzMS43MTQgQyAzNy4xNDYgMzAuNTY1IDQwIDI2LjQwMiA0MCAyMi4xNiBDIDQwIDE5LjM4NSAzOC44MTEgMTYuNjkgMzYuNjcgMTQuNzQ3IEMgMzYuODY4IDEzLjkxNSAzNi45ODcgMTMuMDgyIDM2Ljk4NyAxMi4yNSBDIDM2Ljk4NyA2LjU4MSAzMi4zODkgMi4zMzkgMjcuMDc2IDIuMzM5IEMgMjYuMDA2IDIuMzM5IDI0Ljk3NSAyLjQ5NyAyMy45NDUgMi44NTQgQyAyMi4xNiAxLjExIDE5LjcwMyAwIDE3LjAwNyAwIEMgMTIuMjEgMCA4LjIwNiAzLjQwOSA3LjI5NCA3LjkyOSBDIDIuODU0IDkuMDc4IDAgMTMuMjQxIDAgMTcuNDgzIEMgMCAyMC4yNTggMS4xODkgMjIuOTUzIDMuMzMgMjQuODk2IEMgMy4xMzIgMjUuNzI4IDMuMDEzIDI2LjU2MSAzLjAxMyAyNy4zOTMgQyAzLjAxMyAzMy4wNjIgNy42MTEgMzcuMzA0IDEyLjkyNCAzNy4zMDQgQyAxMy45OTQgMzcuMzA0IDE1LjAyNSAzNy4xNDYgMTYuMDU1IDM2Ljc4OSBDIDE3LjgzOSAzOC41MzMgMjAuMjk3IDM5LjY0MyAyMi45OTMgMzkuNjQzIFoiIGZpbGw9InJnYigyNTUsIDI1NSwgMjU1KSIgaGVpZ2h0PSIzOS42NDMwMDMzMzA4NDk4MXB4IiBpZD0iRmNNMm1MODNMIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuMTY3KSIgd2lkdGg9IjQwcHgiLz48L3N2Zz4=" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--2"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjM3ODY5NTcwOSIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgNDAgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAwIDYuNjY3IEMgMCAyLjk4NSAyLjk4NSAwIDYuNjY3IDAgTCAxMy4zMzMgMCBMIDEzLjMzMyA2LjY2NyBDIDEzLjMzMyAxMC4zNDggMTAuMzQ5IDEzLjMzMyA2LjY2NyAxMy4zMzMgQyAyLjk4NSAxMy4zMzMgMCAxMC4zNDkgMCA2LjY2NyBaIiBmaWxsPSJyZ2IoMzYsIDIwMywgMTEzKSIgaGVpZ2h0PSIxMy4zMzMzMzMzMzMzMzMzMzJweCIgaWQ9InJQcUxFTG50TSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi42NjcgMjYuNjY3KSIgd2lkdGg9IjEzLjMzMzMzMzMzMzMzMzMzMnB4Ii8+PHBhdGggZD0iTSAwIDAgTCAwIDEzLjMzMyBMIDYuNjY3IDEzLjMzMyBDIDEwLjM0OSAxMy4zMzMgMTMuMzMzIDEwLjM0OSAxMy4zMzMgNi42NjcgQyAxMy4zMzMgMi45ODUgMTAuMzQ5IDAgNi42NjcgMCBaIiBmaWxsPSJyZ2IoMjU1LCAxMTQsIDU1KSIgaGVpZ2h0PSIxMy4zMzMzMzMzMzMzMzMzMzRweCIgaWQ9InZNTDNQYTE2eSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAgMCkiIHdpZHRoPSIxMy4zMzMzMzMzMzMzMzMzMzZweCIvPjxwYXRoIGQ9Ik0gNi42NjcgMTMuMzMzIEMgMTAuMzQ5IDEzLjMzMyAxMy4zMzMgMTAuMzQ4IDEzLjMzMyA2LjY2NyBDIDEzLjMzMyAyLjk4NSAxMC4zNDkgMCA2LjY2NyAwIEMgMi45ODUgMCAwIDIuOTg1IDAgNi42NjcgQyAwIDEwLjM0OCAyLjk4NSAxMy4zMzMgNi42NjcgMTMuMzMzIFoiIGZpbGw9InJnYigwLCAxODIsIDI1NSkiIGhlaWdodD0iMTMuMzMzMzMzMzMzMzMzMzM0cHgiIGlkPSJDZnJKelBsVUMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE5Ljk0NSAxMy4zMzMpIiB3aWR0aD0iMTMuMzMzMzMzMzMzMzMzMzM2cHgiLz48cGF0aCBkPSJNIDAgNi42NjcgQyAwIDEwLjM0OSAyLjk4NSAxMy4zMzMgNi42NjcgMTMuMzMzIEwgMTMuMzMzIDEzLjMzMyBMIDEzLjMzMyAwIEwgNi42NjcgMCBDIDIuOTg1IDAgMCAyLjk4NSAwIDYuNjY3IFoiIGZpbGw9InJnYigyNTUsIDU1LCA1NSkiIGhlaWdodD0iMTMuMzMzMzMzMzMzMzMzMzM0cHgiIGlkPSJha01qOUNQVTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuNjY3IDApIiB3aWR0aD0iMTMuMzMzMzMzMzMzMzMzMzMycHgiLz48cGF0aCBkPSJNIDAgNi42NjcgQyAwIDEwLjM0OCAyLjk4NSAxMy4zMzMgNi42NjcgMTMuMzMzIEwgMTMuMzMzIDEzLjMzMyBMIDEzLjMzMyAwIEwgNi42NjcgMCBDIDIuOTg1IDAgMCAyLjk4NSAwIDYuNjY3IFoiIGZpbGw9InJnYigxMzUsIDc5LCAyNTUpIiBoZWlnaHQ9IjEzLjMzMzMzMzMzMzMzMzMzNHB4IiBpZD0iZ1h5a3JUTnZhIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2LjY2NyAxMy4zMzMpIiB3aWR0aD0iMTMuMzMzMzMzMzMzMzMzMzMycHgiLz48L3N2Zz4=" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--3"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjQxMjY3MjU1ODMiIHJvbGU9InByZXNlbnRhdGlvbiIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0ibzVZSlhFZVFrLTQxMjY3MjU1ODMtbGluZWFyLWdyYWRpZW50IiB4MT0iMC40OTc1MTI0Mzc4MTA5NDUyMyIgeDI9IjAuNTAyNDg3NTYyMTg5MDU0OCIgeTE9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9InJnYigxLCAzOCwgODkpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoOSwgMTA0LCAyMTgpIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImNiUUlaeFB3RC00MTI2NzI1NTgzLWxpbmVhci1ncmFkaWVudCIgeDE9IjAuMzc3MDYyMDQ3MjE1NzQ1NCIgeDI9IjAuNjIyOTM3OTUyNzg0MjU0NyIgeTE9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9InJnYigyNTUsIDI1NSwgMjU1KSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0icmdiKDEwNywgMTgyLCAyNTQpIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImFBUDJfdzJ5cC00MTI2NzI1NTgzLWxpbmVhci1ncmFkaWVudCIgeDE9IjAuMzc3MDYzNDI4OTE2ODM3IiB4Mj0iMC42MjI5MzY1NzEwODMxNjMiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMjU1LCAyNTUsIDI1NSkiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9InJnYigxMDcsIDE4MiwgMjU0KSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJzRU95NndfY1UtNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQiIHgxPSIwLjM3NzA2MzQ2MjM1MzExOTgiIHgyPSIwLjYyMjkzNjUzNzY0Njg4MDIiIHkxPSI1LjU1MTExNTEyMzEyNTc4M2UtMTciIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9InJnYigyNTUsIDI1NSwgMjU1KSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0icmdiKDEwNywgMTgyLCAyNTQpIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IlJ2YmlueG5vVy00MTI2NzI1NTgzLWxpbmVhci1ncmFkaWVudCIgeDE9IjAuMzc3MDYzNDI4OTE2ODM3IiB4Mj0iMC42MjI5MzY1NzEwODMxNjMiIHkxPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMjU1LCAyNTUsIDI1NSkiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9InJnYigxMDcsIDE4MiwgMjU0KSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJQUExCUFZZbEMtNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQiIHgxPSIwLjM3NzA2MzQyODkxNjgzNyIgeDI9IjAuNjIyOTM2NTcxMDgzMTYzIiB5MT0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0icmdiKDI1NSwgMjU1LCAyNTUpIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMTA3LCAxODIsIDI1NCkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNIDMyLjUwNSAwIEwgNy40OTMgMCBDIDUuNTA2IDAgMy42IDAuNzg5IDIuMTk1IDIuMTk1IEMgMC43ODkgMy42IDAgNS41MDYgMCA3LjQ5MyBMIDAgMzIuNTA1IEMgMCAzMy40ODkgMC4xOTMgMzQuNDY0IDAuNTcgMzUuMzczIEMgMC45NDYgMzYuMjgyIDEuNDk4IDM3LjEwOSAyLjE5NCAzNy44MDUgQyAyLjg5IDM4LjUwMSAzLjcxNiAzOS4wNTMgNC42MjUgMzkuNDI5IEMgNS41MzUgMzkuODA2IDYuNTA5IDQwIDcuNDkzIDQwIEwgMzIuNTA1IDQwIEMgMzMuNDg5IDQwIDM0LjQ2NCAzOS44MDcgMzUuMzczIDM5LjQzIEMgMzYuMjgzIDM5LjA1MyAzNy4xMDkgMzguNTAxIDM3LjgwNSAzNy44MDUgQyAzOC41MDEgMzcuMTA5IDM5LjA1MyAzNi4yODMgMzkuNDMgMzUuMzczIEMgMzkuODA3IDM0LjQ2NCA0MCAzMy40ODkgNDAgMzIuNTA1IEwgNDAgNy40OTMgQyA0MCA2LjUwOSAzOS44MDYgNS41MzUgMzkuNDI5IDQuNjI1IEMgMzkuMDUzIDMuNzE2IDM4LjUwMSAyLjg5IDM3LjgwNSAyLjE5NCBDIDM3LjEwOSAxLjQ5OCAzNi4yODIgMC45NDYgMzUuMzczIDAuNTcgQyAzNC40NjQgMC4xOTMgMzMuNDg5IDAgMzIuNTA1IDAgWiIgZmlsbD0idXJsKCNvNVlKWEVlUWstNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQpIiBoZWlnaHQ9IjQwLjAwMDAwMDI0MTYyNjY5NHB4IiBpZD0ibzVZSlhFZVFrIiB3aWR0aD0iNDAuMDAwMDAwMjQxNjI2Njk0cHgiLz48cGF0aCBkPSJNIDAuNTEgMCBDIDAuNjQ1IDAgMC43NzUgMC4wNTQgMC44NzEgMC4xNDkgQyAwLjk2NiAwLjI0NSAxLjAyIDAuMzc1IDEuMDIgMC41MSBDIDEuMDIgMC42NDUgMC45NjYgMC43NzUgMC44NzEgMC44NzEgQyAwLjc3NSAwLjk2NiAwLjY0NSAxLjAyIDAuNTEgMS4wMiBDIDAuMzc1IDEuMDIgMC4yNDUgMC45NjYgMC4xNDkgMC44NzEgQyAwLjA1NCAwLjc3NSAwIDAuNjQ1IDAgMC41MSBDIDAgMC4zNzUgMC4wNTQgMC4yNDUgMC4xNDkgMC4xNDkgQyAwLjI0NSAwLjA1NCAwLjM3NSAwIDAuNTEgMCBaIiBmaWxsPSJ1cmwoI2NiUUlaeFB3RC00MTI2NzI1NTgzLWxpbmVhci1ncmFkaWVudCkiIGhlaWdodD0iMS4wMTk5OTk5OTk5OTk5OTk2cHgiIGlkPSJjYlFJWnhQd0QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjcgMTguOTMzKSIgd2lkdGg9IjEuMDIwMDAwMDAwMDAwMTMyOHB4Ii8+PHBhdGggZD0iTSAxLjIyNCAwLjAwNSBDIDEuMjc5IC0wLjAxIDEuMzMyIDAuMDA4IDEuMzg0IDAuMDYgQyAxLjYyNiAwLjMxIDEuODcxIDAuNTU3IDIuMTE3IDAuODA1IEwgMi4xNTIgMC44MzIgQyAyLjE2OSAwLjg0IDIuMTgxIDAuODQ3IDIuMTkyIDAuODQ4IEwgMy4yMDYgMS4xMSBDIDMuMjc2IDEuMTI3IDMuMzE5IDEuMTY1IDMuMzM0IDEuMjIgQyAzLjM0OSAxLjI3OCAzLjMzMSAxLjMzMiAzLjI3OSAxLjM4MyBMIDIuNTM0IDIuMTE1IEMgMi41MjMgMi4xMjYgMi41MTQgMi4xMzggMi41MDcgMi4xNTIgQyAyLjUgMi4xNjQgMi40OTQgMi4xNzggMi40OTEgMi4xOTIgTCAyLjIyOSAzLjIwMyBDIDIuMjEyIDMuMjczIDIuMTc0IDMuMzE3IDIuMTE3IDMuMzMyIEMgMi4wNjEgMy4zNDggMi4wMDcgMy4zMjggMS45NTcgMy4yNzcgTCAxLjIyNCAyLjUzMyBDIDEuMjAyIDIuNTEyIDEuMTc1IDIuNDk3IDEuMTQ2IDIuNDg4IEMgMC44MDkgMi40IDAuNDcxIDIuMzEzIDAuMTM0IDIuMjI4IEMgMC4wNjQgMi4yMTIgMC4wMjEgMi4xNzMgMC4wMDYgMi4xMTUgQyAtMC4wMTEgMi4wNiAwLjAwOSAyLjAwNSAwLjA2MSAxLjk1NSBDIDAuMzExIDEuNzEyIDAuNTU3IDEuNDY4IDAuODA2IDEuMjIyIEMgMC44MTYgMS4yMTEgMC44MjUgMS4yIDAuODMyIDEuMTg3IEMgMC44NCAxLjE3NCAwLjg0NSAxLjE2IDAuODQ5IDEuMTQ1IEwgMS4xMTEgMC4xMzMgQyAxLjEyNyAwLjA2MyAxLjE2NiAwLjAyIDEuMjI0IDAuMDA1IFoiIGZpbGw9InVybCgjYUFQMl93MnlwLTQxMjY3MjU1ODMtbGluZWFyLWdyYWRpZW50KSIgaGVpZ2h0PSIzLjMzNzQ3MTA4OTUyMTc3MnB4IiBpZD0iYUFQMl93MnlwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi43ODkgMTUuOTMpIiB3aWR0aD0iMy4zMzkxMzc3NTYxODgzODVweCIvPjxwYXRoIGQ9Ik0gMC40ODMgMC4wMDEgQyAwLjU1MiAtMC4wMDMgMC42MjIgMC4wMDcgMC42ODcgMC4wMzEgQyAwLjc1MiAwLjA1NSAwLjgxMiAwLjA5MiAwLjg2MyAwLjE0IEMgMC45MTQgMC4xODggMC45NTQgMC4yNDUgMC45ODIgMC4zMDkgQyAxLjAwOSAwLjM3MyAxLjAyMyAwLjQ0MiAxLjAyMyAwLjUxMiBDIDEuMDIzIDAuNTgxIDEuMDA5IDAuNjUgMC45ODIgMC43MTQgQyAwLjk1NCAwLjc3OCAwLjkxNCAwLjgzNiAwLjg2MyAwLjg4NCBDIDAuODEyIDAuOTMyIDAuNzUyIDAuOTY4IDAuNjg3IDAuOTkyIEMgMC42MjIgMS4wMTYgMC41NTIgMS4wMjcgMC40ODMgMS4wMjMgQyAwLjM1MiAxLjAxNSAwLjIyOSAwLjk1OCAwLjE0IDAuODYzIEMgMC4wNSAwLjc2OCAwIDAuNjQyIDAgMC41MTIgQyAwIDAuMzgxIDAuMDUgMC4yNTUgMC4xNCAwLjE2IEMgMC4yMjkgMC4wNjUgMC4zNTIgMC4wMDggMC40ODMgMC4wMDEgWiIgZmlsbD0idXJsKCNzRU95NndfY1UtNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQpIiBoZWlnaHQ9IjEuMDIzMzQ5ODc4NzkyNzE2NHB4IiBpZD0ic0VPeTZ3X2NVIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNC4zMDEgMTYuNjM2KSIgd2lkdGg9IjEuMDIzMzMzMzMzMzMzMzg2N3B4Ii8+PHBhdGggZD0iTSAxLjIyMyAwLjAwNiBDIDEuMjgyIC0wLjAxMSAxLjMzNSAwLjAwOSAxLjM4NSAwLjA1OSBMIDIuMTE1IDAuODA2IEMgMi4xMzcgMC44MjYgMi4xNjMgMC44NDEgMi4xOTIgMC44NDkgTCAzLjIwMiAxLjExMiBDIDMuMjcyIDEuMTI5IDMuMzEzIDEuMTY3IDMuMzMgMS4yMjYgQyAzLjM0NSAxLjI4MSAzLjMyNyAxLjMzNCAzLjI3MyAxLjM4NCBMIDIuNTI4IDIuMTE0IEMgMi41MDggMi4xMzYgMi40OTMgMi4xNjIgMi40ODMgMi4xOTEgTCAyLjIyMiAzLjE5OSBDIDIuMjA1IDMuMjY5IDIuMTY1IDMuMzEyIDIuMTA4IDMuMzI3IEMgMi4wNTIgMy4zNDIgMS45OTggMy4zMjQgMS45NDggMy4yNzIgQyAxLjcwNyAzLjAyMiAxLjQ2MyAyLjc3NCAxLjIyIDIuNTI3IEMgMS4yMDkgMi41MTYgMS4xOTcgMi41MDcgMS4xODMgMi40OTkgQyAxLjE3IDIuNDkyIDEuMTU2IDIuNDg2IDEuMTQyIDIuNDgyIEwgMC4xMzMgMi4yMTkgQyAwLjA2MyAyLjIwMiAwLjAyIDIuMTY0IDAuMDA1IDIuMTA3IEMgLTAuMDEgMi4wNTEgMC4wMDggMS45OTcgMC4wNiAxLjk0NyBDIDAuMzEgMS43MDYgMC41NTcgMS40NjIgMC44MDUgMS4yMTkgQyAwLjgxNiAxLjIwOCAwLjgyNiAxLjE5NiAwLjgzMyAxLjE4MiBDIDAuODQxIDEuMTY5IDAuODQ2IDEuMTU1IDAuODUgMS4xNDEgTCAxLjExMyAwLjEzMiBDIDEuMTMgMC4wNjIgMS4xNjggMC4wMTkgMS4yMjMgMC4wMDYgWiIgZmlsbD0idXJsKCNSdmJpbnhub1ctNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQpIiBoZWlnaHQ9IjMuMzMyNDkxNzcwODI5NDA2cHgiIGlkPSJSdmJpbnhub1ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjM2NSAxMy42MzkpIiB3aWR0aD0iMy4zMzUxMDYxNjcyNDUxMjRweCIvPjxwYXRoIGQ9Ik0gMTAuMTA4IDAuNTcyIEMgMTEuMzEyIDAuMDc4IDEyLjYyMiAtMC4xMDEgMTMuOTE1IDAuMDU0IEMgMTUuNTgxIDAuMjQ0IDE3LjA2NiAwLjk1NCAxOC4zNyAyLjE3NyBDIDE4LjM4NyAyLjE5NCAxOC40MDggMi4yMDcgMTguNDMyIDIuMjEzIEMgMTguNDU1IDIuMjE5IDE4LjQ4IDIuMjIgMTguNTAzIDIuMjE0IEMgMjAuMTk4IDEuNzc2IDIxLjk5MSAxLjkzOCAyMy41OCAyLjY3MiBMIDIzLjY1OCAyLjcwNyBMIDIzLjg1MSAyLjgwNCBDIDI1LjUxNCAzLjY0NiAyNi44MTEgNS4wNjggMjcuNDk4IDYuODAxIEMgMjcuODQ2IDcuNjUxIDI4LjAyMSA4LjUzNiAyOC4wMjUgOS40NTkgQyAyOC4wNSAxMC4xNTEgMjcuOTc1IDEwLjgzMSAyNy44IDExLjQ5OSBDIDI3Ljc5IDExLjUzMyAyNy43OSAxMS41NjkgMjcuNzk5IDExLjYwMiBDIDI3LjgwOCAxMS42MzYgMjcuODI1IDExLjY2NyAyNy44NSAxMS42OTIgQyAyOC44NCAxMi43MDIgMjkuNDk2IDEzLjkwNyAyOS44MjEgMTUuMzA2IEMgMzAuMzAzIDE3LjY4MiAyOS44MSAxOS44MjIgMjguMzQzIDIxLjczMSBMIDI4LjExNiAyMi4wMDcgQyAyNy4xNDUgMjMuMTE5IDI1Ljg3IDIzLjkyMiAyNC40NDggMjQuMzE5IEMgMjQuNDE3IDI0LjMyOCAyNC4zODkgMjQuMzQ1IDI0LjM2NiAyNC4zNjcgQyAyNC4zNDMgMjQuMzg5IDI0LjMyNSAyNC40MTcgMjQuMzE1IDI0LjQ0NyBDIDIzLjk5NiAyNS4zNjYgMjMuNjc1IDI2LjE1MiAyMy4wOCAyNi45MzcgQyAyMS41OCAyOC45MTQgMTkuMzc4IDMwLjAxNCAxNi44OTUgMzAuMDAxIEMgMTQuOTE2IDI5Ljk5MSAxMy4xNjEgMjkuMjY3IDExLjYzMyAyNy44MzEgQyAxMS42MSAyNy44MDkgMTEuNTgxIDI3Ljc5MyAxMS41NSAyNy43ODYgQyAxMS41MTkgMjcuNzc5IDExLjQ4NyAyNy43ODEgMTEuNDU2IDI3Ljc5MSBDIDEwLjgxIDI3Ljk5OSAxMC4xNTYgMjguMDMxIDkuNDUxIDI4LjAyMiBDIDguMzI1IDI4LjAxMyA3LjIxNiAyNy43NDcgNi4yMDggMjcuMjQ0IEMgNS4xNTMgMjYuNzIxIDQuMjM0IDI1Ljk1OCAzLjUyNSAyNS4wMTcgQyAzLjI3MSAyNC42ODIgMy4wMiAyNC4zNjYgMi44MzYgMjMuOTkxIEMgMi41ODQgMjMuNDc2IDIuMzc3IDIyLjk0IDIuMjIgMjIuMzg5IEMgMS44ODcgMjEuMTM1IDEuODc5IDE5LjgxNiAyLjE5OCAxOC41NTcgQyAyLjIwOCAxOC41MjggMi4yMTEgMTguNDk3IDIuMjA2IDE4LjQ2NiBDIDIuMjAxIDE4LjQzNSAyLjE4NSAxOC40MDcgMi4xNjEgMTguMzg2IEMgMS4zOTEgMTcuNjA3IDAuODAyIDE2LjY2NyAwLjQzNiAxNS42MzQgQyAwLjE5NCAxNC45OTggMC4wNTQgMTQuMzI3IDAuMDIgMTMuNjQ3IEMgLTAuMDQxIDEyLjc1MiAwLjAzOCAxMS44NTIgMC4yNTUgMTAuOTgxIEMgMC44MTYgOS4xMjcgMS44OTEgNy42NzIgMy40NzYgNi42MTYgQyAzLjgzIDYuMzgyIDQuMTYzIDYuMTk5IDQuNDc4IDYuMDY3IEMgNC44MzYgNS45MTcgNS4xOTUgNS43OTIgNS41NTUgNS42ODcgQyA1LjU4IDUuNjggNS42MDQgNS42NjYgNS42MjMgNS42NDcgQyA1LjY0MiA1LjYyOCA1LjY1NiA1LjYwNSA1LjY2MyA1LjU3OSBDIDUuOTM2IDQuNTk3IDYuNDA1IDMuNjgxIDcuMDQzIDIuODg2IEMgNy44NDkgMS44NjQgOC45MDQgMS4wNjcgMTAuMTA4IDAuNTcyIFogTSAxMS4zMTMgMTAuMTMxIEMgOS44NzEgOS4xMDcgNy45IDkuNjE0IDcuMTc1IDExLjIyNCBDIDYuNzk4IDEyLjA1NyA2LjcyNSAxMi45MzQgNi45NTMgMTMuODU3IEwgNy4xMzMgMTQuNTkxIEwgNy40NTggMTUuNzc3IEMgNy41OTEgMTYuNDQ0IDcuODQ1IDE3LjA1MiA4LjIyMyAxNy42MDQgTCA4LjI2IDE3LjY1NyBDIDguNDYgMTcuODk0IDguNjggMTguMTExIDguOTE2IDE4LjMwNiBDIDEwLjY0OCAxOS43MjkgMTMuMDEgMTguNzc5IDEzLjQ4MSAxNi42NTIgTCAxMy41NDMgMTYuMzg2IEwgMTMuNTYgMTYuMjg2IEMgMTMuNjMzIDE1Ljc4NiAxMy42MSAxNS4yOTYgMTMuNDkzIDE0LjgxNiBDIDEzLjI4NCAxMy45NjggMTMuMDU2IDEzLjEyNSAxMi44MSAxMi4yODcgQyAxMi41MzggMTEuMzY0IDEyLjA0IDEwLjY0NiAxMS4zMTMgMTAuMTMxIFogTSAyMC4xOTMgOC4wNzIgQyAxOS4xMTYgNy4wNzIgMTcuNDU1IDcuMDM0IDE2LjM4NSA4LjA0MSBDIDE1Ljk2OCA4LjQzMiAxNS42NzYgOC45NjEgMTUuNTEzIDkuNjIyIEMgMTUuMzUgMTAuMjk0IDE1LjM1IDEwLjk5NCAxNS41MTMgMTEuNjY2IEwgMTUuNTMgMTEuNzMyIEwgMTUuNiAxMS45NTkgQyAxNS43NTggMTIuNDg0IDE1LjkwNSAxMy4wMDEgMTYuMDQgMTMuNTA5IEMgMTYuMTgxIDE0LjAzNyAxNi4yOTMgMTQuMzkyIDE2LjM4IDE0LjU3MiBDIDE3LjA5NiAxNi4wODEgMTguNjU1IDE3LjE2NiAyMC4zNSAxNi40NzQgQyAyMS45MjYgMTUuODMxIDIyLjQgMTMuOTYyIDIyLjA0MyAxMi40NDkgQyAyMS45OSAxMi4yMiAyMS45MzEgMTEuOTkyIDIxLjg2OCAxMS43NjYgQyAyMS42MTggMTAuNzk0IDIxLjQ0MSAxMC4xMzkgMjEuMzMzIDkuODAxIEMgMjEuMTExIDkuMTM1IDIwLjcxOCA4LjUzOSAyMC4xOTMgOC4wNzIgWiIgZmlsbD0idXJsKCNQUExCUFZZbEMtNDEyNjcyNTU4My1saW5lYXItZ3JhZGllbnQpIiBoZWlnaHQ9IjMwLjAwMDkzNDAxMTU0NzdweCIgaWQ9IlBQTEJQVllsQyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNSA0Ljk5OSkiIHdpZHRoPSIyOS45OTk5MTYyNTMzODk3MnB4Ii8+PC9zdmc+" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--4"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjIyMDM0NDAzMjkiIHJvbGU9InByZXNlbnRhdGlvbiIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iS0R6VXlRMk1RLTIyMDM0NDAzMjktbGluZWFyLWdyYWRpZW50IiB4MT0iMC40OTc1MTI0Mzc4MTA5NDUyMyIgeDI9IjAuNTAyNDg3NTYyMTg5MDU0OCIgeTE9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9InJnYigyNTUsIDI1NSwgMjU1KSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0icmdiKDI0NSwgMjQ1LCAyNDUpIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTSAxNiAwIEwgMTYgOCBMIDggOCBMIDAgMCBaIE0gMCA4IEwgOCA4IEwgMTYgMTYgTCA4IDE2IEwgOCAyNCBMIDAgMTYgWiIgZmlsbD0idXJsKCNLRHpVeVEyTVEtMjIwMzQ0MDMyOS1saW5lYXItZ3JhZGllbnQpIiBoZWlnaHQ9IjIzLjk5OTk5OTg0NDM5MjI3OHB4IiBpZD0iS0R6VXlRMk1RIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0IDApIiB3aWR0aD0iMTZweCIvPjwvc3ZnPg==" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--5"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjI1MDU2OTMyOTMiIHJvbGU9InByZXNlbnRhdGlvbiIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMjQgMC4wMDEgTCAxNi4zNDIgMTUuMTYgTCA5LjE0OSAxNS4xNiBMIDEyLjM1NCA4Ljg3OCBMIDEyLjIxIDguODc4IEMgOS41NjYgMTIuMzUyIDUuNjIgMTQuNjQgMCAxNS4xNTkgTCAwIDguOTY0IEMgMCA4Ljk2NCAzLjU5NiA4Ljc0OSA1LjcxIDYuNDk4IEwgMCA2LjQ5OCBMIDAgMC4wMDEgTCA2LjQxNyAwLjAwMSBMIDYuNDE3IDUuMzQ1IEwgNi41NjEgNS4zNDUgTCA5LjE4MyAwIEwgMTQuMDM3IDAgTCAxNC4wMzcgNS4zMSBMIDE0LjE4IDUuMzEgTCAxNi45MDEgMCBMIDI0IDAgWiIgZmlsbD0icmdiKDI1NSwgMjU1LCAyNTUpIiBoZWlnaHQ9IjE1LjE1OTk5OTk5OTk5OTk2OHB4IiBpZD0iclFnQVhVdWxDIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDQuNSkiIHdpZHRoPSIyNHB4Ii8+PC9zdmc+" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--6"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjU4MzgwODc3MyIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAwIDYgQyAwIDIuNjg2IDIuNjg2IDAgNiAwIEwgMTggMCBDIDIxLjMxNCAwIDI0IDIuNjg2IDI0IDYgTCAyNCAxOCBDIDI0IDIxLjMxNCAyMS4zMTQgMjQgMTggMjQgTCA2IDI0IEMgMi42ODYgMjQgMCAyMS4zMTQgMCAxOCBaIiBmaWxsPSJyZ2IoMjU1LCAyMjEsIDUxKSIgaGVpZ2h0PSIyNHB4IiBpZD0iaGoxS00zdkpPIiB3aWR0aD0iMjRweCIvPjxwYXRoIGQ9Ik0gMTAuODk0IDAgTCA4LjcxNSAwIEwgMTAuNTMxIDMuMTkgTCA2LjUzNiAwIEwgNC4zNTggMCBMIDYuMzU1IDMuODk5IEwgMi4xNzggMCBMIDAuMDAxIDAgTCAyLjE3OCA0Ljk2MyBMIDAgMTQuODg3IEwgMi4xNzggMTQuODg3IEwgNi4zNTUgNC4yNTUgTCA0LjM1OCAxNC44ODcgTCA2LjUzNiAxNC44ODcgTCAxMC41MzEgMy41NDUgTCA4LjcxNSAxNC44ODcgTCAxMC44OTQgMTQuODg3IEwgMTQuODg4IDIuNDgxIFoiIGZpbGw9InJnYigyOCwgMjgsIDMwKSIgaGVpZ2h0PSIxNC44ODdweCIgaWQ9IkozNW50bFU1NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS4wNjIgNC41NzUpIiB3aWR0aD0iMTQuODg3OTk5OTk5OTk5OTk4cHgiLz48L3N2Zz4=" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--7"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjE2MDU5MDUwMSIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAwIDYgQyAwIDIuNjg2IDIuNjg2IDAgNiAwIEwgMTggMCBDIDIxLjMxNCAwIDI0IDIuNjg2IDI0IDYgTCAyNCAxOCBDIDI0IDIxLjMxNCAyMS4zMTQgMjQgMTggMjQgTCA2IDI0IEMgMi42ODYgMjQgMCAyMS4zMTQgMCAxOCBaIiBmaWxsPSJyZ2IoOTgsIDkzLCAyNDUpIiBoZWlnaHQ9IjI0cHgiIGlkPSJlTUgyOURnQnoiIHdpZHRoPSIyNHB4Ii8+PHBhdGggZD0iTSAxNC4xNjYgNi4yOTUgTCAxMC4wMjQgNi4yOTUgTCAxMy42MTIgNC4yMjQgTCAxMi44MjQgMi44NTkgTCA5LjIzNiA0LjkzIEwgMTEuMzA2IDEuMzQzIEwgOS45NDIgMC41NTUgTCA3Ljg3MSA0LjE0MiBMIDcuODcxIDAgTCA2LjI5NSAwIEwgNi4yOTUgNC4xNDIgTCA0LjIyNCAwLjU1NSBMIDIuODU5IDEuMzQyIEwgNC45MyA0LjkzIEwgMS4zNDMgMi44NTkgTCAwLjU1NSA0LjIyMyBMIDQuMTQyIDYuMjkzIEwgMCA2LjI5MyBMIDAgNy44NyBMIDQuMTQyIDcuODcgTCAwLjU1NSA5Ljk0MSBMIDEuMzQzIDExLjMwNiBMIDQuOTMgOS4yMzYgTCAyLjg1OSAxMi44MjMgTCA0LjIyNCAxMy42MSBMIDYuMjk0IDEwLjAyMyBMIDYuMjk0IDE0LjE2NSBMIDcuODcxIDE0LjE2NSBMIDcuODcxIDEwLjAyMyBMIDkuOTQxIDEzLjYxIEwgMTEuMzA2IDEyLjgyMyBMIDkuMjM2IDkuMjM1IEwgMTIuODIzIDExLjMwNiBMIDEzLjYxMSA5Ljk0MSBMIDEwLjAyNCA3Ljg3MSBMIDE0LjE2NiA3Ljg3MSBaIE0gNy4wODMgOS4yMjYgQyA1Ljg5NSA5LjIyNiA0LjkzMiA4LjI2MyA0LjkzMiA3LjA3NSBDIDQuOTMyIDUuODg3IDUuODk1IDQuOTI0IDcuMDgzIDQuOTI0IEMgOC4yNzEgNC45MjQgOS4yMzQgNS44ODcgOS4yMzQgNy4wNzUgQyA5LjIzNCA4LjI2MyA4LjI3MSA5LjIyNiA3LjA4MyA5LjIyNiBaIiBmaWxsPSJyZ2IoMjU1LCAyNTUsIDI1NSkiIGhlaWdodD0iMTQuMTY0OTk5OTk5OTk5OTk3cHgiIGlkPSJyM3Z3SEpqbWQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuOTE3IDQuOTE3KSIgd2lkdGg9IjE0LjE2NjAwMDAwMDAwMDAwMnB4Ii8+PC9zdmc+" width="40" height="40" alt="" loading="lazy"></span><span class="tool-orbit__app tool-orbit__app--8"><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgaWQ9IjI2NTkzMjc4OSIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSAwIDYgQyAwIDIuNjg2IDIuNjg2IDAgNiAwIEwgMTggMCBDIDIxLjMxNCAwIDI0IDIuNjg2IDI0IDYgTCAyNCAxOCBDIDI0IDIxLjMxNCAyMS4zMTQgMjQgMTggMjQgTCA2IDI0IEMgMi42ODYgMjQgMCAyMS4zMTQgMCAxOCBaIiBmaWxsPSJyZ2IoMjQsIDEwNCwgMjE5KSIgaGVpZ2h0PSIyNHB4IiBpZD0ia3JKTXZLU0kxIiB3aWR0aD0iMjRweCIvPjxwYXRoIGQ9Ik0gNC43MyAxMC4wNjUgTCAzLjQxMyAxMC4wNjUgQyAxLjQyNSAxMC4wNjUgMCA4Ljg0NyAwIDcuMDY1IEwgNy4wODUgNy4wNjUgQyA3LjQ1MiA3LjA2NSA3LjY5IDcuMzI1IDcuNjkgNy42OTUgTCA3LjY5IDE0LjgyNSBDIDUuOTE4IDE0LjgyNSA0LjczIDEzLjM5IDQuNzMgMTEuMzkxIFogTSA4LjIzIDYuNTIyIEwgNi45MTIgNi41MjIgQyA0LjkyNSA2LjUyMiAzLjQ5OSA1LjMyNiAzLjQ5OSAzLjU0NCBMIDEwLjU4NCAzLjU0NCBDIDEwLjk1MSAzLjU0NCAxMS4yMTEgMy43ODMgMTEuMjExIDQuMTUyIEwgMTEuMjExIDExLjI4MiBDIDkuNDM5IDExLjI4MiA4LjIzIDkuODQ3IDguMjMgNy44NDggWiBNIDExLjc1IDMgTCAxMC40MzMgMyBDIDguNDQ2IDMgNy4wMiAxLjc4MyA3LjAyIDAgTCAxNC4xMDUgMCBDIDE0LjQ3MiAwIDE0LjcxIDAuMjYyIDE0LjcxIDAuNjEgTCAxNC43MSA3LjczOSBDIDEyLjkzOSA3LjczOSAxMS43NSA2LjMwNCAxMS43NSA0LjMwNSBaIiBmaWxsPSJyZ2IoMjU1LCAyNTUsIDI1NSkiIGhlaWdodD0iMTQuODI1MDAwMDU3MjIwNDU5cHgiIGlkPSJvaVpwbzNIREEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMzIxIDUuMzY5KSIgd2lkdGg9IjE0LjcwOTk5OTk4MDkyNjUxNXB4Ii8+PC9zdmc+" width="40" height="40" alt="" loading="lazy"></span></div></div><aside class="about-sidebar"><figure class="profile-card" data-reveal="true"><div class="profile-card__image"><img class="" src="https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg" width="500" height="500" alt="رِزق، مصمم منتجات رقمية" loading="lazy" decoding="async"><a class="profile-card__follow" href="https://x.com/irzg_z" target="_blank" rel="noopener noreferrer" aria-label="X — ٦.٤٠٠ (نافذة جديدة)"><svg class="icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h4l12 16h-4L4 4Zm16 0L4 20"></path></svg><span>٦.٤٠٠</span></a></div><figcaption><h3>رِزق</h3><p>مصمم منتجات رقمية</p></figcaption></figure><div class="experience"><h3>المسار الذي سلكته</h3><ol><li class="experience-card" data-reveal="true"><span>٢٠٢٥ - إلى الآن</span><h4>آبل</h4><p>أخصائي واجهة وتجربة المستخدم</p></li><li class="experience-card" data-reveal="true"><span>٢٠⁠٢٣-٢٠⁠٢٥</span><h4>عمل مستقل</h4><p>مصمم منتجات رقمية</p></li><li class="experience-card" data-reveal="true"><span>٢٠⁠٢١-٢٠⁠٢٢</span><h4>قوقـل</h4><p>مصمم أنظمة تصميم</p></li></ol><a class="text-link" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer">إظهار الكل<svg class="icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span class="sr-only"> (LinkedIn، نافذة جديدة)</span></a></div></aside></div></div></section><section class="section skills-section section--bordered" id="skills" aria-labelledby="skills-heading"><div class="container section-stack"><div class="section-heading section-heading--centered" data-reveal="true"><h2 id="skills-heading" class="section-title">خدمات تدفع نموك</h2></div><div class="skills-deck"><article class="skill-card skill-card--1" data-reveal="true"><h3>الأدوات والمنصات</h3><ul dir="ltr"><li>Figma</li><li>FigJam</li><li>After Effects</li><li>Framer</li><li>Photoshop</li></ul></article><article class="skill-card skill-card--2" data-reveal="true"><h3>مهارات النمذجة</h3><ul dir="rtl"><li>نماذج أولية تفاعلية</li><li>مسارات المستخدم</li><li>نماذج قابلة للنقر</li><li>اختبار المستخدم</li><li>التحقق من قابلية الاستخدام</li></ul></article><article class="skill-card skill-card--3" data-reveal="true"><h3>خبرات التصميم</h3><ul dir="rtl"><li>تجربة المستخدم</li><li>تصميم واجهات المستخدم</li><li>التخطيط الهيكلي</li><li>الهرمية البصرية</li><li>تصاميم متجاوبة</li></ul></article></div><div class="cta-panel" data-reveal="true"><h3>عندك فكـرة؟<br>خلينـــــا نحولـها لواقـــع</h3><div class="button-row"><a class="button button--primary " href="#contact-form"><span>ابدأ مشروعك</span></a><a class="button button--secondary " href="#projects"><span>شاهد أعمالي</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg></a></div></div></div></section><section class="section services-section section--bordered" id="services" aria-labelledby="services-heading"><div class="container section-stack"><div class="section-heading " data-reveal="true"><h2 id="services-heading" class="section-title"><span class="text-muted">كــذا أقــــدر<br></span>أساعدك</h2></div><div class="services-list"><div class="service-group" data-reveal="true"><h3>تصميم الواجهات وتجربة المستخدم</h3><ul><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 3 14 9-7 1-3 7L5 3Z"></path></svg><span>التخطيط الهيكلي</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 3 14 9-7 1-3 7L5 3Z"></path></svg><span>أبحاث المستخدم</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 3 14 9-7 1-3 7L5 3Z"></path></svg><span>النمذجة التفاعلية</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 3 14 9-7 1-3 7L5 3Z"></path></svg><span>تصميم التطبيقات</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 3 14 9-7 1-3 7L5 3Z"></path></svg><span>تصميم المواقع</span></li></ul></div><div class="service-group" data-reveal="true"><h3>التصميم التفاعلي</h3><ul><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"></path></svg><span>نماذج أولية تفاعلية</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"></path></svg><span>عناصر الحركة</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"></path></svg><span>التفاعلات الدقيقة</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"></path></svg><span>تصميم حركة التطبيقات</span></li></ul></div><div class="service-group" data-reveal="true"><h3>أنظمة التصميم</h3><ul><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"></path></svg><span>الإرشادات</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"></path></svg><span>إعداد رموز الواجهة</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"></path></svg><span>مجموعات المكونات</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"></path></svg><span>إنشاء مكتبة واجهات</span></li><li><svg class="icon " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"></path></svg><span>التوثيق</span></li></ul></div></div></div></section><div class="client-strip" aria-label="العملاء"><div class="container client-strip__inner"><p class="client-strip__label">موثوق من قِبل</p><div class="client-strip__window"><div class="client-strip__track"><ul class="client-strip__logos"><li><img class="" src="https://framerusercontent.com/images/FbBTDr8JqdTFgkyCUR4rbkhw9k.png" width="400" height="108" alt="شعار عميل 1" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/5GEw6piP2ffZdrKkBHPSWHfZHg.png" width="232" height="124" alt="شعار عميل 2" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/rPDQuslVxzEdY3kXo3k1iL8AlI.png" width="360" height="144" alt="شعار عميل 3" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/cPgZ7tvNf4dBXrK1WhaFohfB2RQ.png" width="360" height="116" alt="شعار عميل 4" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/3hgavCV25l0ZiAWsQIOE0wExolc.png" width="328" height="120" alt="شعار عميل 5" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/OBGSM5CGpScJmZUM0ZA8zhjucpM.png" width="356" height="136" alt="شعار عميل 6" loading="lazy" decoding="async"></li></ul><ul class="client-strip__logos" aria-hidden="true"><li><img class="" src="https://framerusercontent.com/images/FbBTDr8JqdTFgkyCUR4rbkhw9k.png" width="400" height="108" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/5GEw6piP2ffZdrKkBHPSWHfZHg.png" width="232" height="124" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/rPDQuslVxzEdY3kXo3k1iL8AlI.png" width="360" height="144" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/cPgZ7tvNf4dBXrK1WhaFohfB2RQ.png" width="360" height="116" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/3hgavCV25l0ZiAWsQIOE0wExolc.png" width="328" height="120" alt="" loading="lazy" decoding="async"></li><li><img class="" src="https://framerusercontent.com/images/OBGSM5CGpScJmZUM0ZA8zhjucpM.png" width="356" height="136" alt="" loading="lazy" decoding="async"></li></ul></div></div></div></div><section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-heading"><div class="container section-stack"><div class="testimonials-heading"><div class="section-heading " data-reveal="true"><h2 id="testimonials-heading" class="section-title"><span class="text-muted">كلمات صادقة<br></span>من عملائي</h2></div><a class="social-proof" href="#testimonials" aria-label="اقرأ آراء العملاء"><div class="social-proof__avatars" aria-hidden="true"><img class="" src="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><img class="" src="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254 1254w" sizes="38px" width="1254" height="1254" alt="" loading="lazy" decoding="async"></div><div class="social-proof__text"><span class="social-proof__stars" aria-label="تقييم خمس نجوم">★★★★★</span><span>+99 عميل سعيد</span></div></a></div><div class="testimonials-grid" role="region" aria-label="آراء العملاء، مرّر أفقيًا على الهاتف" tabindex="0"><figure class="testimonial-card" data-reveal="true"><blockquote><p>“لفتني اهتمامه بالهوية والتفاصيل دون أن يضحي بسهولة الاستخدام. النتيجة كانت تصميمًا أنيقًا يعبر عن علامتنا بوضوح.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/kJlTWAuyRSiuXg0uAimyXwq9co.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/kJlTWAuyRSiuXg0uAimyXwq9co.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/kJlTWAuyRSiuXg0uAimyXwq9co.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/kJlTWAuyRSiuXg0uAimyXwq9co.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>فهد الدوسري</strong><span>مدير العلامة التجارية في رُؤى</span></div></figcaption></figure><figure class="testimonial-card" data-reveal="true"><blockquote><p>“التعاون معه كان سلسًا من البداية للنهاية. اهتم بالتفاصيل الصغيرة، وقدم حلولًا عملية رفعت جودة المشروع بشكل ملحوظ.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/jMhXekvQBHrHlLyK2bBKKyfJQc.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>عبدالله القحطاني</strong><span>مؤسس متجر نقطة</span></div></figcaption></figure><figure class="testimonial-card" data-reveal="true"><blockquote><p>“أعاد ترتيب تجربة المنتج بطريقة جعلت رحلة المستخدم أقصر وأكثر وضوحًا. لمسنا فرقًا حقيقيًا في التفاعل بعد إطلاق التصميم.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/4mnlFLjgbLGYtkg39QgpYjq5R8c.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>يوسف السالم</strong><span>مدير منتج في أفق</span></div></figcaption></figure><figure class="testimonial-card" data-reveal="true"><blockquote><p>“ساعدنا في تبسيط منتج معقد وتحويله إلى واجهة واضحة للمستخدم. كان متعاونًا في كل مرحلة وسريعًا في تنفيذ الملاحظات.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/MbXGfBGx71qJM8BKQWRWdU0PQ.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>سامر الحربي</strong><span>المدير التقني في شركة مسار</span></div></figcaption></figure><figure class="testimonial-card" data-reveal="true"><blockquote><p>“وصلنا إلى موقع يعكس شخصيتنا ويعرض خدماتنا بصورة احترافية. التواصل كان واضحًا، والتسليم تم بجودة عالية وفي الوقت المحدد.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/SF49x0HGJaEA7qBsKymR9S7ReA.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>عمر العبدالله</strong><span>مؤسس استوديو مدار</span></div></figcaption></figure><figure class="testimonial-card" data-reveal="true"><blockquote><p>“من أول اجتماع كان واضحًا أنه يفهم احتياج المشروع بسرعة. حوّل أفكارنا إلى تجربة مرتبة وسهلة، وكانت النتيجة أفضل مما توقعنا.”</p></blockquote><figcaption><img class="" src="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254" srcset="https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=512 512w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/w4kfLWVN7zU9vo8IuAVMzUBglKU.png?width=1254&amp;height=1254 1254w" sizes="46px" width="1254" height="1254" alt="" loading="lazy" decoding="async"><div><strong>خالد العتيبي</strong><span>شريك مؤسس في منصة نواة</span></div></figcaption></figure></div></div></section><section class="section certificates-section section--bordered" id="certifications" aria-labelledby="certifications-heading"><div class="container section-stack"><div class="section-heading section-heading--centered" data-reveal="true"><h2 id="certifications-heading" class="section-title">معتمد فيمـا أحـــــب</h2></div><div class="certificates-grid"><a class="certificate-card certificate-card--1" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="تصميم المنتجات الرقمية — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر مارس 2024</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTEzIDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMTguNTUgOS4yNDYgQyAxOC41NSAxNC41NjkgMTQuMzg2IDE4LjQ5MiA5LjI3NSAxOC40OTIgQyA0LjE2NCAxOC40OTIgMCAxNC41NjkgMCA5LjI0NiBDIDAgMy44ODUgNC4xNjQgMCA5LjI3NSAwIEMgMTQuMzg2IDAgMTguNTUgMy44ODUgMTguNTUgOS4yNDYgWiBNIDE0LjQ5IDkuMjQ2IEMgMTQuNDkgNS45MTkgMTIuMDc2IDMuNjQzIDkuMjc1IDMuNjQzIEMgNi40NzQgMy42NDMgNC4wNiA1LjkxOSA0LjA2IDkuMjQ2IEMgNC4wNiAxMi41MzkgNi40NzQgMTQuODQ4IDkuMjc1IDE0Ljg0OCBDIDEyLjA3NiAxNC44NDggMTQuNDkgMTIuNTM1IDE0LjQ5IDkuMjQ2IFoiIGZpbGw9InJnYigyMzQsIDY3LCA1MykiIGhlaWdodD0iMTguNDkxN3B4IiBpZD0ieXVtNnloaUphIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOS42ODggMTYuNDA0KSIgd2lkdGg9IjE4LjU0OTk5OTk5OTk5OTk5N3B4Ii8+PHBhdGggZD0iTSAxOC41NSA5LjI0NiBDIDE4LjU1IDE0LjU2OSAxNC4zODYgMTguNDkyIDkuMjc1IDE4LjQ5MiBDIDQuMTY0IDE4LjQ5MiAwIDE0LjU2OSAwIDkuMjQ2IEMgMCAzLjg4OSA0LjE2NCAwIDkuMjc1IDAgQyAxNC4zODYgMCAxOC41NSAzLjg4NSAxOC41NSA5LjI0NiBaIE0gMTQuNDkgOS4yNDYgQyAxNC40OSA1LjkxOSAxMi4wNzYgMy42NDMgOS4yNzUgMy42NDMgQyA2LjQ3NCAzLjY0MyA0LjA2IDUuOTE5IDQuMDYgOS4yNDYgQyA0LjA2IDEyLjUzOSA2LjQ3NCAxNC44NDggOS4yNzUgMTQuODQ4IEMgMTIuMDc2IDE0Ljg0OCAxNC40OSAxMi41MzUgMTQuNDkgOS4yNDYgWiIgZmlsbD0icmdiKDI1MSwgMTg4LCA1KSIgaGVpZ2h0PSIxOC40OTE3cHgiIGlkPSJpaFhQOU1mTHgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ5LjY5NyAxNi40MDQpIiB3aWR0aD0iMTguNTQ5OTk5OTk5OTk5OTlweCIvPjxwYXRoIGQ9Ik0gMTcuNzI1IDAuNTU5IEwgMTcuNzI1IDE3LjE1OCBDIDE3LjcyNSAyMy45ODYgMTMuNjk4IDI2Ljc3NSA4LjkzNyAyNi43NzUgQyA0LjQ1NiAyNi43NzUgMS43NTkgMjMuNzc3IDAuNzQyIDIxLjMyNiBMIDQuMjc3IDE5Ljg1NSBDIDQuOTA2IDIxLjM2IDYuNDQ5IDIzLjEzNSA4LjkzMyAyMy4xMzUgQyAxMS45OCAyMy4xMzUgMTMuODY5IDIxLjI1NSAxMy44NjkgMTcuNzE2IEwgMTMuODY5IDE2LjM4NyBMIDEzLjcyNyAxNi4zODcgQyAxMi44MTggMTcuNTA4IDExLjA2NyAxOC40ODggOC44NTggMTguNDg4IEMgNC4yMzUgMTguNDg4IDAgMTQuNDYxIDAgOS4yNzkgQyAwIDQuMDYgNC4yMzUgMCA4Ljg1OCAwIEMgMTEuMDYzIDAgMTIuODE0IDAuOTggMTMuNzI3IDIuMDY4IEwgMTMuODY5IDIuMDY4IEwgMTMuODY5IDAuNTYzIEwgMTcuNzI1IDAuNTYzIFogTSAxNC4xNTYgOS4yNzkgQyAxNC4xNTYgNi4wMjQgMTEuOTg0IDMuNjQzIDkuMjIxIDMuNjQzIEMgNi40MTkgMy42NDMgNC4wNzMgNi4wMjQgNC4wNzMgOS4yNzkgQyA0LjA3MyAxMi41MDIgNi40MTkgMTQuODQ4IDkuMjIxIDE0Ljg0OCBDIDExLjk4NCAxNC44NDggMTQuMTU2IDEyLjUwMiAxNC4xNTYgOS4yNzkgWiIgZmlsbD0icmdiKDY2LCAxMzMsIDI0NCkiIGhlaWdodD0iMjYuNzc0NnB4IiBpZD0iam5DSVVGUl9ZIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2OS42OTggMTYuNDA0KSIgd2lkdGg9IjE3LjcyNDU5OTk5OTk5OTk5NXB4Ii8+PHBhdGggZD0iTSAzLjk2IDAgTCAzLjk2IDI3LjA5NiBMIDAgMjcuMDk2IEwgMCAwIFoiIGZpbGw9InJnYig1MiwgMTY4LCA4MykiIGhlaWdodD0iMjcuMDk1NTZweCIgaWQ9Ik5pcThFYU9zYiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODkuODE5IDcuMjM0KSIgd2lkdGg9IjMuOTYwMjAwMDAwMDAwMDAwNHB4Ii8+PHBhdGggZD0iTSAxMy43MjcgMTIuMjkzIEwgMTYuODc5IDE0LjM5NCBDIDE1Ljg2MiAxNS44OTkgMTMuNDExIDE4LjQ5MiA5LjE3NSAxOC40OTIgQyAzLjkyMyAxOC40OTIgMCAxNC40MzIgMCA5LjI0NiBDIDAgMy43NDggMy45NTYgMCA4LjcyMSAwIEMgMTMuNTE5IDAgMTUuODY2IDMuODE4IDE2LjYzMyA1Ljg4MiBMIDE3LjA1NCA2LjkzMiBMIDQuNjk0IDEyLjA1MSBDIDUuNjQgMTMuOTA2IDcuMTEyIDE0Ljg1MyA5LjE3NSAxNC44NTMgQyAxMS4yNDMgMTQuODUzIDEyLjY3NyAxMy44MzYgMTMuNzI3IDEyLjI5MyBaIE0gNC4wMjcgOC45NjcgTCAxMi4yODkgNS41MzYgQyAxMS44MzUgNC4zODEgMTAuNDY4IDMuNTc3IDguODU5IDMuNTc3IEMgNi43OTUgMy41NzcgMy45MjMgNS4zOTggNC4wMjcgOC45NjcgWiIgZmlsbD0icmdiKDIzNCwgNjcsIDUzKSIgaGVpZ2h0PSIxOC40OTE3MDAwMDAwMDAwMDVweCIgaWQ9InZXRlMzTmR4aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTUuNDg0IDE2LjQpIiB3aWR0aD0iMTcuMDUzNjAwMDAwMDAwMDAzcHgiLz48cGF0aCBkPSJNIDE0LjU2MSAxNy4wNjYgTCAxNC41NjEgMTMuMTQzIEwgMjcuNzc5IDEzLjE0MyBDIDI3LjkwOCAxMy44MjcgMjcuOTc1IDE0LjYzNiAyNy45NzUgMTUuNTExIEMgMjcuOTc1IDE4LjQ1NCAyNy4xNzEgMjIuMDkzIDI0LjU3OCAyNC42ODYgQyAyMi4wNTYgMjcuMzEyIDE4LjgzMyAyOC43MTMgMTQuNTY1IDI4LjcxMyBDIDYuNjUzIDI4LjcxMyAwIDIyLjI2OCAwIDE0LjM1NiBDIDAgNi40NDUgNi42NTMgMCAxNC41NjUgMCBDIDE4Ljk0MiAwIDIyLjA2IDEuNzE3IDI0LjQwMyAzLjk1NiBMIDIxLjYzNSA2LjcyNCBDIDE5Ljk1NSA1LjE0OCAxNy42NzkgMy45MjMgMTQuNTYxIDMuOTIzIEMgOC43ODMgMy45MjMgNC4yNjQgOC41NzkgNC4yNjQgMTQuMzU2IEMgNC4yNjQgMjAuMTM0IDguNzgzIDI0Ljc5IDE0LjU2MSAyNC43OSBDIDE4LjMwOCAyNC43OSAyMC40NDMgMjMuMjg1IDIxLjgxIDIxLjkxOCBDIDIyLjkxOSAyMC44MDkgMjMuNjQ4IDE5LjIyNSAyMy45MzYgMTcuMDYyIFoiIGZpbGw9InJnYig2NiwgMTMzLCAyNDQpIiBoZWlnaHQ9IjI4LjcxMjk5cHgiIGlkPSJvNUpGUFZjUHciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMTM3IDYuMTc5KSIgd2lkdGg9IjI3Ljk3NTA4MXB4Ii8+PC9zdmc+" alt="" width="150" height="48" loading="lazy"><h3>تصميم المنتجات الرقمية</h3></a><a class="certificate-card certificate-card--2" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="التفكير الإبداعي للتصميم — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر سبتمبر 2023</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTM1IDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGQ9Ik0gMCAwIEwgMTM0IDAgTCAxMzQgMzYgTCAwIDM2IFogTSAxMi4wMDggMTIgTCAwIDEyIEwgMCAyNCBMIDEyLjAwOCAzNiBMIDEyLjAwOCAyNCBMIDI0LjAxNiAyNCBMIDEyLjAwOCAxMiBMIDI0LjAxNiAxMiBMIDI0LjAxNiAwIEwgMCAwIFogTSA0Mi4yNzQgMjcuOTI3IEwgNDYuMjgzIDI3LjkyNyBMIDQ2LjI4MyAxOS4yOTMgTCA1NS44MzYgMTkuMjkzIEwgNTUuODM2IDE1LjkzMyBMIDQ2LjI4MyAxNS45MzMgTCA0Ni4yODMgMTAuNTEzIEwgNTYuNTUgMTAuNTEzIEwgNTYuNTUgNy4wNzMgTCA0Mi4yNzQgNy4wNzMgWiBNIDY1LjQ4OSAxMy4wMiBDIDY0LjUxNSAxMy4wMiA2My43NDEgMTMuMjQgNjMuMTYxIDEzLjY4IEMgNjIuNTggMTQuMTIgNjIuMTYgMTQuNzczIDYxLjg4NyAxNS42NCBMIDYxLjg0NyAxNS42NCBMIDYxLjg0NyAxMy4xNDcgTCA1OC4xNTEgMTMuMTQ3IEwgNTguMTUxIDI3LjkyNyBMIDYxLjk4NyAyNy45MjcgTCA2MS45ODcgMTkuNzQgQyA2MS45ODcgMTguOTczIDYyLjExNCAxOC4zNCA2Mi4zNzQgMTcuODI3IEMgNjIuNjM0IDE3LjMyIDYyLjk4MSAxNi45NCA2My40MzQgMTYuNjg3IEMgNjMuODg4IDE2LjQzMyA2NC4zODggMTYuMzA3IDY0Ljk0OSAxNi4zMDcgQyA2NS41MjMgMTYuMzA0IDY2LjA5OCAxNi4zMzEgNjYuNjcgMTYuMzg3IEwgNjYuNjcgMTMuMDY3IEMgNjYuNTIzIDEzLjA2IDY2LjM1IDEzLjA0NyA2Ni4xNDkgMTMuMDMzIEMgNjUuOTU2IDEzLjAyIDY1LjczNiAxMy4wMTMgNjUuNDg5IDEzLjAxMyBaIE0gNzguMzcxIDE1LjE5MyBMIDc4LjMzMSAxNS4xOTMgQyA3OC4wNDYgMTQuNjkxIDc3LjY2NSAxNC4yNDkgNzcuMjEgMTMuODkzIEMgNzYuNzU4IDEzLjU0NCA3Ni4yNDcgMTMuMjc4IDc1LjcwMiAxMy4xMDcgQyA3NS4xNDkgMTIuOTI3IDc0LjU0OCAxMi44NCA3My45MDEgMTIuODQgQyA3Mi42NCAxMi44NCA3MS41MjYgMTMuMTY3IDcwLjU2NiAxMy44MTMgQyA2OS42MDUgMTQuNDYgNjguODUxIDE1LjM2IDY4LjMxOCAxNi41MTMgQyA2Ny43ODQgMTcuNjY3IDY3LjUxIDE5IDY3LjUxIDIwLjUyIEMgNjcuNTEgMjIuMDQgNjcuNzc3IDIzLjQwNyA2OC4zMTEgMjQuNTY3IEMgNjguODQ1IDI1LjcyNyA2OS41OTIgMjYuNjI3IDcwLjU1MiAyNy4yNjcgQyA3MS41MTMgMjcuOTA3IDcyLjY0IDI4LjIzMyA3My45MjggMjguMjMzIEMgNzQuNTc1IDI4LjIzMyA3NS4xNzUgMjguMTQgNzUuNzI5IDI3Ljk0NyBDIDc2LjI4MyAyNy43NTMgNzYuNzgzIDI3LjQ3MyA3Ny4yMyAyNy4xMDcgQyA3Ny42NzcgMjYuNzQgNzguMDM3IDI2LjI3MyA3OC4zMzEgMjUuNzEzIEwgNzguMzg0IDI1LjcxMyBMIDc4LjM4NCAyNy45MjcgTCA4Mi4xMjYgMjcuOTI3IEwgODIuMTI2IDEzLjE0NyBMIDc4LjM3MSAxMy4xNDcgWiBNIDc4LjA3IDIyLjkzMyBDIDc3Ljc2NCAyMy42MTMgNzcuMzQzIDI0LjE0IDc2Ljc5NiAyNC41MTMgQyA3Ni4yNDkgMjQuODg3IDc1LjYwOSAyNS4wNzMgNzQuODY4IDI1LjA3MyBDIDc0LjE3NSAyNS4wNzMgNzMuNTY4IDI0Ljg5MyA3My4wNDcgMjQuNTQgQyA3Mi41MjcgMjQuMTg3IDcyLjEyIDIzLjY2NyA3MS44MjYgMjIuOTkzIEMgNzEuNTQgMjIuMzIgNzEuMzkzIDIxLjQ5MyA3MS4zOTMgMjAuNTIgQyA3MS4zOTMgMTkuNTQ3IDcxLjU0IDE4LjcxMyA3MS44MjYgMTguMDQgQyA3Mi4xMTMgMTcuMzY3IDcyLjUyIDE2Ljg1MyA3My4wNDcgMTYuNSBDIDczLjU3NCAxNi4xNDcgNzQuMTc1IDE1Ljk2NyA3NC44NjggMTUuOTY3IEMgNzUuNjA5IDE1Ljk2NyA3Ni4yNDkgMTYuMTUzIDc2Ljc5NiAxNi41MjcgQyA3Ny4zNDMgMTYuOSA3Ny43NyAxNy40MjcgNzguMDcgMTguMTA3IEMgNzguMzc3IDE4Ljc4NyA3OC41MjQgMTkuNTkzIDc4LjUyNCAyMC41MTMgQyA3OC41MjQgMjEuNDMzIDc4LjM3MSAyMi4yNCA3OC4wNyAyMi45MiBaIE0gMTA0LjU3NCAxMy40NiBDIDEwMy44MjcgMTMuMDUzIDEwMi45ODcgMTIuODUzIDEwMi4wNTMgMTIuODUzIEMgMTAxLjIzMiAxMi44NTMgMTAwLjQ3OCAxMyA5OS43OTggMTMuMjg3IEMgOTkuMTMyIDEzLjU2MiA5OC41MzkgMTMuOTg2IDk4LjA2MyAxNC41MjcgQyA5Ny43NTcgMTQuODczIDk3LjUxNiAxNS4yNiA5Ny4zMyAxNS42OCBDIDk3LjA4NiAxNC45NCA5Ni42MjMgMTQuMjkxIDk2LjAwMiAxMy44MiBDIDk1LjE2OCAxMy4xNzMgOTQuMTg4IDEyLjg1MyA5My4wNiAxMi44NTMgQyA5Mi4zNjYgMTIuODUzIDkxLjcxMyAxMi45OCA5MS4wODYgMTMuMjQgQyA5MC40NTkgMTMuNDkzIDg5LjkxMSAxMy44OTMgODkuNDM4IDE0LjQyIEMgODkuMDk4IDE0LjggODguODE3IDE1LjI1MyA4OC41OTEgMTUuNzczIEwgODguNTkxIDEzLjE0NyBMIDg0Ljg5NSAxMy4xNDcgTCA4NC44OTUgMjcuOTI3IEwgODguNzMxIDI3LjkyNyBMIDg4LjczMSAxOS4xNDcgQyA4OC43MzEgMTguNDczIDg4Ljg1NyAxNy45MDcgODkuMTExIDE3LjQ0NyBDIDg5LjM2NCAxNi45ODcgODkuNzA1IDE2LjYzMyA5MC4xMjUgMTYuNCBDIDkwLjU1MiAxNi4xNiA5MS4wMTIgMTYuMDQgOTEuNTE5IDE2LjA0IEMgOTIuMjg2IDE2LjA0IDkyLjkwNyAxNi4yNzMgOTMuMzggMTYuNzQ3IEMgOTMuODU0IDE3LjIyIDk0LjA5NCAxNy44NTMgOTQuMDk0IDE4LjY0IEwgOTQuMDk0IDI3LjkyIEwgOTcuODAzIDI3LjkyIEwgOTcuODAzIDE4LjkzMyBDIDk3LjgwMyAxOC4zNjcgOTcuOTE3IDE3Ljg2IDk4LjEzNyAxNy40MiBDIDk4LjM1NyAxNi45OCA5OC42NzcgMTYuNjQgOTkuMDg0IDE2LjQgQyA5OS40OTEgMTYuMTYgOTkuOTc4IDE2LjAzMyAxMDAuNTQ1IDE2LjAzMyBDIDEwMS4yNjYgMTYuMDMzIDEwMS44NzkgMTYuMjUzIDEwMi4zOTMgMTYuNyBDIDEwMi45MDcgMTcuMTQgMTAzLjE2IDE3LjgzMyAxMDMuMTYgMTguNzggTCAxMDMuMTYgMjcuOTIgTCAxMDYuOTgzIDI3LjkyIEwgMTA2Ljk4MyAxOC4xNDcgQyAxMDYuOTgzIDE3IDEwNi43NjIgMTYuMDMzIDEwNi4zMjkgMTUuMjQgQyAxMDUuODk1IDE0LjQ1MyAxMDUuMzAxIDEzLjg1MyAxMDQuNTU0IDEzLjQ0NyBaIE0gMTIxLjQ2NSAxNC45NTMgQyAxMjAuODMzIDE0LjI3MiAxMjAuMDYyIDEzLjczMyAxMTkuMjA0IDEzLjM3MyBDIDExOC4zMjMgMTMgMTE3LjM0MyAxMi44MTMgMTE2LjI2MiAxMi44MTMgQyAxMTQuODYxIDEyLjgxMyAxMTMuNjIgMTMuMTQ3IDExMi41NDYgMTMuODA3IEMgMTExLjQ2NSAxNC40NjcgMTEwLjYyNSAxNS4zODcgMTEwLjAxMSAxNi41NTMgQyAxMDkuMzk3IDE3LjcyIDEwOS4wOTEgMTkuMDUzIDEwOS4wOTEgMjAuNTUzIEMgMTA5LjA5MSAyMi4wNTMgMTA5LjM5MSAyMy4zNzMgMTA5Ljk4NCAyNC41MzMgQyAxMTAuNTg1IDI1LjY5MyAxMTEuNDMyIDI2LjYwNyAxMTIuNTI2IDI3LjI2NyBDIDExMy42MiAyNy45MjcgMTE0LjkxNCAyOC4yNiAxMTYuNDAyIDI4LjI2IEMgMTE3LjU3NiAyOC4yNiAxMTguNjUgMjguMDQ3IDExOS42MjQgMjcuNjI3IEMgMTIwLjU5OCAyNy4yMDcgMTIxLjM5OSAyNi42MjcgMTIyLjAzOSAyNS44ODcgQyAxMjIuNjc5IDI1LjE0NyAxMjMuMDkzIDI0LjI4NyAxMjMuMjggMjMuMzIgTCAxMTkuNzM3IDIzLjMyIEMgMTE5LjYwNCAyMy43MTMgMTE5LjM5NyAyNC4wNiAxMTkuMTA0IDI0LjM2IEMgMTE4LjgxIDI0LjY2IDExOC40NSAyNC45IDExOC4wMSAyNS4wNjcgQyAxMTcuNTY5IDI1LjIzMyAxMTcuMDY5IDI1LjMyIDExNi41MDkgMjUuMzIgQyAxMTUuNzIyIDI1LjMyIDExNS4wNjEgMjUuMTUzIDExNC41MTQgMjQuODEzIEMgMTEzLjk2NyAyNC40OCAxMTMuNTQ3IDI0LjAwNyAxMTMuMjYgMjMuNCBDIDExMyAyMi44NTMgMTEyLjg2IDIyLjIyIDExMi44MzMgMjEuNTEzIEwgMTIzLjQyNiAyMS41MTMgTCAxMjMuNDI2IDIwLjQ4IEMgMTIzLjQyNiAxOS4zNTMgMTIzLjI1MyAxOC4zMiAxMjIuOTEzIDE3LjM4IEMgMTIyLjU3MyAxNi40NCAxMjIuMDg2IDE1LjYzMyAxMjEuNDU5IDE0Ljk1MyBaIE0gMTEyLjg2NiAxOC45ODcgQyAxMTIuOTI2IDE4LjQ2NyAxMTMuMDUzIDE3Ljk5MyAxMTMuMjYgMTcuNTggQyAxMTMuNTQ3IDE3LjAwNyAxMTMuOTU0IDE2LjU2IDExNC40ODEgMTYuMjQ3IEMgMTE1LjAwOCAxNS45MzMgMTE1LjYyOCAxNS43OCAxMTYuMzM1IDE1Ljc4IEMgMTE3LjA0MiAxNS43OCAxMTcuNjg5IDE1LjkzMyAxMTguMjEgMTYuMjQ3IEMgMTE4LjczIDE2LjU2IDExOS4xMzcgMTcgMTE5LjQyNCAxNy41OCBDIDExOS42MzEgMTcuOTkzIDExOS43NTcgMTguNDY3IDExOS44MTcgMTguOTg3IFogTSAxMzMuNDggMTMuMDQgQyAxMzMuMjg2IDEzLjAyNyAxMzMuMDY2IDEzLjAyIDEzMi44MTkgMTMuMDIgQyAxMzEuODQ1IDEzLjAyIDEzMS4wNzEgMTMuMjQgMTMwLjQ5MSAxMy42OCBDIDEyOS45MTEgMTQuMTIgMTI5LjQ5IDE0Ljc3MyAxMjkuMjE3IDE1LjY0IEwgMTI5LjE3NyAxNS42NCBMIDEyOS4xNzcgMTMuMTQ3IEwgMTI1LjQ4MSAxMy4xNDcgTCAxMjUuNDgxIDI3LjkyNyBMIDEyOS4zMTcgMjcuOTI3IEwgMTI5LjMxNyAxOS43NCBDIDEyOS4zMTcgMTguOTczIDEyOS40NDQgMTguMzQgMTI5LjcwNCAxNy44MjcgQyAxMjkuOTU3IDE3LjMyIDEzMC4zMTEgMTYuOTQgMTMwLjc1OCAxNi42ODcgQyAxMzEuMjA1IDE2LjQzMyAxMzEuNzEyIDE2LjMwNyAxMzIuMjcyIDE2LjMwNyBDIDEzMi44NDcgMTYuMzA0IDEzMy40MjEgMTYuMzMxIDEzMy45OTMgMTYuMzg3IEwgMTMzLjk5MyAxMy4wNjcgQyAxMzMuODQ3IDEzLjA2IDEzMy42NzMgMTMuMDQ3IDEzMy40NzMgMTMuMDMzIFoiIGZpbGw9InRyYW5zcGFyZW50IiBoZWlnaHQ9IjM2cHgiIGlkPSJSWTZUVEJQSmsiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgNikiIHdpZHRoPSIxMzRweCI+PHBhdGggZD0iTSAwIDAgTCAxMzQgMCBMIDEzNCAzNiBMIDAgMzYgWiIgZmlsbD0idHJhbnNwYXJlbnQiIGhlaWdodD0iMzZweCIgaWQ9IlI4OFA0bDlTNSIgd2lkdGg9IjEzNHB4Ii8+PHBhdGggZD0iTSAxMi4wMDggMTIgTCAwIDEyIEwgMCAyNCBMIDEyLjAwOCAzNiBMIDEyLjAwOCAyNCBMIDI0LjAxNiAyNCBMIDEyLjAwOCAxMiBMIDI0LjAxNiAxMiBMIDI0LjAxNiAwIEwgMCAwIFogTSA0Mi4yNzQgMjcuOTI3IEwgNDYuMjgzIDI3LjkyNyBMIDQ2LjI4MyAxOS4yOTMgTCA1NS44MzYgMTkuMjkzIEwgNTUuODM2IDE1LjkzMyBMIDQ2LjI4MyAxNS45MzMgTCA0Ni4yODMgMTAuNTEzIEwgNTYuNTUgMTAuNTEzIEwgNTYuNTUgNy4wNzMgTCA0Mi4yNzQgNy4wNzMgWiBNIDY1LjQ4OSAxMy4wMiBDIDY0LjUxNSAxMy4wMiA2My43NDEgMTMuMjQgNjMuMTYxIDEzLjY4IEMgNjIuNTggMTQuMTIgNjIuMTYgMTQuNzczIDYxLjg4NyAxNS42NCBMIDYxLjg0NyAxNS42NCBMIDYxLjg0NyAxMy4xNDcgTCA1OC4xNTEgMTMuMTQ3IEwgNTguMTUxIDI3LjkyNyBMIDYxLjk4NyAyNy45MjcgTCA2MS45ODcgMTkuNzQgQyA2MS45ODcgMTguOTczIDYyLjExNCAxOC4zNCA2Mi4zNzQgMTcuODI3IEMgNjIuNjM0IDE3LjMyIDYyLjk4MSAxNi45NCA2My40MzQgMTYuNjg3IEMgNjMuODg4IDE2LjQzMyA2NC4zODggMTYuMzA3IDY0Ljk0OSAxNi4zMDcgQyA2NS41MjMgMTYuMzA0IDY2LjA5OCAxNi4zMzEgNjYuNjcgMTYuMzg3IEwgNjYuNjcgMTMuMDY3IEMgNjYuNTIzIDEzLjA2IDY2LjM1IDEzLjA0NyA2Ni4xNDkgMTMuMDMzIEMgNjUuOTU2IDEzLjAyIDY1LjczNiAxMy4wMTMgNjUuNDg5IDEzLjAxMyBaIE0gNzguMzcxIDE1LjE5MyBMIDc4LjMzMSAxNS4xOTMgQyA3OC4wNDYgMTQuNjkxIDc3LjY2NSAxNC4yNDkgNzcuMjEgMTMuODkzIEMgNzYuNzU4IDEzLjU0NCA3Ni4yNDcgMTMuMjc4IDc1LjcwMiAxMy4xMDcgQyA3NS4xNDkgMTIuOTI3IDc0LjU0OCAxMi44NCA3My45MDEgMTIuODQgQyA3Mi42NCAxMi44NCA3MS41MjYgMTMuMTY3IDcwLjU2NiAxMy44MTMgQyA2OS42MDUgMTQuNDYgNjguODUxIDE1LjM2IDY4LjMxOCAxNi41MTMgQyA2Ny43ODQgMTcuNjY3IDY3LjUxIDE5IDY3LjUxIDIwLjUyIEMgNjcuNTEgMjIuMDQgNjcuNzc3IDIzLjQwNyA2OC4zMTEgMjQuNTY3IEMgNjguODQ1IDI1LjcyNyA2OS41OTIgMjYuNjI3IDcwLjU1MiAyNy4yNjcgQyA3MS41MTMgMjcuOTA3IDcyLjY0IDI4LjIzMyA3My45MjggMjguMjMzIEMgNzQuNTc1IDI4LjIzMyA3NS4xNzUgMjguMTQgNzUuNzI5IDI3Ljk0NyBDIDc2LjI4MyAyNy43NTMgNzYuNzgzIDI3LjQ3MyA3Ny4yMyAyNy4xMDcgQyA3Ny42NzcgMjYuNzQgNzguMDM3IDI2LjI3MyA3OC4zMzEgMjUuNzEzIEwgNzguMzg0IDI1LjcxMyBMIDc4LjM4NCAyNy45MjcgTCA4Mi4xMjYgMjcuOTI3IEwgODIuMTI2IDEzLjE0NyBMIDc4LjM3MSAxMy4xNDcgWiBNIDc4LjA3IDIyLjkzMyBDIDc3Ljc2NCAyMy42MTMgNzcuMzQzIDI0LjE0IDc2Ljc5NiAyNC41MTMgQyA3Ni4yNDkgMjQuODg3IDc1LjYwOSAyNS4wNzMgNzQuODY4IDI1LjA3MyBDIDc0LjE3NSAyNS4wNzMgNzMuNTY4IDI0Ljg5MyA3My4wNDcgMjQuNTQgQyA3Mi41MjcgMjQuMTg3IDcyLjEyIDIzLjY2NyA3MS44MjYgMjIuOTkzIEMgNzEuNTQgMjIuMzIgNzEuMzkzIDIxLjQ5MyA3MS4zOTMgMjAuNTIgQyA3MS4zOTMgMTkuNTQ3IDcxLjU0IDE4LjcxMyA3MS44MjYgMTguMDQgQyA3Mi4xMTMgMTcuMzY3IDcyLjUyIDE2Ljg1MyA3My4wNDcgMTYuNSBDIDczLjU3NCAxNi4xNDcgNzQuMTc1IDE1Ljk2NyA3NC44NjggMTUuOTY3IEMgNzUuNjA5IDE1Ljk2NyA3Ni4yNDkgMTYuMTUzIDc2Ljc5NiAxNi41MjcgQyA3Ny4zNDMgMTYuOSA3Ny43NyAxNy40MjcgNzguMDcgMTguMTA3IEMgNzguMzc3IDE4Ljc4NyA3OC41MjQgMTkuNTkzIDc4LjUyNCAyMC41MTMgQyA3OC41MjQgMjEuNDMzIDc4LjM3MSAyMi4yNCA3OC4wNyAyMi45MiBaIE0gMTA0LjU3NCAxMy40NiBDIDEwMy44MjcgMTMuMDUzIDEwMi45ODcgMTIuODUzIDEwMi4wNTMgMTIuODUzIEMgMTAxLjIzMiAxMi44NTMgMTAwLjQ3OCAxMyA5OS43OTggMTMuMjg3IEMgOTkuMTMyIDEzLjU2MiA5OC41MzkgMTMuOTg2IDk4LjA2MyAxNC41MjcgQyA5Ny43NTcgMTQuODczIDk3LjUxNiAxNS4yNiA5Ny4zMyAxNS42OCBDIDk3LjA4NiAxNC45NCA5Ni42MjMgMTQuMjkxIDk2LjAwMiAxMy44MiBDIDk1LjE2OCAxMy4xNzMgOTQuMTg4IDEyLjg1MyA5My4wNiAxMi44NTMgQyA5Mi4zNjYgMTIuODUzIDkxLjcxMyAxMi45OCA5MS4wODYgMTMuMjQgQyA5MC40NTkgMTMuNDkzIDg5LjkxMSAxMy44OTMgODkuNDM4IDE0LjQyIEMgODkuMDk4IDE0LjggODguODE3IDE1LjI1MyA4OC41OTEgMTUuNzczIEwgODguNTkxIDEzLjE0NyBMIDg0Ljg5NSAxMy4xNDcgTCA4NC44OTUgMjcuOTI3IEwgODguNzMxIDI3LjkyNyBMIDg4LjczMSAxOS4xNDcgQyA4OC43MzEgMTguNDczIDg4Ljg1NyAxNy45MDcgODkuMTExIDE3LjQ0NyBDIDg5LjM2NCAxNi45ODcgODkuNzA1IDE2LjYzMyA5MC4xMjUgMTYuNCBDIDkwLjU1MiAxNi4xNiA5MS4wMTIgMTYuMDQgOTEuNTE5IDE2LjA0IEMgOTIuMjg2IDE2LjA0IDkyLjkwNyAxNi4yNzMgOTMuMzggMTYuNzQ3IEMgOTMuODU0IDE3LjIyIDk0LjA5NCAxNy44NTMgOTQuMDk0IDE4LjY0IEwgOTQuMDk0IDI3LjkyIEwgOTcuODAzIDI3LjkyIEwgOTcuODAzIDE4LjkzMyBDIDk3LjgwMyAxOC4zNjcgOTcuOTE3IDE3Ljg2IDk4LjEzNyAxNy40MiBDIDk4LjM1NyAxNi45OCA5OC42NzcgMTYuNjQgOTkuMDg0IDE2LjQgQyA5OS40OTEgMTYuMTYgOTkuOTc4IDE2LjAzMyAxMDAuNTQ1IDE2LjAzMyBDIDEwMS4yNjYgMTYuMDMzIDEwMS44NzkgMTYuMjUzIDEwMi4zOTMgMTYuNyBDIDEwMi45MDcgMTcuMTQgMTAzLjE2IDE3LjgzMyAxMDMuMTYgMTguNzggTCAxMDMuMTYgMjcuOTIgTCAxMDYuOTgzIDI3LjkyIEwgMTA2Ljk4MyAxOC4xNDcgQyAxMDYuOTgzIDE3IDEwNi43NjIgMTYuMDMzIDEwNi4zMjkgMTUuMjQgQyAxMDUuODk1IDE0LjQ1MyAxMDUuMzAxIDEzLjg1MyAxMDQuNTU0IDEzLjQ0NyBaIE0gMTIxLjQ2NSAxNC45NTMgQyAxMjAuODMzIDE0LjI3MiAxMjAuMDYyIDEzLjczMyAxMTkuMjA0IDEzLjM3MyBDIDExOC4zMjMgMTMgMTE3LjM0MyAxMi44MTMgMTE2LjI2MiAxMi44MTMgQyAxMTQuODYxIDEyLjgxMyAxMTMuNjIgMTMuMTQ3IDExMi41NDYgMTMuODA3IEMgMTExLjQ2NSAxNC40NjcgMTEwLjYyNSAxNS4zODcgMTEwLjAxMSAxNi41NTMgQyAxMDkuMzk3IDE3LjcyIDEwOS4wOTEgMTkuMDUzIDEwOS4wOTEgMjAuNTUzIEMgMTA5LjA5MSAyMi4wNTMgMTA5LjM5MSAyMy4zNzMgMTA5Ljk4NCAyNC41MzMgQyAxMTAuNTg1IDI1LjY5MyAxMTEuNDMyIDI2LjYwNyAxMTIuNTI2IDI3LjI2NyBDIDExMy42MiAyNy45MjcgMTE0LjkxNCAyOC4yNiAxMTYuNDAyIDI4LjI2IEMgMTE3LjU3NiAyOC4yNiAxMTguNjUgMjguMDQ3IDExOS42MjQgMjcuNjI3IEMgMTIwLjU5OCAyNy4yMDcgMTIxLjM5OSAyNi42MjcgMTIyLjAzOSAyNS44ODcgQyAxMjIuNjc5IDI1LjE0NyAxMjMuMDkzIDI0LjI4NyAxMjMuMjggMjMuMzIgTCAxMTkuNzM3IDIzLjMyIEMgMTE5LjYwNCAyMy43MTMgMTE5LjM5NyAyNC4wNiAxMTkuMTA0IDI0LjM2IEMgMTE4LjgxIDI0LjY2IDExOC40NSAyNC45IDExOC4wMSAyNS4wNjcgQyAxMTcuNTY5IDI1LjIzMyAxMTcuMDY5IDI1LjMyIDExNi41MDkgMjUuMzIgQyAxMTUuNzIyIDI1LjMyIDExNS4wNjEgMjUuMTUzIDExNC41MTQgMjQuODEzIEMgMTEzLjk2NyAyNC40OCAxMTMuNTQ3IDI0LjAwNyAxMTMuMjYgMjMuNCBDIDExMyAyMi44NTMgMTEyLjg2IDIyLjIyIDExMi44MzMgMjEuNTEzIEwgMTIzLjQyNiAyMS41MTMgTCAxMjMuNDI2IDIwLjQ4IEMgMTIzLjQyNiAxOS4zNTMgMTIzLjI1MyAxOC4zMiAxMjIuOTEzIDE3LjM4IEMgMTIyLjU3MyAxNi40NCAxMjIuMDg2IDE1LjYzMyAxMjEuNDU5IDE0Ljk1MyBaIE0gMTEyLjg2NiAxOC45ODcgQyAxMTIuOTI2IDE4LjQ2NyAxMTMuMDUzIDE3Ljk5MyAxMTMuMjYgMTcuNTggQyAxMTMuNTQ3IDE3LjAwNyAxMTMuOTU0IDE2LjU2IDExNC40ODEgMTYuMjQ3IEMgMTE1LjAwOCAxNS45MzMgMTE1LjYyOCAxNS43OCAxMTYuMzM1IDE1Ljc4IEMgMTE3LjA0MiAxNS43OCAxMTcuNjg5IDE1LjkzMyAxMTguMjEgMTYuMjQ3IEMgMTE4LjczIDE2LjU2IDExOS4xMzcgMTcgMTE5LjQyNCAxNy41OCBDIDExOS42MzEgMTcuOTkzIDExOS43NTcgMTguNDY3IDExOS44MTcgMTguOTg3IFogTSAxMzMuNDggMTMuMDQgQyAxMzMuMjg2IDEzLjAyNyAxMzMuMDY2IDEzLjAyIDEzMi44MTkgMTMuMDIgQyAxMzEuODQ1IDEzLjAyIDEzMS4wNzEgMTMuMjQgMTMwLjQ5MSAxMy42OCBDIDEyOS45MTEgMTQuMTIgMTI5LjQ5IDE0Ljc3MyAxMjkuMjE3IDE1LjY0IEwgMTI5LjE3NyAxNS42NCBMIDEyOS4xNzcgMTMuMTQ3IEwgMTI1LjQ4MSAxMy4xNDcgTCAxMjUuNDgxIDI3LjkyNyBMIDEyOS4zMTcgMjcuOTI3IEwgMTI5LjMxNyAxOS43NCBDIDEyOS4zMTcgMTguOTczIDEyOS40NDQgMTguMzQgMTI5LjcwNCAxNy44MjcgQyAxMjkuOTU3IDE3LjMyIDEzMC4zMTEgMTYuOTQgMTMwLjc1OCAxNi42ODcgQyAxMzEuMjA1IDE2LjQzMyAxMzEuNzEyIDE2LjMwNyAxMzIuMjcyIDE2LjMwNyBDIDEzMi44NDcgMTYuMzA0IDEzMy40MjEgMTYuMzMxIDEzMy45OTMgMTYuMzg3IEwgMTMzLjk5MyAxMy4wNjcgQyAxMzMuODQ3IDEzLjA2IDEzMy42NzMgMTMuMDQ3IDEzMy40NzMgMTMuMDMzIFoiIGZpbGw9InJnYigwLCAwLCAwKSIgaGVpZ2h0PSIzNnB4IiBpZD0iSVF0WkdUVzI3IiB3aWR0aD0iMTMzLjk5MzMzNTA3NjQ3ODE2cHgiLz48L2c+PC9zdmc+" alt="" width="150" height="48" loading="lazy"><h3>التفكير الإبداعي للتصميم</h3></a><a class="certificate-card certificate-card--3" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="تصميم تجارب الخدمات الرقمية — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر يناير 2025</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTEzIDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMTguNTUgOS4yNDYgQyAxOC41NSAxNC41NjkgMTQuMzg2IDE4LjQ5MiA5LjI3NSAxOC40OTIgQyA0LjE2NCAxOC40OTIgMCAxNC41NjkgMCA5LjI0NiBDIDAgMy44ODUgNC4xNjQgMCA5LjI3NSAwIEMgMTQuMzg2IDAgMTguNTUgMy44ODUgMTguNTUgOS4yNDYgWiBNIDE0LjQ5IDkuMjQ2IEMgMTQuNDkgNS45MTkgMTIuMDc2IDMuNjQzIDkuMjc1IDMuNjQzIEMgNi40NzQgMy42NDMgNC4wNiA1LjkxOSA0LjA2IDkuMjQ2IEMgNC4wNiAxMi41MzkgNi40NzQgMTQuODQ4IDkuMjc1IDE0Ljg0OCBDIDEyLjA3NiAxNC44NDggMTQuNDkgMTIuNTM1IDE0LjQ5IDkuMjQ2IFoiIGZpbGw9InJnYigyMzQsIDY3LCA1MykiIGhlaWdodD0iMTguNDkxN3B4IiBpZD0ieXVtNnloaUphIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOS42ODggMTYuNDA0KSIgd2lkdGg9IjE4LjU0OTk5OTk5OTk5OTk5N3B4Ii8+PHBhdGggZD0iTSAxOC41NSA5LjI0NiBDIDE4LjU1IDE0LjU2OSAxNC4zODYgMTguNDkyIDkuMjc1IDE4LjQ5MiBDIDQuMTY0IDE4LjQ5MiAwIDE0LjU2OSAwIDkuMjQ2IEMgMCAzLjg4OSA0LjE2NCAwIDkuMjc1IDAgQyAxNC4zODYgMCAxOC41NSAzLjg4NSAxOC41NSA5LjI0NiBaIE0gMTQuNDkgOS4yNDYgQyAxNC40OSA1LjkxOSAxMi4wNzYgMy42NDMgOS4yNzUgMy42NDMgQyA2LjQ3NCAzLjY0MyA0LjA2IDUuOTE5IDQuMDYgOS4yNDYgQyA0LjA2IDEyLjUzOSA2LjQ3NCAxNC44NDggOS4yNzUgMTQuODQ4IEMgMTIuMDc2IDE0Ljg0OCAxNC40OSAxMi41MzUgMTQuNDkgOS4yNDYgWiIgZmlsbD0icmdiKDI1MSwgMTg4LCA1KSIgaGVpZ2h0PSIxOC40OTE3cHgiIGlkPSJpaFhQOU1mTHgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ5LjY5NyAxNi40MDQpIiB3aWR0aD0iMTguNTQ5OTk5OTk5OTk5OTlweCIvPjxwYXRoIGQ9Ik0gMTcuNzI1IDAuNTU5IEwgMTcuNzI1IDE3LjE1OCBDIDE3LjcyNSAyMy45ODYgMTMuNjk4IDI2Ljc3NSA4LjkzNyAyNi43NzUgQyA0LjQ1NiAyNi43NzUgMS43NTkgMjMuNzc3IDAuNzQyIDIxLjMyNiBMIDQuMjc3IDE5Ljg1NSBDIDQuOTA2IDIxLjM2IDYuNDQ5IDIzLjEzNSA4LjkzMyAyMy4xMzUgQyAxMS45OCAyMy4xMzUgMTMuODY5IDIxLjI1NSAxMy44NjkgMTcuNzE2IEwgMTMuODY5IDE2LjM4NyBMIDEzLjcyNyAxNi4zODcgQyAxMi44MTggMTcuNTA4IDExLjA2NyAxOC40ODggOC44NTggMTguNDg4IEMgNC4yMzUgMTguNDg4IDAgMTQuNDYxIDAgOS4yNzkgQyAwIDQuMDYgNC4yMzUgMCA4Ljg1OCAwIEMgMTEuMDYzIDAgMTIuODE0IDAuOTggMTMuNzI3IDIuMDY4IEwgMTMuODY5IDIuMDY4IEwgMTMuODY5IDAuNTYzIEwgMTcuNzI1IDAuNTYzIFogTSAxNC4xNTYgOS4yNzkgQyAxNC4xNTYgNi4wMjQgMTEuOTg0IDMuNjQzIDkuMjIxIDMuNjQzIEMgNi40MTkgMy42NDMgNC4wNzMgNi4wMjQgNC4wNzMgOS4yNzkgQyA0LjA3MyAxMi41MDIgNi40MTkgMTQuODQ4IDkuMjIxIDE0Ljg0OCBDIDExLjk4NCAxNC44NDggMTQuMTU2IDEyLjUwMiAxNC4xNTYgOS4yNzkgWiIgZmlsbD0icmdiKDY2LCAxMzMsIDI0NCkiIGhlaWdodD0iMjYuNzc0NnB4IiBpZD0iam5DSVVGUl9ZIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2OS42OTggMTYuNDA0KSIgd2lkdGg9IjE3LjcyNDU5OTk5OTk5OTk5NXB4Ii8+PHBhdGggZD0iTSAzLjk2IDAgTCAzLjk2IDI3LjA5NiBMIDAgMjcuMDk2IEwgMCAwIFoiIGZpbGw9InJnYig1MiwgMTY4LCA4MykiIGhlaWdodD0iMjcuMDk1NTZweCIgaWQ9Ik5pcThFYU9zYiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODkuODE5IDcuMjM0KSIgd2lkdGg9IjMuOTYwMjAwMDAwMDAwMDAwNHB4Ii8+PHBhdGggZD0iTSAxMy43MjcgMTIuMjkzIEwgMTYuODc5IDE0LjM5NCBDIDE1Ljg2MiAxNS44OTkgMTMuNDExIDE4LjQ5MiA5LjE3NSAxOC40OTIgQyAzLjkyMyAxOC40OTIgMCAxNC40MzIgMCA5LjI0NiBDIDAgMy43NDggMy45NTYgMCA4LjcyMSAwIEMgMTMuNTE5IDAgMTUuODY2IDMuODE4IDE2LjYzMyA1Ljg4MiBMIDE3LjA1NCA2LjkzMiBMIDQuNjk0IDEyLjA1MSBDIDUuNjQgMTMuOTA2IDcuMTEyIDE0Ljg1MyA5LjE3NSAxNC44NTMgQyAxMS4yNDMgMTQuODUzIDEyLjY3NyAxMy44MzYgMTMuNzI3IDEyLjI5MyBaIE0gNC4wMjcgOC45NjcgTCAxMi4yODkgNS41MzYgQyAxMS44MzUgNC4zODEgMTAuNDY4IDMuNTc3IDguODU5IDMuNTc3IEMgNi43OTUgMy41NzcgMy45MjMgNS4zOTggNC4wMjcgOC45NjcgWiIgZmlsbD0icmdiKDIzNCwgNjcsIDUzKSIgaGVpZ2h0PSIxOC40OTE3MDAwMDAwMDAwMDVweCIgaWQ9InZXRlMzTmR4aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTUuNDg0IDE2LjQpIiB3aWR0aD0iMTcuMDUzNjAwMDAwMDAwMDAzcHgiLz48cGF0aCBkPSJNIDE0LjU2MSAxNy4wNjYgTCAxNC41NjEgMTMuMTQzIEwgMjcuNzc5IDEzLjE0MyBDIDI3LjkwOCAxMy44MjcgMjcuOTc1IDE0LjYzNiAyNy45NzUgMTUuNTExIEMgMjcuOTc1IDE4LjQ1NCAyNy4xNzEgMjIuMDkzIDI0LjU3OCAyNC42ODYgQyAyMi4wNTYgMjcuMzEyIDE4LjgzMyAyOC43MTMgMTQuNTY1IDI4LjcxMyBDIDYuNjUzIDI4LjcxMyAwIDIyLjI2OCAwIDE0LjM1NiBDIDAgNi40NDUgNi42NTMgMCAxNC41NjUgMCBDIDE4Ljk0MiAwIDIyLjA2IDEuNzE3IDI0LjQwMyAzLjk1NiBMIDIxLjYzNSA2LjcyNCBDIDE5Ljk1NSA1LjE0OCAxNy42NzkgMy45MjMgMTQuNTYxIDMuOTIzIEMgOC43ODMgMy45MjMgNC4yNjQgOC41NzkgNC4yNjQgMTQuMzU2IEMgNC4yNjQgMjAuMTM0IDguNzgzIDI0Ljc5IDE0LjU2MSAyNC43OSBDIDE4LjMwOCAyNC43OSAyMC40NDMgMjMuMjg1IDIxLjgxIDIxLjkxOCBDIDIyLjkxOSAyMC44MDkgMjMuNjQ4IDE5LjIyNSAyMy45MzYgMTcuMDYyIFoiIGZpbGw9InJnYig2NiwgMTMzLCAyNDQpIiBoZWlnaHQ9IjI4LjcxMjk5cHgiIGlkPSJvNUpGUFZjUHciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMTM3IDYuMTc5KSIgd2lkdGg9IjI3Ljk3NTA4MXB4Ii8+PC9zdmc+" alt="" width="150" height="48" loading="lazy"><h3>تصميم تجارب الخدمات الرقمية</h3></a><a class="certificate-card certificate-card--4" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="بناء الهوية الرقمية — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر أغسطس 2024</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTMzIDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMTQuNjM1IDAgTCAwIDAgTCAwIDM1IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIzNXB4IiBpZD0ib0FGT001MWxwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDYpIiB3aWR0aD0iMTQuNjM1cHgiLz48cGF0aCBkPSJNIDAgMCBMIDE0LjYxNiAwIEwgMTQuNjE2IDM1IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIzNXB4IiBpZD0ic3NrSG5WbFRzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNC45MzIgNikiIHdpZHRoPSIxNC42MTU5MDAwMDAwMDAwMDNweCIvPjxwYXRoIGQ9Ik0gNi4zOTcgMCBMIDE1LjcxMiAyMi4xIEwgOS42MDEgMjIuMSBMIDYuODE3IDE1LjA2NCBMIDAgMTUuMDY0IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIyMi4xMDAycHgiIGlkPSJRbjNiOVpmamEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzLjM4NiAxOC45KSIgd2lkdGg9IjE1LjcxMjRweCIvPjxwYXRoIGQ9Ik0gMTIuMjI5IDE0LjM1OCBMIDEzLjk1NSAxOS4zMDcgQyAxNC4wMTIgMTkuNDMxIDE0LjA5OCAxOS40ODggMTQuMjUgMTkuNDg4IEwgMTcuNTY4IDE5LjQ4OCBDIDE3Ljc1IDE5LjQ4OCAxNy43NzggMTkuNDAyIDE3Ljc1IDE5LjIyMSBMIDEwLjg5NCAwLjE4MSBDIDEwLjg2NiAwLjAyOSAxMC44MzcgMCAxMC42ODUgMCBMIDYuNTY2IDAgQyA2LjQ1MiAwIDYuMzg1IDAuMDg2IDYuMzg1IDAuMjEgQyA2LjMyOCAxLjIxMSA2LjI0MiAxLjUxNiA2LjExOCAxLjgxMiBMIDAuMDA2IDE5LjE5MiBDIC0wLjAyMiAxOS40MDIgMC4wNDUgMTkuNDg4IDAuMjE2IDE5LjQ4OCBMIDMuMTgxIDE5LjQ4OCBDIDMuMzYyIDE5LjQ4OCAzLjQ0OCAxOS40MzEgMy41MTUgMTkuMjUgTCA1LjE0NSAxNC4zNTggWiBNIDYuMDg5IDExLjEyNiBDIDYuOTg1IDguNDE5IDguMTY4IDQuOTQ4IDguNjQ0IDIuOTY1IEwgOC42NzMgMi45NjUgQyA5LjI2NCA1LjA0NCAxMC42NTYgOS4xNjIgMTEuMjg1IDExLjEyNiBaIiBmaWxsPSJyZ2IoMjUwLCAxMiwgMCkiIGhlaWdodD0iMTkuNDg3OXB4IiBpZD0iT3c5blFuNnp5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MS4xOTQgMTMuODk5KSIgd2lkdGg9IjE3Ljc1OTE2NzQ1MDcyODQwNXB4Ii8+PHBhdGggZD0iTSA3LjU4OSAyMS40MTQgQyA5LjM3MiAyMS40MTQgMTEuMjY5IDIxLjA5IDEzLjE5NSAyMC4yNiBDIDEzLjM0OCAyMC4yMDMgMTMuMzc2IDIwLjEzNiAxMy4zNzYgMTkuOTkzIEMgMTMuMzE5IDE5LjQ1OSAxMy4yNTIgMTguNjg3IDEzLjI1MiAxOC4wOTYgTCAxMy4yNTIgMC4xNzIgQyAxMy4yNTIgMC4wNTcgMTMuMjUyIDAgMTMuMTA5IDAgTCA5Ljg3NyAwIEMgOS43NTQgMCA5LjY5NiAwLjA1NyA5LjY5NiAwLjIxIEwgOS42OTYgNi4yODMgQyA5LjE5MSA2LjIyNiA4LjgzOCA2LjE5NyA4LjQxOSA2LjE5NyBDIDMuMjAzIDYuMTk3IDAgOS42MzkgMCAxMy45MzkgQyAwIDE4LjkyNSAzLjI4OSAyMS40MTQgNy41ODkgMjEuNDE0IFogTSA5LjY5NiAxOC4wOTYgQyA5LjE2MiAxOC4yNjcgOC41NzEgMTguMzM0IDcuOTcxIDE4LjMzNCBDIDUuNjA2IDE4LjMzNCAzLjY3MSAxNi45OTkgMy42NzEgMTMuNzU4IEMgMy42NzEgMTAuODg4IDUuNjYzIDkuMTkxIDguMzA0IDkuMTkxIEMgOC44MzggOS4xOTEgOS4zMDUgOS4yNDggOS42OTYgOS40MDEgWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjIxLjQxMzc5OTk5OTk5OTk5NXB4IiBpZD0iWFJMUkgzSEJ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MC4xNjggMTIuMjY5KSIgd2lkdGg9IjEzLjM3NjQ5OTk5OTk5OTk5M3B4Ii8+PHBhdGggZD0iTSA3LjIwOCAwIEMgMi43NTUgMCAwIDMuNDEzIDAgNy42MjcgQyAwIDExLjM5MyAyLjE5MyAxNS4yMTcgNy4xNDEgMTUuMjE3IEMgMTEuMzI3IDE1LjIxNyAxNC4yNjMgMTIuMTM3IDE0LjI2MyA3LjUzMiBDIDE0LjI2MyAzLjQ3IDExLjc3NSAwIDcuMjA4IDAgWiBNIDcuMDI3IDIuOTk0IEMgOS41NDQgMi45OTQgMTAuNjExIDUuMTU4IDEwLjYxMSA3LjYyNyBDIDEwLjYxMSAxMC42NzggOS4wMzggMTIuMTk0IDcuMjA4IDEyLjE5NCBDIDQuOTQ4IDEyLjE5NCAzLjYxMyAxMC4yOTcgMy42MTMgNy41NjEgQyAzLjYxMyA0Ljc0OCA1LjAzNCAyLjk5NCA3LjAyNyAyLjk5NCBaIiBmaWxsPSJyZ2IoMjUwLCAxMiwgMCkiIGhlaWdodD0iMTUuMjE2NnB4IiBpZD0ieUNRaE1CaHJCIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4Ni42NDcgMTguNDY2KSIgd2lkdGg9IjE0LjI2Mjk5OTk5OTk5OTk5MXB4Ii8+PHBhdGggZD0iTSAwLjIxIDAgQyAwLjA4NiAwIDAgMC4wNTcgMCAwLjIxIEwgMCAyMC40OTggQyAwIDIwLjU4NCAwLjA4NiAyMC43MzcgMC4yMSAyMC43NjUgQyAxLjYzIDIxLjIwNCAzLjExOCAyMS40MTQgNC42NTMgMjEuNDE0IEMgOS4wNDggMjEuNDE0IDEzLjMxOSAxOC42ODcgMTMuMzE5IDEzLjE5NSBDIDEzLjMxOSA5LjIyIDEwLjU5MiA2LjE5NyA2LjMyMSA2LjE5NyBDIDUuMzM5IDYuMTk3IDQuNDI0IDYuMzUgMy42MjMgNi42MTcgTCAzLjU4NSAwLjIzOCBDIDMuNTg1IDAuMDI5IDMuNTI4IDAgMy4zMTggMCBaIE0gOS42NjggMTMuNTU4IEMgOS42NjggMTYuODQ3IDcuNDE4IDE4LjM5MiA0Ljk4NiAxOC4zOTIgQyA0LjQ4MSAxOC4zOTIgNC4wMzMgMTguMzYzIDMuNjIzIDE4LjIzOSBMIDMuNjIzIDkuNTgyIEMgNC4wOSA5LjQwMSA0LjY1MyA5LjI0OCA1LjY5MiA5LjI0OCBDIDguMDM3IDkuMjQ4IDkuNjY4IDEwLjczNiA5LjY2OCAxMy41NTggWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjIxLjQxMzc5OTk5OTk5OTk5NXB4IiBpZD0iYTlQVE9HbmpUIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDQyIDEyLjI2OSkiIHdpZHRoPSIxMy4zMTkwMDAwMDAwMDAwMDNweCIvPjxwYXRoIGQ9Ik0gOS42MzkgOC40MjggQyAxMS4wODggOC40MjggMTIuMjggOC40IDEyLjY5IDguMzA0IEMgMTIuODQzIDguMjc2IDEyLjkgOC4yMTggMTIuOTI5IDguMDk1IEMgMTMuMDE0IDcuNzcgMTMuMDUyIDcuMDkzIDEzLjA1MiA2LjI2NCBDIDEzLjA1MiAzLjQ0MiAxMS4zNTUgMCA2Ljk3IDAgQyAyLjQ4OSAwIDAgMy42NTIgMCA3Ljc3IEMgMCAxMS40MjIgMS45MjYgMTUuMjE3IDcuMzIyIDE1LjIxNyBDIDkuMzQ0IDE1LjIxNyAxMC42NSAxNC44OTIgMTEuNzc1IDE0LjM1OCBDIDExLjg4OSAxNC4zMDEgMTEuOTQ2IDE0LjIwNiAxMS45NDYgMTQuMDM0IEwgMTEuOTQ2IDExLjU2NSBDIDExLjk0NiAxMS40MjIgMTEuODYxIDExLjM5MyAxMS43NzUgMTEuNDUgQyAxMC42NSAxMS45MjcgOS40MjkgMTIuMTY2IDguMDk1IDEyLjE2NiBDIDUuMDcyIDEyLjE2NiAzLjY5OSAxMC40OTcgMy42MTQgOC40MjggWiBNIDMuNjE0IDUuODczIEMgMy44NTIgNC40MjQgNC43NjcgMi44NTEgNi44MTcgMi44NTEgQyA5LjA3NyAyLjg1MSA5LjY2OCA0Ljc0OCA5LjY2OCA1LjYwNiBDIDkuNjY4IDUuNjM1IDkuNjY4IDUuNzU5IDkuNjY4IDUuODQ0IEMgOS41NDQgNS44NzMgOS4xNjMgNS44NzMgOC4wMzcgNS44NzMgWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjE1LjIxNjZweCIgaWQ9InB5UGlHbWFQdSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE5Ljc4NCAxOC40NjYpIiB3aWR0aD0iMTMuMDUyMDAwMDAwMDAwMDA3cHgiLz48L3N2Zz4=" alt="" width="150" height="48" loading="lazy"><h3>بناء الهوية الرقمية</h3></a><a class="certificate-card certificate-card--5" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="تصميم واجهات وتجربة المستخدم — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر ديسمبر 2023</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTY3IDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMC40NDkgMTEuMjI3IEMgMC4xNDkgMTAuMzE4IDAgOS4xNyAwIDcuNjI2IEMgMCA2LjA4MiAwLjE0OSA0LjkzMiAwLjQ0OSA0LjAyNSBDIDEuMjg2IDEuNDIyIDMuNTA1IDAgNi40MTEgMCBDIDguNTY5IDAgMTAuMjc3IDAuODc4IDExLjQxNyAyLjI3IEMgMTEuNTA1IDIuMzkgMTEuNTM1IDIuNTcyIDExLjM4NyAyLjY5MyBMIDkuNDk5IDQuMzU3IEMgOS4zNDkgNC40NzkgOS4yIDQuNDQ5IDkuMDc5IDQuMjk4IEMgOC4zNTkgMy40ODEgNy42MSAzLjAyNiA2LjQxMSAzLjAyNiBDIDUuMTIzIDMuMDI2IDQuMTM1IDMuNjYyIDMuNzE1IDQuOTMzIEMgMy40NzcgNS42NjEgMy40MTUgNi41MDggMy40MTUgNy42MjcgQyAzLjQxNSA4Ljc0NiAzLjQ3NiA5LjYyNCAzLjcxNSAxMC4zNTEgQyA0LjEzNSAxMS41OSA1LjEyMyAxMi4yMjYgNi40MTEgMTIuMjI2IEMgNy42MSAxMi4yMjYgOC4zNTkgMTEuNzcxIDkuMDc5IDEwLjk1NyBDIDkuMiAxMC44MDMgOS4zNDkgMTAuODAzIDkuNDk5IDEwLjkyNSBMIDExLjM4NyAxMi41ODkgQyAxMS41MzUgMTIuNzEgMTEuNTA1IDEyLjg2MiAxMS40MTcgMTMuMDEzIEMgMTAuMjc4IDE0LjM3NiA4LjU2OSAxNS4yNTMgNi40MTEgMTUuMjUzIEMgMy41MDUgMTUuMjUyIDEuMjg2IDEzLjgyOCAwLjQ0OSAxMS4yMjcgWiIgZmlsbD0icmdiKDMyLCA2NSwgODYpIiBoZWlnaHQ9IjE1LjI1MjgwMDAwMDAwMDAwNHB4IiBpZD0iSE16TjVVN2ZVIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2LjMgMTkuMzAxKSIgd2lkdGg9IjExLjQ5MDI3MjU5OTIwMzA4MXB4Ii8+PHBhdGggZD0iTSAwLjQ0OSAxMS4yMjcgQyAwLjE0OSAxMC4zMTggMCA5LjE3IDAgNy42MjYgQyAwIDYuMDgyIDAuMTQ5IDQuOTMyIDAuNDQ5IDQuMDI1IEMgMS4yODggMS40MjIgMy41MDUgMCA2LjQxIDAgQyA4LjU2OSAwIDEwLjI3OCAwLjg3OCAxMS40MTYgMi4yNyBDIDExLjUwNSAyLjM5IDExLjUzNiAyLjU3MiAxMS4zODUgMi42OTMgTCA5LjQ5NyA0LjM1NyBDIDkuMzQ3IDQuNDc5IDkuMTk4IDQuNDQ5IDkuMDc4IDQuMjk4IEMgOC4zNiAzLjQ4MSA3LjYxIDMuMDI2IDYuNDEgMy4wMjYgQyA1LjEyMyAzLjAyNiA0LjEzMyAzLjY2MiAzLjcxNSA0LjkzMyBDIDMuNDc0IDUuNjYxIDMuNDE2IDYuNTA4IDMuNDE2IDcuNjI3IEMgMy40MTYgOC43NDYgMy40NzQgOS42MjQgMy43MTUgMTAuMzUxIEMgNC4xMzMgMTEuNTkgNS4xMjMgMTIuMjI2IDYuNDEgMTIuMjI2IEMgNy42MSAxMi4yMjYgOC4zNiAxMS43NzEgOS4wNzggMTAuOTU3IEMgOS4xOTggMTAuODAzIDkuMzQ4IDEwLjgwMyA5LjQ5NyAxMC45MjUgTCAxMS4zODUgMTIuNTg5IEMgMTEuNTM2IDEyLjcxIDExLjUwNSAxMi44NjIgMTEuNDE2IDEzLjAxMyBDIDEwLjI3OCAxNC4zNzYgOC41NjkgMTUuMjUzIDYuNDEgMTUuMjUzIEMgMy41MDUgMTUuMjUyIDEuMjg4IDEzLjgyOCAwLjQ0OSAxMS4yMjcgWiIgZmlsbD0icmdiKDMyLCA2NSwgODYpIiBoZWlnaHQ9IjE1LjI1MjgwMDAwMDAwMDAwNHB4IiBpZD0ieFdyamhUWGtHIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MS43NzQgMTkuMzAxKSIgd2lkdGg9IjExLjQ5MDQwMDAwMDAwMDAwOHB4Ii8+PHBhdGggZD0iTSAxNy45OCAxNC45MiBDIDE3LjggMTQuOTIgMTcuNjgxIDE0Ljc5OSAxNy42ODEgMTQuNjE2IEwgMTcuNjgxIDYuMjA0IEMgMTcuNjgxIDQuMzI4IDE2Ljc1MSAzLjAyNiAxNC45NTIgMy4wMjYgQyAxMy4yMTUgMy4wMjYgMTIuMTk2IDQuMzI3IDEyLjE5NiA2LjIwNCBMIDEyLjE5NiAxNC42MTYgQyAxMi4xOTYgMTQuNzk5IDEyLjA3NSAxNC45MiAxMS44OTcgMTQuOTIgTCA5LjEzOSAxNC45MiBDIDguOTU5IDE0LjkyIDguODM5IDE0Ljc5OSA4LjgzOSAxNC42MTYgTCA4LjgzOSA2LjIwNCBDIDguODM5IDQuMzI4IDcuOTEgMy4wMjYgNi4xMTQgMy4wMjYgQyA0LjM3NiAzLjAyNiAzLjM1NiA0LjMyNyAzLjM1NiA2LjIwNCBMIDMuMzU2IDE0LjYxNiBDIDMuMzU2IDE0Ljc5OSAzLjIzNiAxNC45MiAzLjA1NiAxNC45MiBMIDAuMjk5IDE0LjkyIEMgMC4xMTggMTQuOTIgMCAxNC43OTkgMCAxNC42MTYgTCAwIDAuNjM1IEMgMCAwLjQ1MyAwLjExOCAwLjMzMiAwLjI5OSAwLjMzMiBMIDMuMDU2IDAuMzMyIEMgMy4yMzYgMC4zMzIgMy4zNTYgMC40NTMgMy4zNTYgMC42MzUgTCAzLjM1NiAxLjY5NSBMIDMuMzg2IDEuNjk1IEMgNC4wMTYgMC43ODYgNS4yNzQgMCA3LjE5MSAwIEMgOC45IDAgMTAuMjc4IDAuNjk1IDExLjE0NiAxLjkzNiBMIDExLjE3NyAxLjkzNiBDIDEyLjI4NSAwLjcyNyAxMy43MjQgMCAxNS43OTIgMCBDIDE5LjE0NyAwIDIxLjAzNiAyLjI5OSAyMS4wMzYgNS40MTcgTCAyMS4wMzYgMTQuNjE2IEMgMjEuMDM2IDE0Ljc5OSAyMC45MTUgMTQuOTIgMjAuNzM1IDE0LjkyIFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIxNC45MTk3MDAwMDAwMDAwMDJweCIgaWQ9ImdnTEtHMHlmXyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI5LjkxNCAxOS4zMDEpIiB3aWR0aD0iMjEuMDM2cHgiLz48cGF0aCBkPSJNIDIuMTczIDIwLjAzNSBDIDEuOTk0IDIwLjAzNSAxLjg3NCAxOS45MTQgMS44NzQgMTkuNzMxIEwgMS44NzQgMTcuMzExIEMgMS44NzQgMTcuMTMgMS45OTQgMTcuMDA3IDIuMTczIDE3LjAwNyBMIDIuNzEzIDE3LjAwNyBDIDMuODUxIDE3LjAwNyA0LjQyMiAxNi40OTUgNC44NzEgMTUuMjgzIEwgNS4yOTEgMTQuMDQyIEwgMC4wMTYgMC4zMDMgQyAtMC4wNDQgMC4xMjEgMC4wNzYgMCAwLjI1NyAwIEwgMy4yMjMgMCBDIDMuNDAyIDAgMy41MjMgMC4xMjEgMy41ODEgMC4zMDMgTCA2Ljg0OSA5LjgzNiBMIDYuOTA4IDkuODM2IEwgMTAuMDI1IDAuMzAzIEMgMTAuMDg1IDAuMTIxIDEwLjIwNSAwIDEwLjM4MyAwIEwgMTMuMjI5IDAgQyAxMy40MTEgMCAxMy41MzEgMC4xMjEgMTMuNDY5IDAuMzAzIEwgNy45NTcgMTUuNDk1IEMgNi42OTkgMTguOTQ1IDUuNDk5IDIwLjAzNCAzLjEwMyAyMC4wMzQgWiIgZmlsbD0icmdiKDMyLCA2NSwgODYpIiBoZWlnaHQ9IjIwLjAzNDhweCIgaWQ9IlE2SXhsWkU2dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUyLjk0MSAxOS42MzEpIiB3aWR0aD0iMTMuNDg1MDkyMjk2NDM4NzIycHgiLz48cGF0aCBkPSJNIDAuNDggMTEuMjI0IEMgMC4xNSAxMC4xOTQgMCA5LjIyNiAwIDcuNjIyIEMgMCA2LjAyMSAwLjE1IDUuMDUyIDAuNDggNC4wMjYgQyAxLjI4OSAxLjQ4MyAzLjUwNCAwIDYuNDQgMCBDIDkuMzQ1IDAgMTEuNTYyIDEuNDgzIDEyLjM3MSA0LjAyNiBDIDEyLjY5OCA1LjA1MiAxMi44NDkgNi4wMjEgMTIuODQ5IDcuNjIyIEMgMTIuODQ5IDkuMjI2IDEyLjY5OCAxMC4xOTQgMTIuMzcxIDExLjIyNCBDIDExLjU2MSAxMy43NjUgOS4zNDUgMTUuMjQ3IDYuNDQgMTUuMjQ3IEMgMy41MDQgMTUuMjQ4IDEuMjg5IDEzLjc2NSAwLjQ4IDExLjIyNCBaIE0gOS4xMzYgMTAuMzE3IEMgOS4zNzYgOS41NjEgOS40MzUgOC44NjQgOS40MzUgNy42MjMgQyA5LjQzNSA2LjM4NSA5LjM3NiA1LjcxOCA5LjEzNiA0LjkzMyBDIDguNzE3IDMuNzIzIDcuNzg3IDMuMDI2IDYuNDQgMy4wMjYgQyA1LjA5MyAzLjAyNiA0LjEzMyAzLjcyMyAzLjcxNSA0LjkzMyBDIDMuNDc2IDUuNzE5IDMuNDE1IDYuMzg1IDMuNDE1IDcuNjIzIEMgMy40MTUgOC44NjQgMy40NzYgOS41NjEgMy43MTUgMTAuMzE3IEMgNC4xMzMgMTEuNTI4IDUuMDk0IDEyLjIyMiA2LjQ0IDEyLjIyMiBDIDcuNzg3IDEyLjIyMSA4LjcxNyAxMS41MjggOS4xMzYgMTAuMzE3IFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIxNS4yNDcwMDAxODIwNzkxNzhweCIgaWQ9IlBMRzFnQ1hzciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTkuOTk2IDE5LjMwNCkiIHdpZHRoPSIxMi44NDk0OTk5OTk5OTk5OTlweCIvPjxwYXRoIGQ9Ik0gNi4wNTQgMCBDIDMuNjg3IDAgMi4wOTkgMC41NzUgMC45MyAxLjQyMiBDIDAuODExIDEuNTE0IDAuNzggMS42NjQgMC44NzEgMS44MTUgTCAxLjk3NyAzLjgxMyBDIDIuMDcgMy45NjUgMi4yNDggMy45OTUgMi4zOTkgMy44NzQgQyAzLjA4OCAzLjMzIDQuMDc2IDIuODc1IDUuNjk1IDIuODc1IEMgOC4wNTYgMi44NzUgOC44NTcgMy41OTEgOC44OTggNS4xNjUgTCA4Ljg5OSA1LjE2NSBMIDguODk5IDUuMTg1IEMgOC45IDUuMjIxIDguOSA1LjI1OSA4LjkgNS4yOTggTCA4LjkgMTAuMDE5IEMgOC45IDExLjY4MyA3Ljc2MiAxMi40OTkgNS42OTUgMTIuNDk5IEMgNC4wNzYgMTIuNDk5IDMuMjA4IDExLjg5NSAzLjIwOCAxMC42ODUgQyAzLjIwOCA5LjMyMyA0LjE2NyA4LjcxNiA2LjMyNCA4LjcxNiBMIDYuOTc5IDguNzE3IEMgNy4xNTkgOC43MTcgNy4yOCA4LjU5NiA3LjI4IDguNDE2IEwgNy4yOCA2LjQ3NiBDIDcuMjggNi4yOTUgNy4xNTkgNi4xNzQgNi45NzkgNi4xNzQgTCA2LjgzNSA2LjE3NCBMIDUuNzg1IDYuMTczIEMgMi4yMTkgNi4xNzMgMCA3LjYyOCAwIDEwLjgwNCBDIDAgMTMuODYxIDIuMjE5IDE1LjI1MiA0Ljg1NSAxNS4yNTIgQyA2Ljg5MSAxNS4yNTIgOC4yNCAxNC41NTcgOC45MjkgMTMuNTU4IEwgOC45NTkgMTMuNTU4IEwgOC45NTkgMTQuNjE4IEMgOC45NTkgMTQuNzk5IDkuMDggMTQuOTIxIDkuMjU5IDE0LjkyMSBMIDExLjc3NSAxNC45MjEgQyAxMS45NTYgMTQuOTIxIDEyLjA3NiAxNC44IDEyLjA3NiAxNC42MTggTCAxMi4wNzYgNS4wODUgQyAxMi4wNzYgMS41MTQgMTAuNDU5IDAgNi4wNTQgMCBaIiBmaWxsPSJyZ2IoMzIsIDY1LCA4NikiIGhlaWdodD0iMTUuMjUyMTk5OTk5OTk5OTk4cHgiIGlkPSJLU1Vwa05UZkgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjE2NCAxOS4zMDEpIiB3aWR0aD0iMTIuMDc1OTAwMTY2ODU0OTA4cHgiLz48cGF0aCBkPSJNIDUuMDQ2IDYuMTcyIEMgNC45NjggNi4xNzIgNC45MTYgNi4yMjQgNC45MTYgNi4zMDIgTCA0LjkxNiA2LjM4OCBMIDQuOTE2IDYuNjQxIEwgNC45MTYgOC4yNDQgTCA0LjkxNiA4LjQ1OSBMIDQuOTE2IDguNTg0IEMgNC45MTYgOC42NjIgNC45NjggOC43MTQgNS4wNDYgOC43MTQgTCA1LjEyIDguNzE0IEwgMTIuNDY2IDguNzE0IEMgMTIuNjc2IDguNzE0IDEyLjc5NiA4LjU5NCAxMi43OTYgOC40MTQgQyAxMi43OTYgNi4wNTEgMTIuNjQ1IDUuMDUyIDEyLjMxNiA0LjAyNCBDIDExLjUwNiAxLjU0MyA5LjM1IDAgNi4zODMgMCBDIDMuNTA2IDAgMS4yOSAxLjQ4MiAwLjQ4IDQuMDI0IEMgMC4xODEgNC45NjIgMCA2LjExMyAwIDcuNjI2IEMgMCA5LjEzOSAwLjIxIDEwLjI1OCAwLjUxMiAxMS4xOTcgQyAxLjMyIDEzLjczOCAzLjQ3NyAxNS4yNTEgNi41MzMgMTUuMjUxIEMgOS4xOTkgMTUuMjUxIDExLjIzOCAxNC4yMjIgMTIuNDY1IDEyLjc3IEMgMTIuNTg0IDEyLjYxOSAxMi41ODQgMTIuNDY4IDEyLjQzNSAxMi4zNDYgTCAxMC42NjkgMTAuNzcyIEMgMTAuNTE3IDEwLjY1MiAxMC4zNjggMTAuNjgzIDEwLjIxOCAxMC44MzMgQyA5LjUgMTEuNjIgOC40NTEgMTIuMjI1IDYuODMzIDEyLjIyNSBDIDUuMjE2IDEyLjIyNSA0LjA3NiAxMS40MzkgMy41OTcgMTAuMDE3IEMgMy41MjUgOS44MTkgMy40NjQgOS42MSAzLjQyNyA5LjM4MyBMIDMuNDI2IDkuMzgzIEMgMy4zMTcgOC43NjcgMy4yNTMgOC4xNjcgMy4yNTMgNy4yODYgQyAzLjI3NiA2LjQ1NiAzLjMyNCA1LjkyNiAzLjQ0MiA1LjI1MiBDIDMuNDQzIDUuMjQzIDMuNDQ1IDUuMjM1IDMuNDQ2IDUuMjI2IEMgMy40NDggNS4yMTkgMy40NDkgNS4yMTQgMy40NSA1LjIwNyBMIDMuNDUgNS4yMDcgQyAzLjQ3OCA1LjA0OSAzLjUxOCA0Ljg5OSAzLjU2NiA0Ljc1MSBDIDMuOTU2IDMuNTcxIDUuMDM0IDIuODc1IDYuNDE0IDIuODc1IEMgNy43NjIgMi44NzUgOC44MzkgMy41NzEgOS4yMjkgNC43NTEgQyA5LjM1IDUuMTE2IDkuNDA5IDUuNDc3IDkuNDA5IDUuOTkyIEMgOS40MDkgNi4xMTMgOS4zNDkgNi4xNzMgOS4yMjkgNi4xNzMgTCA1LjI5MiA2LjE3MyBMIDUuMjkzIDYuMTcyIFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIxNS4yNTEwMDAwMDAwMDAwMDFweCIgaWQ9Im01cksxdWVrTiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAuMzczIDE5LjMwMSkiIHdpZHRoPSIxMi43OTU5MDAwMDAwMDAwMDNweCIvPjxwYXRoIGQ9Ik0gMTIuNDE4IDAgTCA5LjY2NiAwIEMgOS40ODQgMCA5LjM2NSAwLjEyMSA5LjM2NSAwLjMgTCA5LjM2NSA3LjM3MSBMIDkuMzY1IDEzLjIxOCBDIDkuMzY1IDEzLjIzNCA5LjM2NSAxMy4yNSA5LjM2NSAxMy4yNjUgQyA5LjM2NSAxMy4yODEgOS4zNjUgMTMuMjk2IDkuMzY1IDEzLjMxMiBMIDkuMzY1IDE0LjA4OCBMIDkuMzQ5IDE0LjA4OCBDIDkuMzE3IDE0LjkyMiA5LjIyNyAxNS40NyA5LjA2NyAxNS45ODQgQyA4LjY3NyAxNy4xOTIgNy43NDggMTcuODU2IDYuMzczIDE3Ljg1NiBDIDUuMDI3IDE3Ljg1NiA0LjEgMTcuMTkyIDMuNzA5IDE1Ljk4NCBDIDMuNSAxNS4zMTkgMy40MTIgMTQuNTk0IDMuNDEyIDEzLjI2NSBDIDMuNDEyIDExLjkzNiAzLjUgMTEuMjEgMy43MDkgMTAuNTQ2IEMgNC4wOTMgOS4zNjIgNC45OSA4LjY5MyA2LjI5MiA4LjY2NiBMIDcuNDY3IDguNjY2IEMgNy41MjQgOC42NTIgNy41NjEgOC42MDcgNy41NjEgOC41NDIgTCA3LjU3NiA1Ljc4IEMgNy41NzYgNS43MDkgNy41MzIgNS42NjIgNy40NjcgNS42NTQgTCA2LjUyOSA1LjY1IEwgNS40MjYgNS42NSBMIDUuNDI2IDUuNjUxIEMgMy4wMTQgNS42NzYgMS4yNDggNi44NTIgMC41MDggOS4xNTMgQyAwLjE0OSAxMC4yNzMgMCAxMS4zMDIgMCAxMy4yNjUgQyAwIDE1LjIyOCAwLjE0OSAxNi4yNTYgMC41MDggMTcuMzczIEMgMS4yNTYgMTkuNzAxIDMuMDUyIDIwLjg3OSA1LjUwNSAyMC44NzkgQyA3LjQ1MSAyMC44NzkgOC42NDggMjAuMTU1IDkuMzM0IDE5LjE1NiBMIDkuMzY0IDE5LjE1NiBMIDkuMzY0IDIwLjI0NCBDIDkuMzY0IDIwLjQyNiA5LjQ4NCAyMC41NDcgOS42NjQgMjAuNTQ3IEwgMTIuNDE3IDIwLjU0NyBDIDEyLjU5NiAyMC41NDcgMTIuNzE2IDIwLjQyNyAxMi43MTYgMjAuMjQ0IEwgMTIuNzE2IDAuMyBDIDEyLjcxOCAwLjEyIDEyLjU5NyAwIDEyLjQxOCAwIFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIyMC44Nzg5OTk5OTk5OTk5OThweCIgaWQ9Im91dUt5d1NGcSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzUuMTczIDEzLjY0MykiIHdpZHRoPSIxMi43MTY0MDg4OTYzOTM3MTZweCIvPjxwYXRoIGQ9Ik0gNS4wNDQgNi4xNzIgQyA0Ljk2NyA2LjE3MiA0LjkxNCA2LjIyNCA0LjkxNCA2LjMwMiBMIDQuOTE0IDYuMzg4IEwgNC45MTQgNi42NDEgTCA0LjkxNCA4LjI0NCBMIDQuOTE0IDguNDU5IEwgNC45MTQgOC41ODQgQyA0LjkxNCA4LjY2MiA0Ljk2NyA4LjcxNCA1LjA0NCA4LjcxNCBMIDUuMTIgOC43MTQgTCAxMi40NjUgOC43MTQgQyAxMi42NzUgOC43MTQgMTIuNzk1IDguNTk0IDEyLjc5NSA4LjQxNCBDIDEyLjc5NSA2LjA1MSAxMi42NDUgNS4wNTIgMTIuMzE2IDQuMDI0IEMgMTEuNTA2IDEuNTQzIDkuMzQ5IDAgNi4zODMgMCBDIDMuNTA2IDAgMS4yOSAxLjQ4MiAwLjQ3OSA0LjAyNCBDIDAuMTgxIDQuOTYyIDAgNi4xMTMgMCA3LjYyNiBDIDAgOS4xMzkgMC4yMSAxMC4yNTggMC41MTEgMTEuMTk3IEMgMS4zMTkgMTMuNzM4IDMuNDc2IDE1LjI1MSA2LjUzMiAxNS4yNTEgQyA5LjE5OCAxNS4yNTEgMTEuMjM4IDE0LjIyMiAxMi40NjUgMTIuNzcgQyAxMi41ODQgMTIuNjE5IDEyLjU4NCAxMi40NjggMTIuNDM1IDEyLjM0NiBMIDEwLjY2OCAxMC43NzIgQyAxMC41MTggMTAuNjUyIDEwLjM2OCAxMC42ODMgMTAuMjE4IDEwLjgzMyBDIDkuNSAxMS42MiA4LjQ1MiAxMi4yMjUgNi44MzIgMTIuMjI1IEMgNS4yMTYgMTIuMjI1IDQuMDc3IDExLjQzOSAzLjU5NyAxMC4wMTcgQyAzLjUyNSA5LjgxOSAzLjQ2NCA5LjYxIDMuNDI3IDkuMzgzIEMgMy4zMTcgOC43NjcgMy4yNTMgOC4xNjcgMy4yNTMgNy4yODYgQyAzLjI3NSA2LjQ1NiAzLjMyMyA1LjkyNiAzLjQ0MSA1LjI1MiBDIDMuNDQ0IDUuMjQzIDMuNDQ1IDUuMjM1IDMuNDQ2IDUuMjI2IEMgMy40NDcgNS4yMTkgMy40NDggNS4yMTQgMy40NSA1LjIwNyBMIDMuNDUgNS4yMDcgQyAzLjQ3OSA1LjA0OSAzLjUxOCA0Ljg5OSAzLjU2NiA0Ljc1MSBDIDMuOTU1IDMuNTcxIDUuMDM0IDIuODc1IDYuNDE0IDIuODc1IEMgNy43NjMgMi44NzUgOC44NCAzLjU3MSA5LjIyOSA0Ljc1MSBDIDkuMzQ5IDUuMTE2IDkuNDA5IDUuNDc3IDkuNDA5IDUuOTkyIEMgOS40MDkgNi4xMTMgOS4zNDkgNi4xNzMgOS4yMjkgNi4xNzMgTCA1LjI5MiA2LjE3MyBMIDUuMjkyIDYuMTcyIFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIxNS4yNTEwMDAwMDAwMDAwMDFweCIgaWQ9ImREa3NpV2pKbyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE0LjY5NiAxOS4zMDEpIiB3aWR0aD0iMTIuNzk1MDAwMDAwMDAwMDAycHgiLz48cGF0aCBkPSJNIDEyLjQzNCAwIEwgOS42NzcgMCBDIDkuNDk3IDAgOS4zNzcgMC4xMjEgOS4zNzcgMC4zMDEgTCA5LjM3NyA3LjM4MSBMIDkuMzc3IDEzLjIzOCBMIDkuMzc3IDEzLjI4NCBMIDkuMzc3IDEzLjMzMSBMIDkuMzc3IDE0LjEwOSBMIDkuMzYyIDE0LjEwOSBDIDkuMzI5IDE0Ljk0NCA5LjIzOCAxNS40OTMgOS4wNzggMTYuMDA4IEMgOC42ODggMTcuMjE3IDcuNzU3IDE3Ljg4NCA2LjM4MSAxNy44ODQgQyA1LjAzNCAxNy44ODQgNC4xMDUgMTcuMjE3IDMuNzE0IDE2LjAwOCBDIDMuNTA1IDE1LjM0MSAzLjQxNCAxNC42MTYgMy40MTQgMTMuMjg0IEMgMy40MTQgMTEuOTU0IDMuNTA0IDExLjIyNSAzLjcxNCAxMC41NjIgQyA0LjA5NyA5LjM3NSA0Ljk5NiA4LjcxMSA2LjMgOC42ODUgTCA3LjQ3NyA4LjY4NiBDIDcuNjU3IDguNjg2IDcuNzc3IDguNTY1IDcuNzc3IDguMzg1IEwgNy43NzcgNS45NiBDIDcuNzc3IDUuNzc5IDcuNjU3IDUuNjU4IDcuNDc3IDUuNjU4IEwgNy4zMzMgNS42NTggTCA1LjU1NCA1LjY1OCBDIDUuNTQgNS42NTggNS41MjYgNS42NTggNS41MTMgNS42NTggQyA1LjQ5OSA1LjY1OCA1LjQ4NyA1LjY1OCA1LjQ3NCA1LjY1OCBMIDUuNDMzIDUuNjU4IEwgNS40MzMgNS42NTggQyAzLjAxOCA1LjY4MyAxLjI1IDYuODYyIDAuNTA5IDkuMTY2IEMgMC4xNDkgMTAuMjg3IDAgMTEuMzE3IDAgMTMuMjgzIEMgMCAxNS4yNDkgMC4xNDkgMTYuMjc5IDAuNTA5IDE3LjM5OCBDIDEuMjU4IDE5LjcyOCAzLjA1NyAyMC45MDkgNS41MTMgMjAuOTA5IEMgNy40NjIgMjAuOTA5IDguNjYgMjAuMTg0IDkuMzQ5IDE5LjE4NCBMIDkuMzc4IDE5LjE4NCBMIDkuMzc4IDIwLjI3MyBDIDkuMzc4IDIwLjQ1NiA5LjQ5OCAyMC41NzYgOS42NzkgMjAuNTc2IEwgMTIuNDM2IDIwLjU3NiBDIDEyLjYxNSAyMC41NzYgMTIuNzM2IDIwLjQ1NyAxMi43MzYgMjAuMjczIEwgMTIuNzM2IDAuMzAxIEMgMTIuNzM0IDAuMTIxIDEyLjYxMyAwIDEyLjQzNCAwIFoiIGZpbGw9InJnYigzMiwgNjUsIDg2KSIgaGVpZ2h0PSIyMC45MDg2OTk5OTk5OTk5OTZweCIgaWQ9InNyNG1RZ0VMRyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTkuNjE3IDEzLjY0MykiIHdpZHRoPSIxMi43MzU3OTk5OTk5OTk5OThweCIvPjxwYXRoIGQ9Ik0gMCAwLjMgTCAwIDMuMDU3IEMgMCAzLjIzOSAwLjEyIDMuMzU5IDAuMyAzLjM1OSBMIDEwLjUxOCAzLjM1OSBDIDEwLjcgMy4zNTkgMTAuODIxIDMuMjM4IDEwLjgyMSAzLjA1NyBMIDEwLjgyMSAwLjMgQyAxMC44MjEgMC4xMjEgMTAuNyAwIDEwLjUxOCAwIEwgMC4zIDAgQyAwLjEyIDAgMCAwLjEyMSAwIDAuMyBaIiBmaWxsPSJyZ2IoMzIsIDY1LCA4NikiIGhlaWdodD0iMy4zNTg3OTk5OTk5OTk5OTVweCIgaWQ9IkkxUGVOcnJQbSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzEuOTk4IDM4LjA0NikiIHdpZHRoPSIxMC44MjExOTk5OTk5OTk5OXB4Ii8+PHBhdGggZD0iTSA2OS40MDMgMC4wOTcgQyA2OS4zOTkgMC4wOTMgNjkuMzk2IDAuMDg3IDY5LjM5MiAwLjA4MyBDIDY5LjM5MSAwLjA4MiA2OS4zOTEgMC4wODIgNjkuMzkxIDAuMDgyIEMgNjkuMzM4IDAuMDMgNjkuMjYzIDAgNjkuMTc1IDAgTCA2OS4xNzEgMCBMIDAuMzAxIDAgQyAwLjI3OCAwIDAuMjU3IDAuMDAyIDAuMjM2IDAuMDA2IEMgMC4yMyAwLjAwNyAwLjIyNSAwLjAwOSAwLjIxOCAwLjAxIEMgMC4yMDUgMC4wMTQgMC4xOSAwLjAxNyAwLjE3OCAwLjAyMiBDIDAuMTc2IDAuMDIzIDAuMTc0IDAuMDI0IDAuMTcyIDAuMDI1IEMgMC4wNjUgMC4wNjkgMCAwLjE2OSAwIDAuMyBMIDAgMC4zMDIgTCAwIDM0LjY5NCBMIDAgMzQuNjk3IEMgMCAzNC44MDIgMC4wNDEgMzQuODg0IDAuMTEgMzQuOTM3IEMgMC4xMTUgMzQuOTQyIDAuMTIgMzQuOTQ2IDAuMTI3IDM0Ljk1IEwgMC4xMjcgMzQuOTUgQyAwLjE3NCAzNC45ODEgMC4yMzMgMzQuOTk3IDAuMzAxIDM0Ljk5NyBMIDY5LjE3MSAzNC45OTcgTCA2OS4xNzQgMzQuOTk3IEMgNjkuMjc2IDM0Ljk5NyA2OS4zNTggMzQuOTU4IDY5LjQxIDM0Ljg5MSBDIDY5LjQ1MSAzNC44NDEgNjkuNDc1IDM0Ljc3NSA2OS40NzUgMzQuNjk2IEwgNjkuNDc1IDM0LjY5NCBMIDY5LjQ3NSAwLjMwMiBMIDY5LjQ3NSAwLjMgQyA2OS40NzUgMC4yMTggNjkuNDQ4IDAuMTQ5IDY5LjQwMyAwLjA5NyBaIE0gMy42NTUgMzEuNjQgQyAzLjYzNCAzMS42NCAzLjYxMyAzMS42MzggMy41OTQgMzEuNjM2IEMgMy41ODggMzEuNjM0IDMuNTgyIDMxLjYzMSAzLjU3NiAzMS42MyBDIDMuNTYyIDMxLjYyNyAzLjU0OCAzMS42MjQgMy41MzUgMzEuNjE5IEMgMy41MzMgMzEuNjE4IDMuNTMxIDMxLjYxNiAzLjUyOSAzMS42MTYgQyAzLjQyMyAzMS41NzMgMy4zNTggMzEuNDczIDMuMzU4IDMxLjM0MyBMIDMuMzU4IDYuNDE0IEwgMy4zNTggMy42NTcgQyAzLjM1OCAzLjUyNSAzLjQyMyAzLjQyNyAzLjUyOSAzLjM4MiBDIDMuNTMyIDMuMzgyIDMuNTM0IDMuMzggMy41MzYgMy4zNzkgQyAzLjU0OCAzLjM3NSAzLjU4NyAzLjM2NSAzLjU5NCAzLjM2MyBDIDMuNjE0IDMuMzYgMy42MzUgMy4zNTggMy42NTYgMy4zNTggTCA2NS44MTggMy4zNTggQyA2NS44NCAzLjM1OCA2NS44NiAzLjM2IDY1Ljg4IDMuMzYzIEMgNjUuODg3IDMuMzY1IDY1Ljg5MiAzLjM2NyA2NS44OTggMy4zNjkgQyA2NS45MTIgMy4zNzIgNjUuOTI2IDMuMzc1IDY1LjkzOSAzLjM4IEMgNjUuOTQxIDMuMzggNjUuOTQzIDMuMzgyIDY1Ljk0NSAzLjM4MyBDIDY2LjA1MiAzLjQyNyA2Ni4xMTYgMy41MjYgNjYuMTE2IDMuNjU4IEwgNjYuMTE2IDMxLjM0MyBDIDY2LjExNiAzMS40NzUgNjYuMDUxIDMxLjU3NCA2NS45NDYgMzEuNjE3IEMgNjUuOTQzIDMxLjYxNyA2NS45NDIgMzEuNjE5IDY1LjkzOSAzMS42MiBDIDY1LjkyNyAzMS42MjQgNjUuOTEyIDMxLjYyOCA2NS44OTkgMzEuNjMxIEMgNjUuODkyIDMxLjYzMyA2NS44ODcgMzEuNjM2IDY1Ljg4MSAzMS42MzcgQyA2NS44NjEgMzEuNjQgNjUuODQyIDMxLjY0MSA2NS44MiAzMS42NDEgTCAzLjY1NSAzMS42NDEgWiIgZmlsbD0icmdiKDMyLCA2NSwgODYpIiBoZWlnaHQ9IjM0Ljk5NzJweCIgaWQ9Ik9UTmIwUVRLcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA2LjQwNCkiIHdpZHRoPSI2OS40NzQ2cHgiLz48L3N2Zz4=" alt="" width="150" height="48" loading="lazy"><h3>تصميم واجهات وتجربة المستخدم</h3></a><a class="certificate-card certificate-card--6" href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" data-reveal="true" aria-label="أساسيات تصميم واجهات المستخدم — LinkedIn (نافذة جديدة)"><span class="certificate-card__date">صادر نوفمبر 2024</span><img src="data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgcm9sZT0icHJlc2VudGF0aW9uIiB2aWV3Qm94PSIwIDAgMTMzIDQ4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMTQuNjM1IDAgTCAwIDAgTCAwIDM1IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIzNXB4IiBpZD0ib0FGT001MWxwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDYpIiB3aWR0aD0iMTQuNjM1cHgiLz48cGF0aCBkPSJNIDAgMCBMIDE0LjYxNiAwIEwgMTQuNjE2IDM1IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIzNXB4IiBpZD0ic3NrSG5WbFRzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNC45MzIgNikiIHdpZHRoPSIxNC42MTU5MDAwMDAwMDAwMDNweCIvPjxwYXRoIGQ9Ik0gNi4zOTcgMCBMIDE1LjcxMiAyMi4xIEwgOS42MDEgMjIuMSBMIDYuODE3IDE1LjA2NCBMIDAgMTUuMDY0IFoiIGZpbGw9InJnYigyNTAsIDEyLCAwKSIgaGVpZ2h0PSIyMi4xMDAycHgiIGlkPSJRbjNiOVpmamEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzLjM4NiAxOC45KSIgd2lkdGg9IjE1LjcxMjRweCIvPjxwYXRoIGQ9Ik0gMTIuMjI5IDE0LjM1OCBMIDEzLjk1NSAxOS4zMDcgQyAxNC4wMTIgMTkuNDMxIDE0LjA5OCAxOS40ODggMTQuMjUgMTkuNDg4IEwgMTcuNTY4IDE5LjQ4OCBDIDE3Ljc1IDE5LjQ4OCAxNy43NzggMTkuNDAyIDE3Ljc1IDE5LjIyMSBMIDEwLjg5NCAwLjE4MSBDIDEwLjg2NiAwLjAyOSAxMC44MzcgMCAxMC42ODUgMCBMIDYuNTY2IDAgQyA2LjQ1MiAwIDYuMzg1IDAuMDg2IDYuMzg1IDAuMjEgQyA2LjMyOCAxLjIxMSA2LjI0MiAxLjUxNiA2LjExOCAxLjgxMiBMIDAuMDA2IDE5LjE5MiBDIC0wLjAyMiAxOS40MDIgMC4wNDUgMTkuNDg4IDAuMjE2IDE5LjQ4OCBMIDMuMTgxIDE5LjQ4OCBDIDMuMzYyIDE5LjQ4OCAzLjQ0OCAxOS40MzEgMy41MTUgMTkuMjUgTCA1LjE0NSAxNC4zNTggWiBNIDYuMDg5IDExLjEyNiBDIDYuOTg1IDguNDE5IDguMTY4IDQuOTQ4IDguNjQ0IDIuOTY1IEwgOC42NzMgMi45NjUgQyA5LjI2NCA1LjA0NCAxMC42NTYgOS4xNjIgMTEuMjg1IDExLjEyNiBaIiBmaWxsPSJyZ2IoMjUwLCAxMiwgMCkiIGhlaWdodD0iMTkuNDg3OXB4IiBpZD0iT3c5blFuNnp5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MS4xOTQgMTMuODk5KSIgd2lkdGg9IjE3Ljc1OTE2NzQ1MDcyODQwNXB4Ii8+PHBhdGggZD0iTSA3LjU4OSAyMS40MTQgQyA5LjM3MiAyMS40MTQgMTEuMjY5IDIxLjA5IDEzLjE5NSAyMC4yNiBDIDEzLjM0OCAyMC4yMDMgMTMuMzc2IDIwLjEzNiAxMy4zNzYgMTkuOTkzIEMgMTMuMzE5IDE5LjQ1OSAxMy4yNTIgMTguNjg3IDEzLjI1MiAxOC4wOTYgTCAxMy4yNTIgMC4xNzIgQyAxMy4yNTIgMC4wNTcgMTMuMjUyIDAgMTMuMTA5IDAgTCA5Ljg3NyAwIEMgOS43NTQgMCA5LjY5NiAwLjA1NyA5LjY5NiAwLjIxIEwgOS42OTYgNi4yODMgQyA5LjE5MSA2LjIyNiA4LjgzOCA2LjE5NyA4LjQxOSA2LjE5NyBDIDMuMjAzIDYuMTk3IDAgOS42MzkgMCAxMy45MzkgQyAwIDE4LjkyNSAzLjI4OSAyMS40MTQgNy41ODkgMjEuNDE0IFogTSA5LjY5NiAxOC4wOTYgQyA5LjE2MiAxOC4yNjcgOC41NzEgMTguMzM0IDcuOTcxIDE4LjMzNCBDIDUuNjA2IDE4LjMzNCAzLjY3MSAxNi45OTkgMy42NzEgMTMuNzU4IEMgMy42NzEgMTAuODg4IDUuNjYzIDkuMTkxIDguMzA0IDkuMTkxIEMgOC44MzggOS4xOTEgOS4zMDUgOS4yNDggOS42OTYgOS40MDEgWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjIxLjQxMzc5OTk5OTk5OTk5NXB4IiBpZD0iWFJMUkgzSEJ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MC4xNjggMTIuMjY5KSIgd2lkdGg9IjEzLjM3NjQ5OTk5OTk5OTk5M3B4Ii8+PHBhdGggZD0iTSA3LjIwOCAwIEMgMi43NTUgMCAwIDMuNDEzIDAgNy42MjcgQyAwIDExLjM5MyAyLjE5MyAxNS4yMTcgNy4xNDEgMTUuMjE3IEMgMTEuMzI3IDE1LjIxNyAxNC4yNjMgMTIuMTM3IDE0LjI2MyA3LjUzMiBDIDE0LjI2MyAzLjQ3IDExLjc3NSAwIDcuMjA4IDAgWiBNIDcuMDI3IDIuOTk0IEMgOS41NDQgMi45OTQgMTAuNjExIDUuMTU4IDEwLjYxMSA3LjYyNyBDIDEwLjYxMSAxMC42NzggOS4wMzggMTIuMTk0IDcuMjA4IDEyLjE5NCBDIDQuOTQ4IDEyLjE5NCAzLjYxMyAxMC4yOTcgMy42MTMgNy41NjEgQyAzLjYxMyA0Ljc0OCA1LjAzNCAyLjk5NCA3LjAyNyAyLjk5NCBaIiBmaWxsPSJyZ2IoMjUwLCAxMiwgMCkiIGhlaWdodD0iMTUuMjE2NnB4IiBpZD0ieUNRaE1CaHJCIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4Ni42NDcgMTguNDY2KSIgd2lkdGg9IjE0LjI2Mjk5OTk5OTk5OTk5MXB4Ii8+PHBhdGggZD0iTSAwLjIxIDAgQyAwLjA4NiAwIDAgMC4wNTcgMCAwLjIxIEwgMCAyMC40OTggQyAwIDIwLjU4NCAwLjA4NiAyMC43MzcgMC4yMSAyMC43NjUgQyAxLjYzIDIxLjIwNCAzLjExOCAyMS40MTQgNC42NTMgMjEuNDE0IEMgOS4wNDggMjEuNDE0IDEzLjMxOSAxOC42ODcgMTMuMzE5IDEzLjE5NSBDIDEzLjMxOSA5LjIyIDEwLjU5MiA2LjE5NyA2LjMyMSA2LjE5NyBDIDUuMzM5IDYuMTk3IDQuNDI0IDYuMzUgMy42MjMgNi42MTcgTCAzLjU4NSAwLjIzOCBDIDMuNTg1IDAuMDI5IDMuNTI4IDAgMy4zMTggMCBaIE0gOS42NjggMTMuNTU4IEMgOS42NjggMTYuODQ3IDcuNDE4IDE4LjM5MiA0Ljk4NiAxOC4zOTIgQyA0LjQ4MSAxOC4zOTIgNC4wMzMgMTguMzYzIDMuNjIzIDE4LjIzOSBMIDMuNjIzIDkuNTgyIEMgNC4wOSA5LjQwMSA0LjY1MyA5LjI0OCA1LjY5MiA5LjI0OCBDIDguMDM3IDkuMjQ4IDkuNjY4IDEwLjczNiA5LjY2OCAxMy41NTggWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjIxLjQxMzc5OTk5OTk5OTk5NXB4IiBpZD0iYTlQVE9HbmpUIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDQuMDQyIDEyLjI2OSkiIHdpZHRoPSIxMy4zMTkwMDAwMDAwMDAwMDNweCIvPjxwYXRoIGQ9Ik0gOS42MzkgOC40MjggQyAxMS4wODggOC40MjggMTIuMjggOC40IDEyLjY5IDguMzA0IEMgMTIuODQzIDguMjc2IDEyLjkgOC4yMTggMTIuOTI5IDguMDk1IEMgMTMuMDE0IDcuNzcgMTMuMDUyIDcuMDkzIDEzLjA1MiA2LjI2NCBDIDEzLjA1MiAzLjQ0MiAxMS4zNTUgMCA2Ljk3IDAgQyAyLjQ4OSAwIDAgMy42NTIgMCA3Ljc3IEMgMCAxMS40MjIgMS45MjYgMTUuMjE3IDcuMzIyIDE1LjIxNyBDIDkuMzQ0IDE1LjIxNyAxMC42NSAxNC44OTIgMTEuNzc1IDE0LjM1OCBDIDExLjg4OSAxNC4zMDEgMTEuOTQ2IDE0LjIwNiAxMS45NDYgMTQuMDM0IEwgMTEuOTQ2IDExLjU2NSBDIDExLjk0NiAxMS40MjIgMTEuODYxIDExLjM5MyAxMS43NzUgMTEuNDUgQyAxMC42NSAxMS45MjcgOS40MjkgMTIuMTY2IDguMDk1IDEyLjE2NiBDIDUuMDcyIDEyLjE2NiAzLjY5OSAxMC40OTcgMy42MTQgOC40MjggWiBNIDMuNjE0IDUuODczIEMgMy44NTIgNC40MjQgNC43NjcgMi44NTEgNi44MTcgMi44NTEgQyA5LjA3NyAyLjg1MSA5LjY2OCA0Ljc0OCA5LjY2OCA1LjYwNiBDIDkuNjY4IDUuNjM1IDkuNjY4IDUuNzU5IDkuNjY4IDUuODQ0IEMgOS41NDQgNS44NzMgOS4xNjMgNS44NzMgOC4wMzcgNS44NzMgWiIgZmlsbD0icmdiKDI1MCwgMTIsIDApIiBoZWlnaHQ9IjE1LjIxNjZweCIgaWQ9InB5UGlHbWFQdSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE5Ljc4NCAxOC40NjYpIiB3aWR0aD0iMTMuMDUyMDAwMDAwMDAwMDA3cHgiLz48L3N2Zz4=" alt="" width="150" height="48" loading="lazy"><h3>أساسيات تصميم واجهات المستخدم</h3></a></div></div></section><section class="section faq-section section--bordered" id="faq" aria-labelledby="faq-heading"><div class="container faq-grid"><div class="faq-content"><div class="section-heading " data-reveal="true"><h2 id="faq-heading" class="section-title"><span class="text-muted">أسئلتك،<br></span>جاوبنا عليها.</h2></div><div class="faq-list"><details class="faq-item" name="portfolio-faq" open><summary><span class="faq-item__number" dir="ltr">01</span><span>كم تستغرق مدة تنفيذ المشروع؟</span><span class="faq-item__toggle"><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"></path></svg></span></summary><div class="faq-item__answer"><p>تختلف المدة حسب حجم المشروع وتعقيده. المشاريع البسيطة قد تستغرق من أسبوعين إلى ثلاثة أسابيع، بينما المشاريع الأكبر قد تمتد من شهر إلى شهرين. بعد المكالمة الأولى أوضح لك الجدول الزمني بدقة.</p></div></details><details class="faq-item" name="portfolio-faq"><summary><span class="faq-item__number" dir="ltr">02</span><span>هل تقدر تشتغل على هوية وتصميم موجود؟</span><span class="faq-item__toggle"><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"></path></svg></span></summary><div class="faq-item__answer"><p>أكيد. أقدر أراجع الهوية والواجهات الحالية، وأطوّرها بدون ما أفقدها شخصيتها. الهدف هو تحسين التجربة والوضوح مع الحفاظ على جوهر العلامة.</p></div></details><details class="faq-item" name="portfolio-faq"><summary><span class="faq-item__number" dir="ltr">03</span><span>إيش يميّز طريقتك في التصميم؟</span><span class="faq-item__toggle"><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"></path></svg></span></summary><div class="faq-item__answer"><p>أبدأ بفهم المشكلة وأهداف العمل قبل التفكير في الشكل. كل قرار تصميمي يكون له سبب، والنتيجة تجربة تجمع بين سهولة الاستخدام، جودة الواجهة، وقابلية النمو.</p></div></details><details class="faq-item" name="portfolio-faq"><summary><span class="faq-item__number" dir="ltr">04</span><span>هل تقدم دعم بعد تسليم المشروع؟</span><span class="faq-item__toggle"><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"></path></svg></span></summary><div class="faq-item__answer"><p>نعم، أقدّم فترة دعم بعد التسليم للتأكد أن كل شيء يعمل بشكل صحيح، ومعالجة أي ملاحظات مرتبطة بالنطاق المتفق عليه. ويمكن الاتفاق على دعم مستمر عند الحاجة.</p></div></details><details class="faq-item" name="portfolio-faq"><summary><span class="faq-item__number" dir="ltr">05</span><span>كيف تتعامل مع سرية المشروع وحقوق الملكية؟</span><span class="faq-item__toggle"><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"></path></svg></span></summary><div class="faq-item__answer"><p>جميع معلومات المشروع تُعامل بسرية كاملة، وتنتقل حقوق التصاميم النهائية المتفق عليها للعميل بعد اكتمال الدفعات. ولا يتم نشر المشروع إلا بعد أخذ الموافقة.</p></div></details></div></div><aside class="consultation-card" data-reveal="true"><img class="" src="https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg" width="500" height="500" alt="" loading="lazy" decoding="async"><h3>لسى محتار؟<br>احجز استشارتك</h3><p>مكالمة قصيرة نفهم فيها احتياجك ونحدد الخطوة المناسبة لمشروعك.</p><div><a class="button button--primary " href="https://cal.com" target="_blank" rel="noopener noreferrer"><span>احجز استشارة</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span class="sr-only"> (يفتح في نافذة جديدة)</span></a><span class="cal-wordmark" dir="ltr">Cal.com</span></div></aside></div></section><section class="section articles-section section--bordered" id="blog" aria-labelledby="blog-heading"><div class="container section-stack"><div class="section-heading " data-reveal="true"><h2 id="blog-heading" class="section-title"><span class="text-muted">من المدوّنة،<br></span>رؤى في التصميم.</h2><a class="button button--secondary " href="#blog"><span>عرض الكل</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg></a></div><div class="articles-grid"><article class="article-card article-card--featured" data-reveal="true"><a href="https://rzgfolio.framer.ai/blog/how-designers-and-developers-can-actually-collaborate" target="_blank" rel="noopener noreferrer" aria-label="كيف يتعاون المصممون والمطورون فعلًا (نافذة جديدة)"><div class="article-card__image"><img class="" src="https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg?width=1920&amp;height=2400" srcset="https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg?width=1920&amp;height=2400&amp;scale-down-to=512 410w, https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg?width=1920&amp;height=2400&amp;scale-down-to=1024 819w, https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg?width=1920&amp;height=2400&amp;scale-down-to=2048 1638w, https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg?width=1920&amp;height=2400 1920w" sizes="(max-width: 809px) calc(100vw - 44px), 490px" width="1920" height="2400" alt="كيف يتعاون المصممون والمطورون فعلًا" loading="lazy" decoding="async"></div><div class="article-card__content"><h3>كيف يتعاون المصممون والمطورون فعلًا</h3><div class="article-card__meta"><span>بقلم عبدالرزاق الزهراني</span><time datetime="2025-03-06">مارس 2025</time></div><p>استراتيجيات عملية لتقليل فجوة التصميم والتطوير، وإزالة احتكاك التسليم، وشحن منتجات أفضل أسرع عبر تعاون حقيقي.</p></div></a></article><article class="article-card " data-reveal="true"><a href="https://rzgfolio.framer.ai/blog/why-faster-isn-t-always-better" target="_blank" rel="noopener noreferrer" aria-label="لماذا ليست السرعة أفضل دائمًا (نافذة جديدة)"><div class="article-card__image"><img class="" src="https://framerusercontent.com/images/HuxzIq7j0tsSLY9lFylSkywPosM.jpg?width=1200&amp;height=1200" srcset="https://framerusercontent.com/images/HuxzIq7j0tsSLY9lFylSkywPosM.jpg?width=1200&amp;height=1200&amp;scale-down-to=512 512w, https://framerusercontent.com/images/HuxzIq7j0tsSLY9lFylSkywPosM.jpg?width=1200&amp;height=1200&amp;scale-down-to=1024 1024w, https://framerusercontent.com/images/HuxzIq7j0tsSLY9lFylSkywPosM.jpg?width=1200&amp;height=1200 1200w" sizes="(max-width: 809px) calc(100vw - 44px), 490px" width="1200" height="1200" alt="لماذا ليست السرعة أفضل دائمًا" loading="lazy" decoding="async"></div><div class="article-card__content"><h3>لماذا ليست السرعة أفضل دائمًا</h3><div class="article-card__meta"><span>بقلم عبدالرزاق الزهراني</span><time datetime="2025-04-22">أبريل 2025</time></div></div></a></article><article class="article-card " data-reveal="true"><a href="https://rzgfolio.framer.ai/blog/designing-for-human-connection" target="_blank" rel="noopener noreferrer" aria-label="التصميم للتواصل الإنساني (نافذة جديدة)"><div class="article-card__image"><img class="" src="https://framerusercontent.com/images/8bSsbaMEKJGuQA9MmrKIhSz8rw.png?width=992&amp;height=1200" srcset="https://framerusercontent.com/images/8bSsbaMEKJGuQA9MmrKIhSz8rw.png?width=992&amp;height=1200&amp;scale-down-to=512 423w, https://framerusercontent.com/images/8bSsbaMEKJGuQA9MmrKIhSz8rw.png?width=992&amp;height=1200&amp;scale-down-to=1024 847w, https://framerusercontent.com/images/8bSsbaMEKJGuQA9MmrKIhSz8rw.png?width=992&amp;height=1200 992w" sizes="(max-width: 809px) calc(100vw - 44px), 490px" width="992" height="1200" alt="التصميم للتواصل الإنساني" loading="lazy" decoding="async"></div><div class="article-card__content"><h3>التصميم للتواصل الإنساني</h3><div class="article-card__meta"><span>بقلم عبدالرزاق الزهراني</span><time datetime="2025-04-01">أبريل 2025</time></div></div></a></article></div></div></section></main><footer class="site-footer" id="footer"><div class="container footer-stack"><div class="cta-panel" data-reveal="true"><h3>خلينــــا نخلــــي<br>منتجــــك يلمـــــع</h3><div class="button-row"><a class="button button--primary " href="#contact-form"><span>ابدأ مشروعك</span></a><a class="button button--secondary " href="https://cal.com" target="_blank" rel="noopener noreferrer"><span>احجز مكالمة</span><svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 17 7 7M7 17V7h10"></path></svg><span class="sr-only"> (يفتح في نافذة جديدة)</span></a></div></div><div class="footer-grid"><div class="contact-panel" id="contact-form"><h3>خلينــا نتواصــل</h3><form class="contact-form" data-contact-form="true" data-endpoint="" data-recipient="info@abdulrzaq.com"><label class="sr-only" for="contact-name">الاسم</label><input id="contact-name" name="name" type="text" placeholder="اكتب اسمك" autocomplete="name" required minlength="2" maxlength="100"><label class="sr-only" for="contact-email">البريد الإلكتروني</label><input id="contact-email" name="email" type="email" placeholder="اكتب بريدك الإلكتروني" autocomplete="email" required maxlength="254"><label class="sr-only" for="contact-message">الرسالة</label><textarea id="contact-message" name="message" placeholder="كيف أقدر أساعدك؟" required minlength="10" maxlength="5000" rows="4"></textarea><div class="contact-form__trap" aria-hidden="true"><label for="contact-website">Leave this field empty</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div><button class="button button--secondary contact-form__submit" type="submit">أرسل رسالة</button><p class="contact-form__note" id="contact-help">يفتح تطبيق البريد لإنشاء مسودة؛ لا تُرسل الرسالة تلقائيًا.</p><p class="contact-form__status" data-form-status="true" role="status" aria-live="polite" tabindex="-1"></p><noscript><p>للتواصل مباشرةً: <a href="mailto:info@abdulrzaq.com">info@abdulrzaq.com</a>. يحتاج هذا النموذج إلى JavaScript.</p></noscript></form></div><div class="footer-info"><nav aria-label="روابط التذييل"><a href="#about">عني</a><a href="#projects">المشاريع</a><a href="#services">الخدمات</a><a href="#blog">المدونة</a><a href="#faq">الأسئلة الشائعة</a></nav><div class="footer-info__contact"><div class="social-links"><a href="https://x.com/irzg_z" target="_blank" rel="noopener noreferrer" aria-label="X (نافذة جديدة)"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h4l12 16h-4L4 4Zm16 0L4 20"></path></svg></a><a href="https://www.linkedin.com/in/irzg/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (نافذة جديدة)"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 9v11M5 4v1M10 20V9h4v2c1-3 6-3 6 2v7M14 12v8"></path></svg></a></div><a class="email-pill" href="mailto:info@abdulrzaq.com" dir="ltr">info@abdulrzaq.com</a><button class="copy-email" type="button" data-copy-email="info@abdulrzaq.com"><svg class="icon " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 9h11v11H9zM5 15H4V4h11v1"></path></svg><span>نسخ البريد الإلكتروني</span></button></div></div></div><div class="footer-bottom"><p>© كل الحقوق محفوظة 2026، <a href="https://x.com/irzg_z" target="_blank" rel="noopener noreferrer">رِزق</a></p><a href="#top" class="back-to-top">العودة للأعلى<svg class="icon " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4M5 11l7-7 7 7"></path></svg></a></div></div></footer><div class="scroll-fade" aria-hidden="true"></div><script>
+(()=>{
+/** @typedef {{ name: string, email: string, message: string, website: string }} ContactFields */
+
+/** Normalize user input once, before validation or creating a mailto draft.
+ * @param {FormData} formData
+ * @returns {ContactFields}
+ */
+function readContactFields(formData) {
+  const text = (/** @type {string} */ key) => String(formData.get(key) ?? '').trim();
+  return { name: text('name'), email: text('email'), message: text('message'), website: text('website') };
+}
+
+/** Client-side feedback only. Repeat validation and spam/rate limits on your server.
+ * @param {ContactFields} fields
+ * @returns {string | null}
+ */
+function validateContact(fields) {
+  if (fields.website) return 'تعذّر إرسال الرسالة. يرجى المحاولة مرة أخرى.';
+  if (fields.name.length < 2 || fields.name.length > 100) return 'اكتب اسمًا من حرفين إلى ١٠٠ حرف.';
+  if (fields.email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email)) {
+    return 'تأكد من كتابة بريد إلكتروني صحيح.';
+  }
+  if (fields.message.length < 10 || fields.message.length > 5000) return 'اكتب رسالة من ١٠ إلى ٥٠٠٠ حرف.';
+  return null;
+}
+
+/** @param {string} recipient @param {ContactFields} fields */
+function createMailto(recipient, fields) {
+  // Keep the recipient fixed in site.json; visitors cannot supply additional recipients.
+  if (!/^[^\s@,;?]+@[^\s@,;?]+\.[^\s@,;?]+$/.test(recipient)) throw new Error('Invalid configured recipient');
+  const subject = encodeURIComponent(`استفسار مشروع — ${fields.name}`);
+  const body = encodeURIComponent(`الاسم: ${fields.name}\nالبريد: ${fields.email}\n\n${fields.message}`);
+  return `mailto:${recipient}?subject=${subject}&body=${body}`;
+}
+
+/** Reject non-HTTP schemes and protocol-relative configuration.
+ * @param {string} endpoint @param {string} origin
+ */
+function resolveContactEndpoint(endpoint, origin) {
+  const input = endpoint.trim();
+  if (!input || input.startsWith('//') || input.includes('\\')) throw new Error('Invalid contact endpoint');
+  const url = /^https?:\/\//i.test(input) ? new URL(input) : new URL(input, origin);
+  const localhost = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
+  if (url.username || url.password || (url.protocol !== 'https:' && !(localhost && url.protocol === 'http:'))) {
+    throw new Error('Contact endpoint must use HTTPS');
+  }
+  return url.href;
+}
+
+/** Keep the source CDN references readable, with responsive derivatives where supported.
+ * @param {{ src: string, width: number, height: number }} image
+ */
+function responsiveImage(image) {
+  if (!image.src.startsWith('https://framerusercontent.com/images/') || image.width <= 512) {
+    return { src: image.src, srcset: undefined };
+  }
+  const url = new URL(image.src);
+  url.searchParams.set('width', String(image.width));
+  url.searchParams.set('height', String(image.height));
+  const variants = [512, 1024, 2048].filter(size => size < Math.max(image.width, image.height));
+  const widths = new Set();
+  const sources = variants.map(size => {
+    const derivative = new URL(url);
+    derivative.searchParams.set('scale-down-to', String(size));
+    const width = Math.round(image.width * size / Math.max(image.width, image.height));
+    widths.add(width);
+    return `${derivative.href} ${width}w`;
+  });
+  if (!widths.has(image.width)) sources.push(`${url.href} ${image.width}w`);
+  return { src: url.href, srcset: sources.join(', ') };
+}
+
+function initMenu() {
+    const dialog = document.querySelector('#site-menu');
+    const trigger = document.querySelector('[data-menu-open]');
+    const closeButton = dialog?.querySelector('[data-menu-close]');
+    if (!dialog || !trigger || !closeButton)
+        return;
+    trigger.addEventListener('click', () => {
+        if (dialog.open)
+            return;
+        dialog.showModal();
+        trigger.setAttribute('aria-expanded', 'true');
+        document.documentElement.classList.add('menu-is-open');
+    });
+    closeButton.addEventListener('click', () => dialog.close());
+    dialog.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => dialog.close());
+    });
+    // Native dialog supplies keyboard focus containment and Escape handling.
+    dialog.addEventListener('close', () => {
+        trigger.setAttribute('aria-expanded', 'false');
+        document.documentElement.classList.remove('menu-is-open');
+        trigger.focus({ preventScroll: true });
+    });
+}
+
+function initReveal() {
+    if (!('IntersectionObserver' in window))
+        return;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (motion.matches)
+        return;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting)
+                return;
+            entry.target.classList.add('is-entering');
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal]').forEach(element => {
+        observer.observe(element);
+        element.addEventListener('animationend', () => element.classList.remove('is-entering'), { once: true });
+    });
+    motion.addEventListener('change', event => {
+        if (event.matches)
+            observer.disconnect();
+    });
+}
+
+function initContactForm() {
+    const form = document.querySelector('[data-contact-form]');
+    const button = form?.querySelector('button[type="submit"]');
+    const status = form?.querySelector('[data-form-status]');
+    if (!form || !button || !status)
+        return;
+    let submitting = false;
+    function setStatus(message, state) {
+        if (!status)
+            return;
+        status.textContent = message;
+        status.dataset.state = state;
+        status.focus({ preventScroll: true });
+    }
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (submitting || !form.reportValidity())
+            return;
+        const fields = readContactFields(new FormData(form));
+        const error = validateContact(fields);
+        if (error) {
+            setStatus(error, 'error');
+            return;
+        }
+        const endpoint = form.dataset.endpoint?.trim();
+        if (!endpoint) {
+            try {
+                const url = createMailto(form.dataset.recipient || '', fields);
+                setStatus('تم تجهيز مسودة البريد. أرسلها من تطبيق بريدك؛ لم تُرسل رسالة من الموقع.', 'draft');
+                window.location.href = url;
+            }
+            catch {
+                setStatus('البريد غير مُعدّ بشكل صحيح. استخدم رابط التواصل المباشر.', 'error');
+            }
+            return;
+        }
+        submitting = true;
+        button.disabled = true;
+        button.textContent = 'جارٍ الإرسال…';
+        form.setAttribute('aria-busy', 'true');
+        status.textContent = '';
+        try {
+            const url = resolveContactEndpoint(endpoint, window.location.origin);
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                credentials: 'omit',
+                body: JSON.stringify(fields),
+                signal: AbortSignal.timeout(15000),
+            });
+            // A redirect to an HTML success page is not evidence of a delivered message.
+            const payload = await response.json();
+            if (!response.ok || !payload || typeof payload !== 'object' || !('ok' in payload) || payload.ok !== true) {
+                throw new Error('Submission was not acknowledged');
+            }
+            form.reset();
+            setStatus('تم استلام رسالتك بنجاح. شكرًا لتواصلك.', 'success');
+        }
+        catch {
+            setStatus('تعذّر إرسال الرسالة. حاول مرة أخرى أو تواصل عبر البريد مباشرةً.', 'error');
+        }
+        finally {
+            submitting = false;
+            button.disabled = false;
+            button.textContent = 'أرسل رسالة';
+            form.removeAttribute('aria-busy');
+        }
+    });
+}
+function initCopyEmail() {
+    document.querySelectorAll('[data-copy-email]').forEach(button => {
+        const label = button.querySelector('span');
+        const original = label?.textContent || '';
+        button.setAttribute('aria-live', 'polite');
+        button.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(button.dataset.copyEmail || '');
+                if (label)
+                    label.textContent = 'تم نسخ البريد';
+            }
+            catch {
+                if (label)
+                    label.textContent = 'تعذّر النسخ — انسخ البريد من الرابط أعلاه';
+            }
+            window.setTimeout(() => { if (label)
+                label.textContent = original; }, 4000);
+        });
+    });
+}
+
+// Astro processes this as a module: it is deferred and runs once per page.
+initMenu();
+initReveal();
+initContactForm();
+initCopyEmail();
+
+})();
+</script>
+</body></html>

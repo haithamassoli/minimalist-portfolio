@@ -1,0 +1,14 @@
+---
+import { responsiveImage } from '../../lib/images.mjs';
+import type { ImageAsset } from '../../types/content';
+interface Props {
+  image: ImageAsset;
+  class?: string;
+  sizes?: string;
+  eager?: boolean;
+  decorative?: boolean;
+}
+const { image, class: className = '', sizes = '100vw', eager = false, decorative = false } = Astro.props;
+const { src, srcset } = responsiveImage(image);
+---
+<img class={className} src={src} srcset={srcset} sizes={srcset ? sizes : undefined} width={image.width} height={image.height} alt={decorative ? '' : image.alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />

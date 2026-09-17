@@ -1,0 +1,15 @@
+---
+import { projects } from '../../data';
+import SectionHeading from '../ui/SectionHeading.astro';
+import ProjectCard from '../cards/ProjectCard.astro';
+import Button from '../ui/Button.astro';
+---
+<section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+  <div class="container section-stack">
+    <SectionHeading id="projects-heading" muted="ألقِ نظرة" title="على أعمالي" centered />
+    <div class="projects-grid">{projects.map(project => <ProjectCard project={project} />)}</div>
+    <div class="section-action">
+      <Button href="/projects/" label="رؤية جميع المشاريع" variant="secondary" icon="arrow-up-left" />
+    </div>
+  </div>
+</section>

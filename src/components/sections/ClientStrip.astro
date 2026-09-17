@@ -1,0 +1,22 @@
+---
+import { clients } from '../../data';
+import AssetImage from '../ui/AssetImage.astro';
+import SocialProof from '../ui/SocialProof.astro';
+interface Props { proof?: boolean }
+const { proof = false } = Astro.props;
+---
+<div class="client-strip" aria-label="العملاء">
+  <div class="container client-strip__inner">
+    {proof ? <SocialProof /> : <p class="client-strip__label">موثوق من قِبل</p>}
+    <div class="client-strip__window">
+      <div class="client-strip__track">
+        <ul class="client-strip__logos">{clients.map(logo => <li>
+        <AssetImage image={logo} sizes="100px" />
+      </li>)}</ul>
+      <ul class="client-strip__logos" aria-hidden="true">{clients.map(logo => <li>
+      <AssetImage image={logo} sizes="100px" decorative />
+    </li>)}</ul>
+  </div>
+</div>
+</div>
+</div>

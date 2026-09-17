@@ -1,0 +1,120 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  direction: ltr;
+}
+
+.project-card {
+  min-width: 0;
+  direction: rtl;
+  border-radius: var(--radius-card);
+}
+
+.project-card > a {
+  position: relative;
+  display: block;
+  height: 400px;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #d2d1cf;
+  isolation: isolate;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s var(--ease-out);
+}
+
+.project-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, #000c);
+  pointer-events: none;
+}
+
+.project-card__caption {
+  position: absolute;
+  bottom: 20px;
+  inset-inline: 20px;
+  color: #fff;
+}
+
+.project-card__caption h3 {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.project-card__caption p {
+  color: #f1f1f1;
+  font-size: 16px;
+}
+
+.project-card__open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ffffff60;
+  background: #1a1a1a55;
+  backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 14px 18px;
+  color: #fff;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .3s, transform .3s var(--ease-out);
+}
+
+.project-card > a:hover .project-card__image, .project-card > a:focus-visible .project-card__image {
+  transform: scale(1.045);
+}
+
+.project-card > a:hover .project-card__open, .project-card > a:focus-visible .project-card__open {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .project-card > a {
+    height: 350px;
+  }
+  .projects-grid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 809px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .project-card > a {
+    height: auto;
+    aspect-ratio: 1.12;
+  }
+  .project-card__caption h3 {
+    font-size: 23px;
+  }
+  .project-card__caption p {
+    font-size: 14px;
+  }
+  .project-card__open {
+    top: 18px;
+    left: 18px;
+    transform: none;
+    opacity: 1;
+    padding: 10px;
+  }
+  .project-card__open span {
+    display: none;
+  }
+  .project-card > a:hover .project-card__open, .project-card > a:focus-visible .project-card__open {
+    transform: none;
+  }
+}

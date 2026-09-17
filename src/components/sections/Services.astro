@@ -1,0 +1,20 @@
+---
+import { services } from '../../data';
+import SectionHeading from '../ui/SectionHeading.astro';
+import Icon from '../ui/Icon.astro';
+const icons = ['cursor', 'sparkles', 'layers'];
+---
+<section class="section services-section section--bordered" id="services" aria-labelledby="services-heading">
+  <div class="container section-stack">
+    <SectionHeading id="services-heading" muted="كــذا أقــــدر" title="أساعدك" />
+    <div class="services-list">
+      {services.map((group, index) => <div class="service-group" data-reveal>
+      <h3>{group.title}</h3>
+      <ul>{group.items.map(item => <li>
+      <Icon name={icons[index]} size={22} />
+      <span>{item}</span>
+    </li>)}</ul>
+  </div>)}
+</div>
+</div>
+</section>

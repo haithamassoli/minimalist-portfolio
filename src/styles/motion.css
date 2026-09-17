@@ -1,0 +1,74 @@
+/* Content is visible by default. JS only animates elements on entry, so a
+   blocked or failed script can never leave the page permanently invisible. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__title {
+    animation: hero-arrive .8s var(--ease-out) both;
+  }
+  .hero__description {
+    animation: hero-arrive .8s .1s var(--ease-out) both;
+  }
+  .hero__actions {
+    animation: hero-arrive .8s .2s var(--ease-out) both;
+  }
+  [data-reveal].is-entering {
+    animation: section-arrive .65s var(--ease-out);
+  }
+}
+
+@keyframes hero-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes section-arrive {
+  from {
+    opacity: .25;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .site-header, .site-menu, .scroll-fade, .page-rails, .skip-link {
+    display: none !important;
+  }
+  .hero {
+    padding-top: 20px;
+  }
+  .section {
+    padding-block: 32px;
+  }
+  .client-strip__track {
+    animation: none;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+  }
+  .testimonial-card, .certificate-card, .project-card {
+    break-inside: avoid;
+  }
+}

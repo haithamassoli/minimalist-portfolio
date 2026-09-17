@@ -1,0 +1,158 @@
+.faq-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.faq-content {
+  display: grid;
+  gap: 64px;
+  min-width: 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  content: '';
+}
+
+.faq-item__number {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.faq-item__toggle {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  margin-inline-start: auto;
+}
+
+.faq-item__toggle svg {
+  transition: rotate .25s var(--ease-out);
+}
+
+.faq-item[open] .faq-item__toggle svg {
+  rotate: 45deg;
+}
+
+.faq-item__answer {
+  padding: 0 24px 24px;
+  color: var(--color-body);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.consultation-card {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.consultation-card > img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+}
+
+.consultation-card h3 {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.consultation-card > p {
+  color: var(--color-body);
+}
+
+.consultation-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.consultation-card .button {
+  padding: 18px 24px;
+  min-height: 56px;
+}
+
+.cal-wordmark {
+  font: 700 17px Arial, sans-serif;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 1199px) {
+  .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consultation-card {
+    position: static;
+    justify-items: center;
+    text-align: center;
+  }
+  .consultation-card > p {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 809px) {
+  .faq-content {
+    gap: 48px;
+  }
+  .faq-item summary {
+    padding: 20px 16px;
+    gap: 9px;
+    font-size: 16px;
+  }
+  .faq-item__answer {
+    padding: 0 16px 22px;
+    font-size: 15px;
+  }
+  .consultation-card {
+    padding: 28px 20px;
+  }
+  .consultation-card h3 {
+    font-size: 28px;
+  }
+}

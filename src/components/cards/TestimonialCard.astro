@@ -1,0 +1,18 @@
+---
+import type { Testimonial } from '../../types/content';
+import AssetImage from '../ui/AssetImage.astro';
+interface Props { testimonial: Testimonial }
+const { testimonial } = Astro.props;
+---
+<figure class="testimonial-card" data-reveal>
+  <blockquote>
+    <p>“{testimonial.quote}”</p>
+  </blockquote>
+  <figcaption>
+    <AssetImage image={testimonial.avatar} sizes="46px" decorative />
+    <div>
+      <strong>{testimonial.name}</strong>
+      <span>{testimonial.role}</span>
+    </div>
+  </figcaption>
+</figure>

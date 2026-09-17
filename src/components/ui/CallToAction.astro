@@ -1,0 +1,13 @@
+---
+import { site } from '../../data';
+import Button from './Button.astro';
+interface Props { footer?: boolean }
+const { footer = false } = Astro.props;
+---
+<div class="cta-panel" data-reveal>
+  <h3>{footer ? 'خلينــــا نخلــــي' : 'عندك فكـرة؟'}<br />{footer ? 'منتجــــك يلمـــــع' : 'خلينـــــا نحولـها لواقـــع'}</h3>
+  <div class="button-row">
+    <Button href="/#contact-form" label="ابدأ مشروعك" />
+    <Button href={footer ? site.bookingUrl : '/projects/'} label={footer ? 'احجز مكالمة' : 'شاهد أعمالي'} variant="secondary" external={footer} icon="arrow-up-left" />
+  </div>
+</div>

@@ -1,0 +1,17 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  href: string;
+  label: string;
+  variant?: 'primary' | 'secondary';
+  icon?: string;
+  external?: boolean;
+  class?: string;
+}
+const { href, label, variant = 'primary', icon, external = false, class: className = '' } = Astro.props;
+---
+<a class={`button button--${variant} ${className}`} href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+  <span>{label}</span>
+  {icon && <Icon name={icon} size={18} />}
+  {external && <span class="sr-only"> (يفتح في نافذة جديدة)</span>}
+</a>

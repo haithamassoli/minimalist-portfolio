@@ -1,0 +1,54 @@
+---
+import { site } from '../data';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import '../styles/main.css';
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = site.title, description = site.description } = Astro.props;
+const origin = import.meta.env.PUBLIC_SITE_URL || Astro.site?.origin || Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, origin);
+const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
+---
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f7" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexable ? 'index,follow,max-image-preview:large' : 'noindex,nofollow'} />
+    <link rel="canonical" href={canonical.href} />
+    <link rel="icon" href={site.faviconLight} media="(prefers-color-scheme: light)" />
+    <link rel="icon" href={site.faviconDark} media="(prefers-color-scheme: dark)" />
+    <link rel="preconnect" href="https://framerusercontent.com" crossorigin="anonymous" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={site.socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={site.socialImage} />
+  </head>
+  <body id="top">
+    <a href="#main-content" class="skip-link">انتقل إلى المحتوى</a>
+    <div class="page-rails" aria-hidden="true">
+    </div>
+    <Header />
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <div class="scroll-fade" aria-hidden="true">
+    </div>
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

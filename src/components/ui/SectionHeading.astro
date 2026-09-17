@@ -1,0 +1,17 @@
+---
+import Button from './Button.astro';
+interface Props {
+  title: string;
+  muted?: string;
+  id?: string;
+  centered?: boolean;
+  actionHref?: string;
+  actionLabel?: string;
+}
+const { title, muted, id, centered = false, actionHref, actionLabel } = Astro.props;
+---
+<div class={`section-heading ${centered ? 'section-heading--centered' : ''}`} data-reveal>
+  <h2 id={id} class="section-title">{muted && <span class="text-muted">{muted}<br />
+</span>}{title}</h2>
+{actionHref && actionLabel && <Button href={actionHref} label={actionLabel} variant="secondary" icon="arrow-up-left" />}
+</div>

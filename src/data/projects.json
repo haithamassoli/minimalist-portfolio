@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "mihad-mobility",
+    "title": "مِهاد",
+    "category": "استراتيجية علامة وتجربة رقمية",
+    "sourceUrl": "https://rzgfolio.framer.ai/projects/mihad-mobility",
+    "image": {
+      "src": "https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png",
+      "width": 902,
+      "height": 1200,
+      "alt": "مِهاد — استراتيجية علامة وتجربة رقمية"
+    }
+  },
+  {
+    "slug": "nabd-digital-health",
+    "title": "نبض",
+    "category": "تصميم منتج وتجربة مستخدم",
+    "sourceUrl": "https://rzgfolio.framer.ai/projects/nabd-digital-health",
+    "image": {
+      "src": "https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png",
+      "width": 904,
+      "height": 1200,
+      "alt": "نبض — تصميم منتج وتجربة مستخدم"
+    }
+  },
+  {
+    "slug": "zin-wearable",
+    "title": "زِن",
+    "category": "تجربة لياقة وأجهزة ذكية",
+    "sourceUrl": "https://rzgfolio.framer.ai/projects/zin-wearable",
+    "image": {
+      "src": "https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png",
+      "width": 992,
+      "height": 1200,
+      "alt": "زِن — تجربة لياقة وأجهزة ذكية"
+    }
+  },
+  {
+    "slug": "volt-product-launch",
+    "title": "فولت",
+    "category": "تصميم ويب وتوجيه إبداعي",
+    "sourceUrl": "https://rzgfolio.framer.ai/projects/volt-product-launch",
+    "image": {
+      "src": "https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png",
+      "width": 1200,
+      "height": 1200,
+      "alt": "فولت — تصميم ويب وتوجيه إبداعي"
+    }
+  }
+]

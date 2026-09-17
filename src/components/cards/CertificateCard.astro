@@ -1,0 +1,10 @@
+---
+import type { Certificate } from '../../types/content';
+interface Props { certificate: Certificate; index: number }
+const { certificate, index } = Astro.props;
+---
+<a class={`certificate-card certificate-card--${index + 1}`} href={certificate.url} target="_blank" rel="noopener noreferrer" data-reveal aria-label={`${certificate.title} — LinkedIn (نافذة جديدة)`}>
+  <span class="certificate-card__date">{certificate.date}</span>
+  <img src={certificate.logo} alt="" width="150" height="48" loading="lazy" />
+  <h3>{certificate.title}</h3>
+</a>

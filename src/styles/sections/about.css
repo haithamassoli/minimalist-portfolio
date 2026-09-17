@@ -1,0 +1,268 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 64px;
+  direction: ltr;
+}
+
+.about-copy, .about-sidebar {
+  direction: rtl;
+  min-width: 0;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.about-copy > p {
+  font-size: 22px;
+  line-height: 1.85;
+  color: var(--color-body);
+}
+
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.profile-card {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-card__image {
+  position: relative;
+  aspect-ratio: .824445;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e6e4e0;
+}
+
+.profile-card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__follow {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #ffffffea;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  font-size: 14px;
+}
+
+.profile-card h3 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.profile-card figcaption p {
+  font-size: 18px;
+  color: var(--color-muted);
+}
+
+.experience {
+  display: grid;
+  gap: 16px;
+}
+
+.experience > h3 {
+  font-size: 26px;
+}
+
+.experience ol {
+  display: grid;
+  gap: 12px;
+}
+
+.experience-card {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 22px;
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.experience-card > span {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.experience-card > h4 {
+  font-size: 18px;
+  margin-block: 10px 3px;
+}
+
+.experience-card > p {
+  font-size: 14px;
+  color: var(--color-body);
+}
+
+.experience > .text-link {
+  justify-self: center;
+  font-size: 14px;
+}
+
+.tool-orbit {
+  width: 100%;
+  aspect-ratio: 1.1;
+  position: relative;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.tool-orbit__ring {
+  position: absolute;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tool-orbit__ring--outer {
+  width: 87%;
+  aspect-ratio: 1;
+  border-style: dashed;
+}
+
+.tool-orbit__ring--inner {
+  width: 54%;
+  aspect-ratio: 1;
+}
+
+.tool-orbit__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: #fff;
+  font-size: 31px;
+  font-weight: 700;
+  box-shadow: var(--shadow-card);
+}
+
+.tool-orbit__app {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: #fff;
+  border: 1px solid #dedede;
+  box-shadow: 0 8px 16px #00000009;
+  animation: tool-float 5s ease-in-out infinite alternate;
+}
+
+.tool-orbit__app img {
+  object-fit: contain;
+}
+
+.tool-orbit__app--1 {
+  top: 12%;
+  left: 45%;
+  background: #1a1a1a;
+}
+
+.tool-orbit__app--2 {
+  top: 28%;
+  right: 5%;
+  animation-delay: -2s;
+}
+
+.tool-orbit__app--3 {
+  bottom: 17%;
+  right: 14%;
+  animation-delay: -3s;
+}
+
+.tool-orbit__app--4 {
+  top: 26%;
+  left: 7%;
+  animation-delay: -1s;
+}
+
+.tool-orbit__app--5 {
+  bottom: 12%;
+  left: 30%;
+  animation-delay: -4s;
+}
+
+.tool-orbit__app--6 {
+  bottom: 31%;
+  left: 6%;
+  animation-delay: -2s;
+}
+
+.tool-orbit__app--7 {
+  top: 34%;
+  left: 34%;
+  width: 49px;
+  height: 49px;
+  animation-delay: -3s;
+}
+
+.tool-orbit__app--8 {
+  top: 56%;
+  left: 60%;
+  width: 49px;
+  height: 49px;
+  animation-delay: -1s;
+}
+
+@keyframes tool-float {
+  to {
+    transform: translateY(-9px) rotate(4deg);
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+  }
+  .about-copy > p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 809px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .about-copy {
+    gap: 28px;
+  }
+  .about-copy > p {
+    font-size: 18px;
+  }
+  .about-sidebar {
+    gap: 32px;
+  }
+  .profile-card__image {
+    aspect-ratio: .905759;
+  }
+  .tool-orbit {
+    max-width: 470px;
+    align-self: center;
+  }
+}

@@ -1,0 +1,251 @@
+.site-footer {
+  position: relative;
+  z-index: 2;
+  padding-block: 64px;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.footer-info, .contact-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px 28px;
+  min-height: 540px;
+  border: 1px solid var(--color-border);
+  border-radius: 32px;
+  background: var(--color-ink);
+  color: #fff;
+  box-shadow: 0 16px 20px #1a1a1a26, inset 0 4px 6px #ffffff59;
+}
+
+.footer-info {
+  justify-content: space-between;
+  gap: 44px;
+}
+
+.footer-info nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-info nav a {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color .2s;
+}
+
+.footer-info nav a:hover {
+  color: #b8b8b8;
+}
+
+.footer-info__contact {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+
+.email-pill {
+  border: 1px solid var(--color-border);
+  background: linear-gradient(#fff, #f4f4f4);
+  color: var(--color-ink);
+  padding: 21px 27px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-button);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+.copy-email {
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #b8b8b8;
+  padding: 0;
+  font-size: 12px;
+}
+
+.copy-email:hover {
+  color: #fff;
+}
+
+.contact-panel {
+  gap: 28px;
+}
+
+.contact-panel h3 {
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input, .contact-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #ebebeb33;
+  border-radius: 20px;
+  background: #bbbbbb26;
+  padding: 23px 26px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  text-align: right;
+  transition: border-color .2s;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #b8b8b8;
+  opacity: 1;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: #f0f0f0;
+  box-shadow: 0 0 0 1px #f0f0f0;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form__trap {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.contact-form__submit {
+  width: 100%;
+  margin-top: 2px;
+}
+
+.contact-form__note {
+  font-size: 11px;
+  color: #b8b8b8;
+  line-height: 1.7;
+}
+
+.contact-form__status:empty {
+  display: none;
+}
+
+.contact-form__status {
+  font-size: 13px;
+  color: #fff;
+  padding: 10px 12px;
+  border: 1px solid #ffffff40;
+  border-radius: 12px;
+  background: #ffffff0d;
+}
+
+.contact-form__status[data-state='error'] {
+  border-color: #ffa590;
+  color: #ffd4c8;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  background: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: 28px;
+  box-shadow: inset 0 4px 6px #ffffff59;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+
+.footer-bottom p a {
+  color: #fff;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .footer-info {
+    min-height: auto;
+    gap: 60px;
+  }
+  .footer-info__contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 809px) {
+  .site-footer {
+    padding-block: 44px;
+  }
+  .footer-info, .contact-panel {
+    padding: 32px 22px;
+    min-height: auto;
+  }
+  .contact-panel h3 {
+    font-size: 30px;
+  }
+  .footer-info nav a {
+    font-size: 28px;
+  }
+  .footer-info__contact {
+    display: grid;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 21px 20px;
+    font-size: 16px;
+  }
+  .footer-bottom {
+    padding: 24px 22px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}

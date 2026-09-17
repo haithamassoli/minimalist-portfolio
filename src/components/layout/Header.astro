@@ -1,0 +1,40 @@
+---
+import { site } from '../../data';
+import Icon from '../ui/Icon.astro';
+import AssetImage from '../ui/AssetImage.astro';
+---
+<header class="site-header">
+  <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="site-menu" aria-expanded="false" data-menu-open>
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+  </button>
+  <div class="identity-pill">
+    <a class="identity-pill__mail" href="/#contact-form" aria-label="تواصل معي">
+      <Icon name="mail" size={19} />
+    </a>
+    <a class="identity-pill__profile" href="/" aria-label="رِزق — الصفحة الرئيسية">
+      <span class="identity-pill__copy">
+        <strong>{site.name}</strong>
+        <span>{site.role}</span>
+      </span>
+      <AssetImage image={site.avatar} sizes="40px" eager decorative />
+    </a>
+  </div>
+</header>
+<dialog id="site-menu" class="site-menu" aria-labelledby="menu-heading">
+  <button class="menu-close" type="button" aria-label="إغلاق القائمة" data-menu-close>
+    <Icon name="close" />
+  </button>
+  <h2 id="menu-heading" class="sr-only">القائمة الرئيسية</h2>
+  <nav aria-label="القائمة الرئيسية">
+    {site.navigation.map(link => <a href={link.href}>{link.label}</a>)}
+  </nav>
+  <a class="site-menu__email" href={`mailto:${site.email}`}>{site.email}</a>
+</dialog>
+<noscript>
+  <nav class="no-js-nav" aria-label="روابط الموقع">{site.navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav>
+</noscript>

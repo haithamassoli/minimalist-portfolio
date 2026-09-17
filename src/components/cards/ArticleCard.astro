@@ -1,0 +1,19 @@
+---
+import type { Post } from '../../types/content';
+import AssetImage from '../ui/AssetImage.astro';
+interface Props { post: Post; featured?: boolean }
+const { post, featured = false } = Astro.props;
+---
+<article class={`article-card ${featured ? 'article-card--featured' : ''}`} data-reveal>
+  <a href={post.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`${post.title} (نافذة جديدة)`}>
+    <div class="article-card__image">
+      <AssetImage image={post.image} sizes="(max-width: 809px) calc(100vw - 44px), 490px" />
+    </div>
+    <div class="article-card__content">
+      <h3>{post.title}</h3>
+      <div class="article-card__meta">
+        <span>{post.author}</span>
+        <time datetime={post.date}>{post.dateLabel}</time>
+      </div>{featured && post.excerpt && <p>{post.excerpt}</p>}</div>
+    </a>
+  </article>

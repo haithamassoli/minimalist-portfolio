@@ -1,0 +1,56 @@
+{
+  "name": "رِزق",
+  "fullName": "عبدالرزاق الزهراني",
+  "role": "مصمم منتجات",
+  "aboutRole": "مصمم منتجات رقمية",
+  "title": "Home | الرئيسية",
+  "description": "معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك.",
+  "heroDescription": "مصمم واجهات وتجربة مستخدم، أساعد الشركات والمنتجات الناشئة على تحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام.",
+  "email": "info@abdulrzaq.com",
+  "bookingUrl": "https://cal.com",
+  "sourceUrl": "https://rzgfolio.framer.ai/",
+  "socials": [
+    {
+      "name": "X",
+      "url": "https://x.com/irzg_z",
+      "icon": "x"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/irzg/",
+      "icon": "linkedin"
+    }
+  ],
+  "avatar": {
+    "src": "https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg",
+    "width": 500,
+    "height": 500,
+    "alt": "رِزق، مصمم منتجات رقمية"
+  },
+  "faviconLight": "https://framerusercontent.com/images/k0cCifxqNYOPVH771zx1Tc0o.png",
+  "faviconDark": "https://framerusercontent.com/images/VKtY3zUE6vgynd8drPYsZJOblgc.png",
+  "socialImage": "https://framerusercontent.com/assets/NeyGbZ0qWoRptvkeBeaNYDDcW4.jpg",
+  "happyClients": "+99 عميل سعيد",
+  "navigation": [
+    {
+      "label": "عني",
+      "href": "/#about"
+    },
+    {
+      "label": "المشاريع",
+      "href": "/projects/"
+    },
+    {
+      "label": "الخدمات",
+      "href": "/#services"
+    },
+    {
+      "label": "المدونة",
+      "href": "/blog/"
+    },
+    {
+      "label": "الأسئلة الشائعة",
+      "href": "/#faq"
+    }
+  ]
+}

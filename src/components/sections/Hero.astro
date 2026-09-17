@@ -1,0 +1,18 @@
+---
+import { site } from '../../data';
+import Button from '../ui/Button.astro';
+import ClientStrip from './ClientStrip.astro';
+---
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero__dots" aria-hidden="true">
+  </div>
+  <div class="container hero__inner">
+    <h1 id="hero-title" class="hero__title">{site.name}</h1>
+    <p class="hero__description">{site.heroDescription}</p>
+    <div class="button-row hero__actions">
+      <Button href="/#contact-form" label="ابدأ مشروعك" />
+      <Button href="/projects/" label="شاهد أعمالي" variant="secondary" icon="arrow-up-left" />
+    </div>
+  </div>
+  <ClientStrip proof />
+</section>

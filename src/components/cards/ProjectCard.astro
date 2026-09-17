@@ -1,0 +1,22 @@
+---
+import type { Project } from '../../types/content';
+import AssetImage from '../ui/AssetImage.astro';
+import Icon from '../ui/Icon.astro';
+interface Props { project: Project }
+const { project } = Astro.props;
+---
+<article class="project-card" data-reveal>
+  <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} — استعرض المشروع (نافذة جديدة)`}>
+    <AssetImage image={project.image} class="project-card__image" sizes="(max-width: 809px) calc(100vw - 44px), (max-width: 1080px) calc((100vw - 106px) / 2), 487px" />
+    <div class="project-card__shade">
+    </div>
+    <div class="project-card__caption">
+      <h3>{project.title}</h3>
+      <p>{project.category}</p>
+    </div>
+    <span class="project-card__open">
+      <Icon name="arrow-up-left" size={24} />
+      <span>استعرض الموقع</span>
+    </span>
+  </a>
+</article>
