@@ -2,10 +2,11 @@
 import { posts } from '../../data';
 import SectionHeading from '../ui/SectionHeading.astro';
 import ArticleCard from '../cards/ArticleCard.astro';
+const showArticles = posts.length > 0;
 ---
-<section class="section articles-section section--bordered" id="blog" aria-labelledby="blog-heading">
+{showArticles && <section class="section articles-section section--bordered" id="blog" aria-labelledby="blog-heading">
   <div class="container section-stack">
-    <SectionHeading id="blog-heading" muted="من المدوّنة،" title="رؤى في التصميم." actionHref="/blog/" actionLabel="عرض الكل" />
+    <SectionHeading id="blog-heading" muted="من المدوّنة،" title="رؤى في التطوير." actionHref="/blog/" actionLabel="عرض الكل" />
     <div class="articles-grid">{posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}</div>
   </div>
-</section>
+</section>}

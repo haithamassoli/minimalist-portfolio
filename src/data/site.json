@@ -1,36 +1,37 @@
 {
-  "name": "رِزق",
-  "fullName": "عبدالرزاق الزهراني",
-  "role": "مصمم منتجات",
-  "aboutRole": "مصمم منتجات رقمية",
-  "title": "Home | الرئيسية",
-  "description": "معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك.",
-  "heroDescription": "مصمم واجهات وتجربة مستخدم، أساعد الشركات والمنتجات الناشئة على تحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام.",
-  "email": "info@abdulrzaq.com",
-  "bookingUrl": "https://cal.com",
-  "sourceUrl": "https://rzgfolio.framer.ai/",
+  "name": "هيثم",
+  "fullName": "هيثم العسولي",
+  "role": "مطوّر ويب وموبايل full-stack",
+  "aboutRole": "مطوّر ويب وتطبيقات موبايل full-stack",
+  "title": "الرئيسية | هيثم العسولي",
+  "description": "مطوّر ويب وموبايل full-stack في عمّان، الأردن. أبني منتجات ويب وجوال من نموذج البيانات حتى الإطلاق والدعم.",
+  "heroDescription": "مطوّر ويب وموبايل full-stack في عمّان، الأردن. أحوّل متطلبات المنتج إلى برمجيات موثوقة، من المعمارية حتى الإطلاق.",
+  "location": "عمّان، الأردن",
+  "email": "haitham.b.assoli@gmail.com",
+  "bookingUrl": "mailto:haitham.b.assoli@gmail.com",
+  "sourceUrl": "https://assoli.site",
   "socials": [
     {
-      "name": "X",
-      "url": "https://x.com/irzg_z",
+      "name": "GitHub",
+      "url": "https://github.com/haithamassoli",
       "icon": "x"
     },
     {
       "name": "LinkedIn",
-      "url": "https://www.linkedin.com/in/irzg/",
+      "url": "https://www.linkedin.com/in/haithamassoli/",
       "icon": "linkedin"
     }
   ],
   "avatar": {
-    "src": "https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg",
-    "width": 500,
-    "height": 500,
-    "alt": "رِزق، مصمم منتجات رقمية"
+    "src": "/images/haitham-assoli.png",
+    "width": 1024,
+    "height": 1024,
+    "alt": "هيثم العسولي، مطوّر ويب وموبايل full-stack"
   },
-  "faviconLight": "https://framerusercontent.com/images/k0cCifxqNYOPVH771zx1Tc0o.png",
-  "faviconDark": "https://framerusercontent.com/images/VKtY3zUE6vgynd8drPYsZJOblgc.png",
-  "socialImage": "https://framerusercontent.com/assets/NeyGbZ0qWoRptvkeBeaNYDDcW4.jpg",
-  "happyClients": "+99 عميل سعيد",
+  "faviconLight": "/images/haitham-assoli.png",
+  "faviconDark": "/images/haitham-assoli.png",
+  "socialImage": "/images/haitham-assoli.png",
+  "happyClients": "تطوير ويب وموبايل",
   "navigation": [
     {
       "label": "عني",
@@ -43,10 +44,6 @@
     {
       "label": "الخدمات",
       "href": "/#services"
-    },
-    {
-      "label": "المدونة",
-      "href": "/blog/"
     },
     {
       "label": "الأسئلة الشائعة",

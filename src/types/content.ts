@@ -34,9 +34,10 @@ export interface Testimonial {
 export interface Certificate {
   date: string;
   title: string;
-  logo: string;
+  issuer: string;
   url: string;
 }
+
 
 export interface FAQItem {
   id: string;

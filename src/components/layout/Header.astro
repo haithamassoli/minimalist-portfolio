@@ -16,7 +16,7 @@ import AssetImage from '../ui/AssetImage.astro';
     <a class="identity-pill__mail" href="/#contact-form" aria-label="تواصل معي">
       <Icon name="mail" size={19} />
     </a>
-    <a class="identity-pill__profile" href="/" aria-label="رِزق — الصفحة الرئيسية">
+    <a class="identity-pill__profile" href="/" aria-label={`${site.name} — الصفحة الرئيسية`}>
       <span class="identity-pill__copy">
         <strong>{site.name}</strong>
         <span>{site.role}</span>

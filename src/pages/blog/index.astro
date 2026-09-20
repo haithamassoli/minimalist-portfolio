@@ -1,18 +1,21 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { posts } from '../../data';
+import { posts, site } from '../../data';
 import ArticleCard from '../../components/cards/ArticleCard.astro';
 ---
-<SiteLayout title="المدونة | رِزق">
+<SiteLayout title={`المدونة | ${site.name}`}>
   <section class="section listing-page" aria-labelledby="listing-heading">
     <div class="container section-stack">
       <div class="listing-heading">
         <a class="text-link" href="/">الرئيسية</a>
         <h1 id="listing-heading">من المدوّنة،<br />
-        <span class="text-muted">رؤى في التصميم.</span>
+        <span class="text-muted">رؤى في التطوير.</span>
       </h1>
     </div>
-    <div class="articles-grid">{posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}</div>
+    <div class="articles-grid">
+      {posts.length === 0 && <p class="text-muted">لا توجد مقالات منشورة بعد؛ تابع المدونة لاحقًا.</p>}
+      {posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}
+    </div>
   </div>
 </section>
 </SiteLayout>

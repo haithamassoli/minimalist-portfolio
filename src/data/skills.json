@@ -1,35 +1,48 @@
 [
   {
-    "title": "الأدوات والمنصات",
+    "title": "اللغات",
     "items": [
-      "Figma",
-      "FigJam",
-      "After Effects",
-      "Framer",
-      "Photoshop"
+      "TypeScript",
+      "JavaScript",
+      "Swift",
+      "Kotlin",
+      "Python",
+      "C++",
+      "C#",
+      "PHP"
     ],
     "direction": "ltr"
   },
   {
-    "title": "مهارات النمذجة",
+    "title": "الواجهة والموبايل",
     "items": [
-      "نماذج أولية تفاعلية",
-      "مسارات المستخدم",
-      "نماذج قابلة للنقر",
-      "اختبار المستخدم",
-      "التحقق من قابلية الاستخدام"
+      "React",
+      "Next.js",
+      "Astro",
+      "Tailwind CSS",
+      "React Native",
+      "Expo",
+      "SwiftUI",
+      "Jetpack Compose"
     ],
-    "direction": "rtl"
+    "direction": "ltr"
   },
   {
-    "title": "خبرات التصميم",
+    "title": "الخادم والبيانات والبنية",
     "items": [
-      "تجربة المستخدم",
-      "تصميم واجهات المستخدم",
-      "التخطيط الهيكلي",
-      "الهرمية البصرية",
-      "تصاميم متجاوبة"
+      "Node.js",
+      "NestJS",
+      "Hono",
+      "Laravel",
+      "Prisma",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Supabase",
+      "Firebase",
+      "AWS",
+      "Docker"
     ],
-    "direction": "rtl"
+    "direction": "ltr"
   }
 ]

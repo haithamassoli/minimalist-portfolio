@@ -1,9 +1,9 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { projects } from '../../data';
+import { projects, site } from '../../data';
 import ProjectCard from '../../components/cards/ProjectCard.astro';
 ---
-<SiteLayout title="المشاريع | رِزق">
+<SiteLayout title={`المشاريع | ${site.name}`}>
   <section class="section listing-page" aria-labelledby="listing-heading">
     <div class="container section-stack">
       <div class="listing-heading">

@@ -14,7 +14,7 @@ const year = new Intl.NumberFormat('ar', { useGrouping: false }).format(new Date
         <nav aria-label="روابط التذييل">{site.navigation.map(link => <a href={link.href}>{link.label}</a>)}</nav>
         <div class="footer-info__contact">
           <div class="social-links">{site.socials.map(social => <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={`${social.name} (نافذة جديدة)`}>
-          <Icon name={social.icon} size={24} />
+          <Icon name={social.name === 'GitHub' ? 'github' : social.icon} size={24} />
         </a>)}</div>
         <a class="email-pill" href={`mailto:${site.email}`} dir="ltr">{site.email}</a>
         <button class="copy-email" type="button" data-copy-email={site.email}>
@@ -25,7 +25,7 @@ const year = new Intl.NumberFormat('ar', { useGrouping: false }).format(new Date
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© كل الحقوق محفوظة {year}، <a href={site.socials[0].url} target="_blank" rel="noopener noreferrer">{site.name}</a>
+    <p>© كل الحقوق محفوظة {year}، {site.fullName} — {site.location}
   </p>
   <a href="#top" class="back-to-top">العودة للأعلى<Icon name="arrow-up" size={18} />
 </a>

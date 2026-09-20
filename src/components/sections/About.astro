@@ -3,10 +3,11 @@ import { site, about } from '../../data';
 import AssetImage from '../ui/AssetImage.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
 import Icon from '../ui/Icon.astro';
+const github = site.socials.find(social => social.name === 'GitHub');
 ---
 <section class="section about-section section--bordered" id="about" aria-labelledby="about-heading">
   <div class="container section-stack">
-    <SectionHeading id="about-heading" muted="أصمّم تجارب" title="تحل مشكلات حقيقية." centered />
+    <SectionHeading id="about-heading" muted="أبني منتجات" title="تحل مشكلات حقيقية." centered />
     <div class="about-grid">
       <div class="about-copy">
         {about.paragraphs.map(paragraph => <p data-reveal>{paragraph}</p>)}
@@ -15,7 +16,7 @@ import Icon from '../ui/Icon.astro';
           </div>
           <div class="tool-orbit__ring tool-orbit__ring--inner">
           </div>
-          <span class="tool-orbit__center">رِزق</span>
+          <span class="tool-orbit__center">{site.name}</span>
           {about.orbitIcons.map((src, index) => <span class={`tool-orbit__app tool-orbit__app--${index + 1}`}>
           <img src={src} width="40" height="40" alt="" loading="lazy" />
         </span>)}
@@ -25,10 +26,10 @@ import Icon from '../ui/Icon.astro';
       <figure class="profile-card" data-reveal>
         <div class="profile-card__image">
           <AssetImage image={site.avatar} sizes="(max-width: 809px) calc(100vw - 44px), 372px" />
-          <a class="profile-card__follow" href={site.socials[0].url} target="_blank" rel="noopener noreferrer" aria-label="X — ٦.٤٠٠ (نافذة جديدة)">
-            <Icon name="x" size={15} />
-            <span>٦.٤٠٠</span>
-          </a>
+          {github && <a class="profile-card__follow" href={github.url} target="_blank" rel="noopener noreferrer" aria-label="GitHub (نافذة جديدة)">
+            <Icon name="github" size={15} />
+            <span>GitHub</span>
+          </a>}
         </div>
         <figcaption>
           <h3>{site.name}</h3>
@@ -42,7 +43,7 @@ import Icon from '../ui/Icon.astro';
         <h4>{job.company}</h4>
         <p>{job.role}</p>
       </li>)}</ol>
-      <a class="text-link" href={site.socials[1].url} target="_blank" rel="noopener noreferrer">إظهار الكل<Icon name="arrow-up-left" size={15} />
+      <a class="text-link" href={site.socials.find(social => social.name === 'LinkedIn')?.url ?? site.socials[0].url} target="_blank" rel="noopener noreferrer">إظهار الكل<Icon name="arrow-up-left" size={15} />
       <span class="sr-only"> (LinkedIn، نافذة جديدة)</span>
     </a>
   </div>

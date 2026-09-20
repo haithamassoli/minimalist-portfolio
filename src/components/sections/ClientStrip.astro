@@ -4,11 +4,13 @@ import AssetImage from '../ui/AssetImage.astro';
 import SocialProof from '../ui/SocialProof.astro';
 interface Props { proof?: boolean }
 const { proof = false } = Astro.props;
+const hasClients = clients.length > 0;
+const showStrip = proof || hasClients;
 ---
-<div class="client-strip" aria-label="العملاء">
+{showStrip && <div class="client-strip" aria-label="العملاء">
   <div class="container client-strip__inner">
     {proof ? <SocialProof /> : <p class="client-strip__label">موثوق من قِبل</p>}
-    <div class="client-strip__window">
+    {hasClients && <div class="client-strip__window">
       <div class="client-strip__track">
         <ul class="client-strip__logos">{clients.map(logo => <li>
         <AssetImage image={logo} sizes="100px" />
@@ -17,6 +19,6 @@ const { proof = false } = Astro.props;
       <AssetImage image={logo} sizes="100px" decorative />
     </li>)}</ul>
   </div>
+</div>}
 </div>
-</div>
-</div>
+</div>}
