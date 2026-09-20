@@ -6,7 +6,7 @@ import Icon from '../ui/Icon.astro';
 ---
 <section class="section about-section section--bordered" id="about" aria-labelledby="about-heading">
   <div class="container section-stack">
-    <SectionHeading id="about-heading" muted="أصمّم تجارب" title="تحل مشكلات حقيقية." centered />
+    <SectionHeading id="about-heading" muted="أبني منتجات" title="من الفكرة حتى الإطلاق." centered />
     <div class="about-grid">
       <div class="about-copy">
         {about.paragraphs.map(paragraph => <p data-reveal>{paragraph}</p>)}
@@ -15,7 +15,7 @@ import Icon from '../ui/Icon.astro';
           </div>
           <div class="tool-orbit__ring tool-orbit__ring--inner">
           </div>
-          <span class="tool-orbit__center">رِزق</span>
+          <span class="tool-orbit__center">هيثم</span>
           {about.orbitIcons.map((src, index) => <span class={`tool-orbit__app tool-orbit__app--${index + 1}`}>
           <img src={src} width="40" height="40" alt="" loading="lazy" />
         </span>)}
@@ -25,9 +25,9 @@ import Icon from '../ui/Icon.astro';
       <figure class="profile-card" data-reveal>
         <div class="profile-card__image">
           <AssetImage image={site.avatar} sizes="(max-width: 809px) calc(100vw - 44px), 372px" />
-          <a class="profile-card__follow" href={site.socials[0].url} target="_blank" rel="noopener noreferrer" aria-label="X — ٦.٤٠٠ (نافذة جديدة)">
-            <Icon name="x" size={15} />
-            <span>٦.٤٠٠</span>
+          <a class="profile-card__follow" href={site.socials[0].url} target="_blank" rel="noopener noreferrer" aria-label="GitHub — haithamassoli (نافذة جديدة)">
+            <Icon name="github" size={15} />
+            <span dir="ltr">haithamassoli</span>
           </a>
         </div>
         <figcaption>

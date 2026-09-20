@@ -11,6 +11,7 @@ test('homepage is RTL with one main heading and no horizontal overflow', async (
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('.project-card')).toHaveCount(4);
+  await expect(page.locator('h1')).toHaveText('هيثم');
   await expect(page.locator('.testimonial-card')).toHaveCount(6);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
   expect(overflow).toBe(false);
@@ -36,7 +37,7 @@ test('FAQ opens with keyboard and preserves a single open answer', async ({ page
 
 test('listing links resolve locally', async ({ page }) => {
   await page.goto('/projects/');
-  await expect(page.locator('.project-card')).toHaveCount(4);
+  await expect(page.locator('.project-card')).toHaveCount(12);
   await page.goto('/blog/');
   await expect(page.locator('.article-card')).toHaveCount(3);
 });

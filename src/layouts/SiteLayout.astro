@@ -10,6 +10,7 @@ interface Props {
 const { title = site.title, description = site.description } = Astro.props;
 const origin = import.meta.env.PUBLIC_SITE_URL || Astro.site?.origin || Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, origin);
+const socialImage = new URL(site.socialImage, origin).href;
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
 ---
 <!doctype html>
@@ -30,11 +31,11 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
-    <meta property="og:image" content={site.socialImage} />
+    <meta property="og:image" content={socialImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={site.socialImage} />
+    <meta name="twitter:image" content={socialImage} />
   </head>
   <body id="top">
     <a href="#main-content" class="skip-link">انتقل إلى المحتوى</a>

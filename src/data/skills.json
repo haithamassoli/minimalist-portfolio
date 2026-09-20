@@ -1,34 +1,34 @@
 [
   {
-    "title": "الأدوات والمنصات",
+    "title": "الويب والجوال",
     "items": [
-      "Figma",
-      "FigJam",
-      "After Effects",
-      "Framer",
-      "Photoshop"
+      "TypeScript",
+      "React / Next.js",
+      "React Native / Expo",
+      "Astro",
+      "SwiftUI"
     ],
     "direction": "ltr"
   },
   {
-    "title": "مهارات النمذجة",
+    "title": "الخادم والبيانات",
     "items": [
-      "نماذج أولية تفاعلية",
-      "مسارات المستخدم",
-      "نماذج قابلة للنقر",
-      "اختبار المستخدم",
-      "التحقق من قابلية الاستخدام"
+      "Node.js / NestJS",
+      "PostgreSQL",
+      "Convex / Prisma",
+      "Supabase",
+      "REST APIs"
     ],
-    "direction": "rtl"
+    "direction": "ltr"
   },
   {
-    "title": "خبرات التصميم",
+    "title": "الذكاء والإطلاق",
     "items": [
-      "تجربة المستخدم",
-      "تصميم واجهات المستخدم",
-      "التخطيط الهيكلي",
-      "الهرمية البصرية",
-      "تصاميم متجاوبة"
+      "استدلال على الجهاز",
+      "تشغيل نماذج محليًا",
+      "تفريغ عربي",
+      "نشر سحابي",
+      "مراجعة المتاجر"
     ],
     "direction": "rtl"
   }

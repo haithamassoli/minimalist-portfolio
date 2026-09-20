@@ -118,8 +118,9 @@
 }
 
 .cal-wordmark {
-  font: 700 17px Arial, sans-serif;
-  letter-spacing: -1px;
+  font: 600 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1199px) {

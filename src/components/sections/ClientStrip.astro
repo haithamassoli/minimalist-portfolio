@@ -7,7 +7,7 @@ const { proof = false } = Astro.props;
 ---
 <div class="client-strip" aria-label="العملاء">
   <div class="container client-strip__inner">
-    {proof ? <SocialProof /> : <p class="client-strip__label">موثوق من قِبل</p>}
+    {proof ? <SocialProof /> : <p class="client-strip__label">منتجاتي على المتاجر</p>}
     <div class="client-strip__window">
       <div class="client-strip__track">
         <ul class="client-strip__logos">{clients.map(logo => <li>

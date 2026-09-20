@@ -1,36 +1,36 @@
 {
-  "name": "رِزق",
-  "fullName": "عبدالرزاق الزهراني",
-  "role": "مصمم منتجات",
-  "aboutRole": "مصمم منتجات رقمية",
-  "title": "Home | الرئيسية",
-  "description": "معرض أعمال مصمم بعناية ليقدم مشاريعك، خبرتك ومحتواك بصورة تليق بجودة عملك.",
-  "heroDescription": "مصمم واجهات وتجربة مستخدم، أساعد الشركات والمنتجات الناشئة على تحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام.",
-  "email": "info@abdulrzaq.com",
-  "bookingUrl": "https://cal.com",
-  "sourceUrl": "https://rzgfolio.framer.ai/",
+  "name": "هيثم",
+  "fullName": "هيثم العسولي",
+  "role": "مهندس برمجيات",
+  "aboutRole": "مطوّر ويب وتطبيقات جوال full-stack",
+  "title": "هيثم العسولي | مهندس برمجيات للويب والجوال",
+  "description": "مهندس برمجيات متكامل يبني منتجات الويب وiOS وأندرويد من المعمارية وتصميم الواجهة حتى الإطلاق والدعم.",
+  "heroDescription": "أحوّل متطلبات المنتج إلى تطبيقات ويب وiOS وأندرويد موثوقة، من نموذج البيانات والواجهة حتى الإطلاق والدعم.",
+  "email": "haitham.b.assoli@gmail.com",
+  "bookingUrl": "mailto:haitham.b.assoli@gmail.com",
+  "sourceUrl": "https://assoli.site",
   "socials": [
     {
-      "name": "X",
-      "url": "https://x.com/irzg_z",
-      "icon": "x"
+      "name": "GitHub",
+      "url": "https://github.com/haithamassoli",
+      "icon": "github"
     },
     {
       "name": "LinkedIn",
-      "url": "https://www.linkedin.com/in/irzg/",
+      "url": "https://www.linkedin.com/in/haithamassoli/",
       "icon": "linkedin"
     }
   ],
   "avatar": {
-    "src": "https://framerusercontent.com/images/4p9mLKoeZ1tiXrKIhn4h9kLajI.jpg",
-    "width": 500,
-    "height": 500,
-    "alt": "رِزق، مصمم منتجات رقمية"
+    "src": "/images/profile.png",
+    "width": 1024,
+    "height": 1024,
+    "alt": "هيثم العسولي، مطوّر ويب وتطبيقات جوال"
   },
-  "faviconLight": "https://framerusercontent.com/images/k0cCifxqNYOPVH771zx1Tc0o.png",
-  "faviconDark": "https://framerusercontent.com/images/VKtY3zUE6vgynd8drPYsZJOblgc.png",
-  "socialImage": "https://framerusercontent.com/assets/NeyGbZ0qWoRptvkeBeaNYDDcW4.jpg",
-  "happyClients": "+99 عميل سعيد",
+  "faviconLight": "/favicon.svg",
+  "faviconDark": "/favicon.svg",
+  "socialImage": "/images/og.png",
+  "happyClients": "+40 مشروعًا منجزًا",
   "navigation": [
     {
       "label": "عني",
