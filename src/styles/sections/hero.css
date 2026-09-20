@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 144px;
   isolation: isolate;
+  overflow-x: clip;
 }
 
 .hero__dots {

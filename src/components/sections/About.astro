@@ -25,6 +25,11 @@ import Icon from '../ui/Icon.astro';
       <figure class="profile-card" data-reveal>
         <div class="profile-card__image">
           <AssetImage image={site.avatar} sizes="(max-width: 809px) calc(100vw - 44px), 372px" />
+          <div class="profile-card__socials">
+            {site.socials.map((social, index) => <a href={social.url} target="_blank" rel="noopener noreferrer" style={`--d: ${index * .1}s`} aria-label={`${social.name} (نافذة جديدة)`}>
+            <Icon name={social.icon} size={16} />
+          </a>)}
+          </div>
           <a class="profile-card__follow" href={site.socials[0].url} target="_blank" rel="noopener noreferrer" aria-label="GitHub — haithamassoli (نافذة جديدة)">
             <Icon name="github" size={15} />
             <span dir="ltr">haithamassoli</span>

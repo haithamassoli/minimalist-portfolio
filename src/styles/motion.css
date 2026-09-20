@@ -1,43 +1,111 @@
-/* Content is visible by default. JS only animates elements on entry, so a
-   blocked or failed script can never leave the page permanently invisible. */
+@import 'lenis/dist/lenis.css';
+
+/* .motion-ready is added before paint when motion is allowed. If the
+   deferred module never runs, the inline load fallback removes it so
+   content is not left hidden. */
+
+html.lenis {
+  scroll-behavior: auto;
+}
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero__title {
-    animation: hero-arrive .8s var(--ease-out) both;
-  }
-  .hero__description {
-    animation: hero-arrive .8s .1s var(--ease-out) both;
+  .menu-toggle, .identity-pill {
+    animation: motion-drop .93s .3s var(--ease-spring) both;
   }
   .hero__actions {
-    animation: hero-arrive .8s .2s var(--ease-out) both;
+    animation: motion-rise .93s .5s var(--ease-spring) both;
   }
-  [data-reveal].is-entering {
-    animation: section-arrive .65s var(--ease-out);
+  .hero .client-strip {
+    animation: motion-rise-lg 1.2s .3s var(--ease-spring-heavy) both;
+  }
+  .hero .social-proof {
+    animation: motion-fade .6s .6s var(--ease-tween) both;
+  }
+
+  html.motion-ready [data-reveal] {
+    opacity: .001;
+    translate: 0 40px;
+  }
+  html.motion-ready [data-reveal='fan-left'] {
+    translate: -80px 0;
+  }
+  html.motion-ready [data-reveal='fan-up'] {
+    translate: 0 80px;
+  }
+  html.motion-ready [data-reveal='fan-right'] {
+    translate: 80px 0;
+  }
+  html.motion-ready [data-reveal='rise-lg'] {
+    translate: 0 150px;
+  }
+  html.motion-ready [data-reveal='rise-xl'] {
+    translate: 0 250px;
+  }
+  html.motion-ready [data-reveal].is-in {
+    opacity: 1;
+    translate: 0 0;
+    transition: opacity .93s var(--ease-spring), translate .93s var(--ease-spring);
+  }
+  html.motion-ready [data-reveal='rise-lg'].is-in {
+    transition-duration: 1.2s;
+    transition-timing-function: var(--ease-spring-heavy);
+  }
+  html.motion-ready [data-reveal='rise-xl'].is-in {
+    transition-duration: 1.1s;
+  }
+  html.motion-ready [data-reveal].is-in.is-settled {
+    transition: translate .3s var(--ease-out), opacity .3s;
+  }
+
+  @media (max-width: 809px) {
+    html.motion-ready [data-reveal='fan-left'],
+    html.motion-ready [data-reveal='fan-up'],
+    html.motion-ready [data-reveal='fan-right'] {
+      translate: 0 40px;
+    }
+    html.motion-ready [data-reveal='rise-lg'],
+    html.motion-ready [data-reveal='rise-xl'] {
+      translate: 0 80px;
+    }
   }
 }
 
-@keyframes hero-arrive {
+@keyframes motion-drop {
   from {
-    opacity: 0;
-    transform: translateY(16px);
-    filter: blur(5px);
+    opacity: .001;
+    translate: 0 -80px;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
+    translate: 0 0;
   }
 }
 
-@keyframes section-arrive {
+@keyframes motion-rise {
   from {
-    opacity: .25;
-    transform: translateY(18px);
+    opacity: .001;
+    translate: 0 70px;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
+}
+
+@keyframes motion-rise-lg {
+  from {
+    opacity: .001;
+    translate: 0 150px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes motion-fade {
+  from { opacity: .001; }
+  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,6 @@
 .skills-section {
   padding-block: 90px;
+  overflow-x: clip;
 }
 
 .skills-deck {
@@ -20,7 +21,7 @@
   transition: translate .3s var(--ease-out);
 }
 
-.skill-card:hover {
+.skill-card.is-in:hover, html:not(.motion-ready) .skill-card:hover {
   translate: 0 -8px;
   z-index: 4;
 }

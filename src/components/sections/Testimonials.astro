@@ -10,6 +10,6 @@ import TestimonialCard from '../cards/TestimonialCard.astro';
       <SectionHeading id="testimonials-heading" muted="كلمات صادقة" title="من عملائي" />
       <SocialProof />
     </div>
-    <div class="testimonials-grid" role="region" aria-label="آراء العملاء، مرّر أفقيًا على الهاتف" tabindex="0">{testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} />)}</div>
+    <div class="testimonials-grid" role="region" aria-label="آراء العملاء، مرّر أفقيًا على الهاتف" tabindex="0" data-lenis-prevent-horizontal>{testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} />)}</div>
   </div>
 </section>

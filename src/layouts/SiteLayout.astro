@@ -18,6 +18,22 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('motion-ready');
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (!window.__motionInit) document.documentElement.classList.remove('motion-ready');
+          }, 200);
+        });
+      }
+    </script>
+    <noscript>
+      <style>
+        html.motion-ready [data-reveal] { opacity: 1; translate: none; }
+        .menu-toggle, .identity-pill, .hero__actions, .hero .client-strip, .hero .social-proof { animation: none !important; opacity: 1; translate: none; }
+      </style>
+    </noscript>
     <meta name="theme-color" content="#f7f7f7" />
     <title>{title}</title>
     <meta name="description" content={description} />

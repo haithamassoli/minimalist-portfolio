@@ -10,7 +10,7 @@ import Icon from '../ui/Icon.astro';
     <div class="faq-content">
       <SectionHeading id="faq-heading" muted="أسئلتك،" title="جاوبنا عليها." />
       <div class="faq-list">
-        {faqs.map((faq, index) => <details class="faq-item" name="portfolio-faq" open={index === 0}>
+        {faqs.map((faq, index) => <details class="faq-item" name="portfolio-faq" open={index === 0} data-reveal>
         <summary>
           <span class="faq-item__number" dir="ltr">{faq.id}</span>
           <span>{faq.question}</span>
