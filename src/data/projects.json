@@ -1,50 +1,146 @@
 [
   {
-    "slug": "mihad-mobility",
-    "title": "مِهاد",
-    "category": "استراتيجية علامة وتجربة رقمية",
-    "sourceUrl": "https://rzgfolio.framer.ai/projects/mihad-mobility",
+    "slug": "aoun",
+    "title": "عون",
+    "category": "تطوير ويب · منصة أكاديمية",
+    "sourceUrl": "https://aoun.assoli.site",
     "image": {
-      "src": "https://framerusercontent.com/images/ji43cjEjdve4bDt9qVABHIdY8Xc.png",
-      "width": 902,
-      "height": 1200,
-      "alt": "مِهاد — استراتيجية علامة وتجربة رقمية"
+      "src": "/images/projects/aoun.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "عون — منصة أكاديمية مجانية لطلاب الجامعات الأردنية"
     }
   },
   {
-    "slug": "nabd-digital-health",
-    "title": "نبض",
-    "category": "تصميم منتج وتجربة مستخدم",
-    "sourceUrl": "https://rzgfolio.framer.ai/projects/nabd-digital-health",
+    "slug": "kashaf-alkulify",
+    "title": "كشّاف أبي جعفر",
+    "category": "تطوير ويب · بحث عربي",
+    "sourceUrl": "https://alkulify.assoli.site",
     "image": {
-      "src": "https://framerusercontent.com/images/FtQR8eS1qLlyWsdtxKny0fk8vA.png",
-      "width": 904,
-      "height": 1200,
-      "alt": "نبض — تصميم منتج وتجربة مستخدم"
+      "src": "/images/projects/kashaf-alkulify.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "كشّاف أبي جعفر — بحث يصل إلى الثانية في آلاف ساعات الدروس"
     }
   },
   {
-    "slug": "zin-wearable",
-    "title": "زِن",
-    "category": "تجربة لياقة وأجهزة ذكية",
-    "sourceUrl": "https://rzgfolio.framer.ai/projects/zin-wearable",
+    "slug": "malabji",
+    "title": "ملعبجي",
+    "category": "تطبيق جوال · حجز ملاعب",
+    "sourceUrl": "https://apps.apple.com/jo/app/id6744635501",
     "image": {
-      "src": "https://framerusercontent.com/images/aaU7WeDeU904z55Tuq9HsrMzIo.png",
-      "width": 992,
-      "height": 1200,
-      "alt": "زِن — تجربة لياقة وأجهزة ذكية"
+      "src": "/images/projects/malabji.png",
+      "width": 900,
+      "height": 1955,
+      "alt": "ملعبجي — ابحث عن ملعب، وابحث عن لاعبين، احجز، والعب"
     }
   },
   {
-    "slug": "volt-product-launch",
-    "title": "فولت",
-    "category": "تصميم ويب وتوجيه إبداعي",
-    "sourceUrl": "https://rzgfolio.framer.ai/projects/volt-product-launch",
+    "slug": "naqi",
+    "title": "نقيّ",
+    "category": "ذكاء اصطناعي على الجهاز",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.haithamassoli.naqi",
     "image": {
-      "src": "https://framerusercontent.com/images/GL21QShwXxJufjY8nfjDmnBmtbU.png",
-      "width": 1200,
-      "height": 1200,
-      "alt": "فولت — تصميم ويب وتوجيه إبداعي"
+      "src": "/images/projects/naqi.png",
+      "width": 704,
+      "height": 1524,
+      "alt": "نقيّ — يزيل الموسيقى ويحجب الصور في الفيديو على جهازك"
+    }
+  },
+  {
+    "slug": "pastehtml",
+    "title": "pastehtml",
+    "category": "تطوير ويب · نشر صفحات",
+    "sourceUrl": "https://pastehtml.assoli.site",
+    "image": {
+      "src": "/images/projects/pastehtml.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "pastehtml — أفلِت ملف HTML واحصل على رابط عام"
+    }
+  },
+  {
+    "slug": "eecommittee",
+    "title": "لجنة الهندسة الكهربائية",
+    "category": "تطبيق جوال · تعليم",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.haithamassoli.EECommitte",
+    "image": {
+      "src": "/images/projects/eecommittee.png",
+      "width": 742,
+      "height": 1280,
+      "alt": "لجنة الهندسة الكهربائية — مواد وتسجيلات وحاسبة معدّل لطلاب الهندسة"
+    }
+  },
+  {
+    "slug": "majalis",
+    "title": "مركز التبيان التعليمي",
+    "category": "تطبيق جوال · تحفيظ القرآن",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.haithamassoli.majalis",
+    "image": {
+      "src": "/images/projects/majalis.png",
+      "width": 1000,
+      "height": 2167,
+      "alt": "مركز التبيان التعليمي — حلقات تحفيظ القرآن تُدار من الهاتف"
+    }
+  },
+  {
+    "slug": "rooh-al-jouf",
+    "title": "روح الجوف",
+    "category": "تطبيق جوال · سياحة",
+    "sourceUrl": "https://apps.apple.com/us/app/rooh-al-jouf/id6743066965",
+    "image": {
+      "src": "/images/projects/rooh-al-jouf.png",
+      "width": 900,
+      "height": 1948,
+      "alt": "روح الجوف — دليل سياحي ثنائي اللغة لمنطقة الجوف"
+    }
+  },
+  {
+    "slug": "t3-code",
+    "title": "T3 Code",
+    "category": "عمل للعملاء · وكلاء برمجة",
+    "sourceUrl": "https://t3.codes",
+    "image": {
+      "src": "/images/projects/t3code.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "T3 Code — تحكّم بوكلاء البرمجة على جهازك من أي مكان"
+    }
+  },
+  {
+    "slug": "discover-ajloun",
+    "title": "اكتشف عجلون",
+    "category": "تطبيق جوال · بلدية وسياحة",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.haithamassoli.telescope",
+    "image": {
+      "src": "/images/projects/discover-ajloun.png",
+      "width": 1000,
+      "height": 2167,
+      "alt": "اكتشف عجلون — السياحة وشكاوى البلدية لمحافظة عجلون"
+    }
+  },
+  {
+    "slug": "marafiq-plus",
+    "title": "مرافق بلس",
+    "category": "تطبيق جوال · خدمات عامة",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.haithamassoli.hadiqa",
+    "image": {
+      "src": "/images/projects/marafiq-plus.png",
+      "width": 1000,
+      "height": 2167,
+      "alt": "مرافق بلس — اعثر على كل حديقة ومرفق عام في عمّان"
+    }
+  },
+  {
+    "slug": "tawsilah-abshir",
+    "title": "توصيلة ابشر",
+    "category": "تطبيق جوال · توصيل",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.assoliindustries.tawsilah",
+    "image": {
+      "src": "/images/projects/tawsilah.png",
+      "width": 1000,
+      "height": 2164,
+      "alt": "توصيلة ابشر — تطبيق توصيل مبني لعجلون"
     }
   }
 ]

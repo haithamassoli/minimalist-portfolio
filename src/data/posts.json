@@ -1,47 +1,47 @@
 [
   {
-    "slug": "how-designers-and-developers-can-actually-collaborate",
-    "title": "كيف يتعاون المصممون والمطورون فعلًا",
-    "author": "بقلم عبدالرزاق الزهراني",
-    "dateLabel": "مارس 2025",
-    "date": "2025-03-06",
-    "excerpt": "استراتيجيات عملية لتقليل فجوة التصميم والتطوير، وإزالة احتكاك التسليم، وشحن منتجات أفضل أسرع عبر تعاون حقيقي.",
-    "sourceUrl": "https://rzgfolio.framer.ai/blog/how-designers-and-developers-can-actually-collaborate",
+    "slug": "arabic-search-that-matches-how-people-type",
+    "title": "بحث عربي يحتمل طريقة الكتابة الفعلية",
+    "author": "بقلم هيثم العسولي",
+    "dateLabel": "أغسطس ٢٠٢٦",
+    "date": "2026-08-19",
+    "excerpt": "الطلاب يكتبون «احصاء» بدل «إحصاء»، ويحذفون التشكيل، ويخلطون العربية والإنجليزية في استعلام واحد. المطابقة الساذجة تعيد لا شيء. هكذا بنيت فهرسًا يطبّع الهمزة والتشكيل والأرقام حتى يصل الباحث إلى الثانية التي قيلت فيها العبارة.",
+    "sourceUrl": "https://alkulify.assoli.site",
     "image": {
-      "src": "https://framerusercontent.com/images/d0BwZFrtELCoWDdpc1wN5g0q070.jpeg",
-      "width": 1920,
-      "height": 2400,
-      "alt": "كيف يتعاون المصممون والمطورون فعلًا"
+      "src": "/images/projects/kashaf-alkulify.png",
+      "width": 2880,
+      "height": 1800,
+      "alt": "بحث عربي يحتمل طريقة الكتابة الفعلية"
     }
   },
   {
-    "slug": "why-faster-isn-t-always-better",
-    "title": "لماذا ليست السرعة أفضل دائمًا",
-    "author": "بقلم عبدالرزاق الزهراني",
-    "dateLabel": "أبريل 2025",
-    "date": "2025-04-22",
+    "slug": "on-device-video-filtering",
+    "title": "ترشيح الفيديو على الجهاز، بلا سحابة",
+    "author": "بقلم هيثم العسولي",
+    "dateLabel": "مارس ٢٠٢٦",
+    "date": "2026-03-12",
     "excerpt": "",
-    "sourceUrl": "https://rzgfolio.framer.ai/blog/why-faster-isn-t-always-better",
+    "sourceUrl": "https://github.com/haithamassoli/NaqiHalalVideoFilter",
     "image": {
-      "src": "https://framerusercontent.com/images/HuxzIq7j0tsSLY9lFylSkywPosM.jpg",
-      "width": 1200,
-      "height": 1200,
-      "alt": "لماذا ليست السرعة أفضل دائمًا"
+      "src": "/images/projects/naqi-home.png",
+      "width": 2400,
+      "height": 1350,
+      "alt": "ترشيح الفيديو على الجهاز، بلا سحابة"
     }
   },
   {
-    "slug": "designing-for-human-connection",
-    "title": "التصميم للتواصل الإنساني",
-    "author": "بقلم عبدالرزاق الزهراني",
-    "dateLabel": "أبريل 2025",
-    "date": "2025-04-01",
+    "slug": "booking-without-double-selling",
+    "title": "حجز ملاعب دون بيع الموعد مرتين",
+    "author": "بقلم هيثم العسولي",
+    "dateLabel": "أبريل ٢٠٢٥",
+    "date": "2025-04-18",
     "excerpt": "",
-    "sourceUrl": "https://rzgfolio.framer.ai/blog/designing-for-human-connection",
+    "sourceUrl": "https://malabji.vercel.app",
     "image": {
-      "src": "https://framerusercontent.com/images/8bSsbaMEKJGuQA9MmrKIhSz8rw.png",
-      "width": 992,
-      "height": 1200,
-      "alt": "التصميم للتواصل الإنساني"
+      "src": "/images/projects/malabji.png",
+      "width": 900,
+      "height": 1955,
+      "alt": "حجز ملاعب دون بيع الموعد مرتين"
     }
   }
 ]

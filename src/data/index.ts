@@ -12,6 +12,7 @@ export { default as skills } from './skills.json';
 export { default as services } from './services.json';
 
 export const projects: Project[] = projectData;
+export const featuredProjects: Project[] = projects.slice(0, 4);
 export const posts: Post[] = postData;
 export const testimonials: Testimonial[] = testimonialData;
 export const certificates: Certificate[] = certificateData;

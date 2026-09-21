@@ -10,7 +10,7 @@ import Icon from '../ui/Icon.astro';
     <div class="faq-content">
       <SectionHeading id="faq-heading" muted="أسئلتك،" title="جاوبنا عليها." />
       <div class="faq-list">
-        {faqs.map((faq, index) => <details class="faq-item" name="portfolio-faq" open={index === 0}>
+        {faqs.map((faq, index) => <details class="faq-item" name="portfolio-faq" open={index === 0} data-reveal>
         <summary>
           <span class="faq-item__number" dir="ltr">{faq.id}</span>
           <span>{faq.question}</span>
@@ -26,11 +26,11 @@ import Icon from '../ui/Icon.astro';
   </div>
   <aside class="consultation-card" data-reveal>
     <AssetImage image={site.avatar} sizes="64px" decorative />
-    <h3>لسى محتار؟<br />احجز استشارتك</h3>
-    <p>مكالمة قصيرة نفهم فيها احتياجك ونحدد الخطوة المناسبة لمشروعك.</p>
+    <h3>لسى محتار؟<br />راسلني مباشرة</h3>
+    <p>صف المشروع والقيود والموعد المستهدف، وأردّ بخطوة واضحة خلال يومي عمل.</p>
     <div>
-      <Button href={site.bookingUrl} label="احجز استشارة" external icon="arrow-up-left" />
-      <span class="cal-wordmark" dir="ltr">Cal.com</span>
+      <Button href={site.bookingUrl} label="أرسل بريدًا" external icon="arrow-up-left" />
+      <span class="cal-wordmark" dir="ltr">{site.email}</span>
     </div>
   </aside>
 </div>

@@ -1,3 +1,7 @@
+.services-section {
+  overflow-x: clip;
+}
+
 .services-list {
   display: grid;
   gap: 64px;

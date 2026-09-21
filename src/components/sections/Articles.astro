@@ -5,7 +5,7 @@ import ArticleCard from '../cards/ArticleCard.astro';
 ---
 <section class="section articles-section section--bordered" id="blog" aria-labelledby="blog-heading">
   <div class="container section-stack">
-    <SectionHeading id="blog-heading" muted="من المدوّنة،" title="رؤى في التصميم." actionHref="/blog/" actionLabel="عرض الكل" />
+    <SectionHeading id="blog-heading" muted="من المدوّنة،" title="ملاحظات هندسية." actionHref="/blog/" actionLabel="عرض الكل" />
     <div class="articles-grid">{posts.map((post, index) => <ArticleCard post={post} featured={index === 0} />)}</div>
   </div>
 </section>

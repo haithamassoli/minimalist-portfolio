@@ -1,3 +1,5 @@
+import { lenis } from './motion';
+
 export function initMenu(): void {
   const dialog = document.querySelector<HTMLDialogElement>('#site-menu');
   const trigger = document.querySelector<HTMLButtonElement>('[data-menu-open]');
@@ -9,6 +11,7 @@ export function initMenu(): void {
     dialog.showModal();
     trigger.setAttribute('aria-expanded', 'true');
     document.documentElement.classList.add('menu-is-open');
+    lenis?.stop();
   });
 
   closeButton.addEventListener('click', () => dialog.close());
@@ -20,6 +23,7 @@ export function initMenu(): void {
   dialog.addEventListener('close', () => {
     trigger.setAttribute('aria-expanded', 'false');
     document.documentElement.classList.remove('menu-is-open');
+    lenis?.start();
     trigger.focus({ preventScroll: true });
   });
 }

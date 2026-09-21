@@ -10,6 +10,7 @@ interface Props {
 const { title = site.title, description = site.description } = Astro.props;
 const origin = import.meta.env.PUBLIC_SITE_URL || Astro.site?.origin || Astro.url.origin;
 const canonical = new URL(Astro.url.pathname, origin);
+const socialImage = new URL(site.socialImage, origin).href;
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
 ---
 <!doctype html>
@@ -17,6 +18,22 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('motion-ready');
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (!window.__motionInit) document.documentElement.classList.remove('motion-ready');
+          }, 200);
+        });
+      }
+    </script>
+    <noscript>
+      <style>
+        html.motion-ready [data-reveal] { opacity: 1; translate: none; }
+        .menu-toggle, .identity-pill, .hero__actions, .hero .client-strip, .hero .social-proof { animation: none !important; opacity: 1; translate: none; }
+      </style>
+    </noscript>
     <meta name="theme-color" content="#f7f7f7" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -30,11 +47,11 @@ const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
-    <meta property="og:image" content={site.socialImage} />
+    <meta property="og:image" content={socialImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={site.socialImage} />
+    <meta name="twitter:image" content={socialImage} />
   </head>
   <body id="top">
     <a href="#main-content" class="skip-link">انتقل إلى المحتوى</a>
